@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Sourcing — CHAI & CO. | From the Tea Garden to Your Cup</title>
+  <meta name="description" content="Explore how CHAI & CO. ethically sources single-estate teas from Assam, Darjeeling, and the 6 Sacred Whole Spices from generational Indian spice farmers.">
+  <meta name="keywords" content="tea sourcing, ethical tea, assam black tea, darjeeling orthodox, idukki cardamom, kashmiri saffron, direct trade tea">
+  <meta name="robots" content="index, follow">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="preloader-cup"><i class="fa-solid fa-mug-hot"></i></div>
+    <div class="preloader-brand">CHAI & CO.</div>
+    <div class="preloader-text">Tracing our origins...</div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="Chai & Co. Homepage">
+        <div class="logo-icon"><i class="fa-solid fa-mug-hot"></i></div>
+        <span>CHAI & CO.</span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="sourcing.html" class="nav-link active">Our Sourcing</a>
+        <a href="loyalty.html" class="nav-link">Loyalty</a>
+        <a href="pricing.html" class="nav-link">Catering</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="header-tool-btn theme-toggle-btn" aria-label="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
+        <button type="button" class="header-tool-btn rtl-toggle-btn" aria-label="Layout Direction: LTR (Click for RTL)"><span class="btn-label" style="font-size:0.7rem;font-weight:700;">LTR</span></button>
+        <button type="button" class="header-tool-btn cart-toggle-btn" aria-label="Open Cart"><i class="fa-solid fa-bag-shopping"></i><span class="badge-count cart-count-badge" style="display:none;">0</span></button>
+        <button type="button" class="hamburger" aria-label="Open Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <aside class="mobile-nav-drawer">
+    <div class="drawer-header">
+      <div class="brand-logo" style="font-size:1.3rem;">
+        <div class="logo-icon" style="width:34px;height:34px;font-size:0.9rem;"><i class="fa-solid fa-mug-hot"></i></div>
+        <span>CHAI & CO.</span>
+      </div>
+      <button type="button" class="drawer-close-btn btn-icon"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="drawer-nav-list">
+      <a href="index.html" class="drawer-nav-link">Home <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="about.html" class="drawer-nav-link">About Us <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="menu.html" class="drawer-nav-link">Our Menu <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="sourcing.html" class="drawer-nav-link active">Our Sourcing <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="loyalty.html" class="drawer-nav-link">Chai Rewards <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="pricing.html" class="drawer-nav-link">Catering <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="blog.html" class="drawer-nav-link">Blog <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="contact.html" class="drawer-nav-link">Contact Us <i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+  </aside>
+
+  <!-- Cart Drawer -->
+  <aside class="cart-drawer">
+    <div class="cart-header">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <i class="fa-solid fa-bag-shopping" style="color:var(--primary);font-size:1.2rem;"></i>
+        <h3>Your Order (<span class="cart-count-badge">0</span>)</h3>
+      </div>
+      <button type="button" class="cart-close-btn btn-icon"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cart-body"></div>
+    <div class="cart-footer">
+      <div class="cart-summary-row"><span>Subtotal</span><span class="cart-subtotal-val">₹0</span></div>
+      <div class="cart-summary-row"><span>GST (5%)</span><span class="cart-tax-val">₹0</span></div>
+      <div class="cart-summary-row total"><span>Total</span><span class="cart-total-val">₹0</span></div>
+      <button type="button" class="btn btn-primary cart-checkout-btn" style="width:100%;margin-top:16px;">
+        Proceed to Order <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </aside>
+  <div class="drawer-backdrop"></div>
+
+  <!-- MAIN -->
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <span class="tagline-label"><i class="fa-solid fa-mountain"></i> Direct from the Origin</span>
+        <h1 class="page-hero-title">From the Tea Garden to Your Cup</h1>
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></span>
+          <span style="color:var(--text-main);font-weight:600;">Our Sourcing</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. The Estates -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="tagline-label"><i class="fa-solid fa-leaf"></i> Single-Estate Terroirs</span>
+          <h2 class="section-title">Our Sacred Tea Estates</h2>
+          <p class="section-description">Every blend begins in misty valleys where volcanic soil and monsoon rains create extraordinary depth of flavor.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="chai-card reveal">
+            <div style="height:240px;overflow:hidden;">
+              <img src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&w=600&q=80" alt="Assam Tea Plantation" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div style="padding:28px;">
+              <span class="chai-category">Upper Assam Valley</span>
+              <h3 style="font-size:1.4rem;margin:8px 0 12px;">Malty Bold CTC & Orthodox</h3>
+              <p class="text-muted" style="font-size:0.9rem;line-height:1.6;margin-bottom:16px;">
+                Grown on low-altitude fertile floodplains along the Brahmaputra River. Delivers that robust, deep amber backbone that holds up boldly to warm whole milk and crushed ginger.
+              </p>
+              <div style="font-size:0.8rem;color:var(--primary);font-weight:700;">Elevation: 100m – 300m • Second Flush Harvest</div>
+            </div>
+          </div>
+
+          <div class="chai-card reveal">
+            <div style="height:240px;overflow:hidden;">
+              <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&q=80" alt="Darjeeling Mist Valley" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div style="padding:28px;">
+              <span class="chai-category">Darjeeling Himalayan Slopes</span>
+              <h3 style="font-size:1.4rem;margin:8px 0 12px;">Champagne of Teas</h3>
+              <p class="text-muted" style="font-size:0.9rem;line-height:1.6;margin-bottom:16px;">
+                Steep slopes shrouded in cool Himalayan mist. Hand-picked at daybreak to capture delicate floral notes, naturally occurring Muscatel sweetness, and pale golden liquor.
+              </p>
+              <div style="font-size:0.8rem;color:var(--primary);font-weight:700;">Elevation: 1,500m – 2,100m • Spring First Flush</div>
+            </div>
+          </div>
+
+          <div class="chai-card reveal">
+            <div style="height:240px;overflow:hidden;">
+              <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=600&q=80" alt="Nilgiri Hills" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div style="padding:28px;">
+              <span class="chai-category">Nilgiri Blue Mountains</span>
+              <h3 style="font-size:1.4rem;margin:8px 0 12px;">Citrus Frost & Cold Brews</h3>
+              <p class="text-muted" style="font-size:0.9rem;line-height:1.6;margin-bottom:16px;">
+                Harvested in southern India under winter frost. Naturally sweet and aromatic with zero bitterness, making it the perfect foundation for our cold brews and iced fruit chais.
+              </p>
+              <div style="font-size:0.8rem;color:var(--primary);font-weight:700;">Elevation: 1,800m • Winter Harvest Frost Tea</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. The 6 Sacred Spices -->
+    <section class="section section-bg">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="tagline-label"><i class="fa-solid fa-mortar-pestle"></i> Hand-Pounded Whole Spices</span>
+          <h2 class="section-title">The 6 Sacred Spices</h2>
+          <p class="section-description">We never purchase ground spice dust. Every spice arrives whole from regenerative spice forests and is crushed fresh in our stalls daily.</p>
+        </div>
+
+        <div class="spice-grid">
+          <!-- Cardamom -->
+          <div class="spice-card reveal">
+            <div class="spice-icon-box"><i class="fa-solid fa-seedling"></i></div>
+            <span class="spice-origin">Idukki, Kerala</span>
+            <h4 class="spice-title">Green Cardamom</h4>
+            <p class="text-muted" style="font-size:0.875rem;line-height:1.6;">
+              Jumbo 8mm green pods rich in aromatic cineole essential oils. Imparts sweet, cooling, floral notes that define authentic Indian chai.
+            </p>
+          </div>
+
+          <!-- Cinnamon -->
+          <div class="spice-card reveal">
+            <div class="spice-icon-box"><i class="fa-solid fa-scroll"></i></div>
+            <span class="spice-origin">Wayanad, Kerala</span>
+            <h4 class="spice-title">Ceylon Cinnamon Quill</h4>
+            <p class="text-muted" style="font-size:0.875rem;line-height:1.6;">
+              Delicate, multi-layered true Ceylon cinnamon bark. Delivers subtle woody warmth without the harsh pungent bite of synthetic cassia.
+            </p>
+          </div>
+
+          <!-- Ginger -->
+          <div class="spice-card reveal">
+            <div class="spice-icon-box"><i class="fa-solid fa-fire"></i></div>
+            <span class="spice-origin">Himachal Foothills</span>
+            <h4 class="spice-title">Fresh Mountain Ginger</h4>
+            <p class="text-muted" style="font-size:0.875rem;line-height:1.6;">
+              Fibrous, spicy young ginger root hand-pounded to release fresh gingerols. Provides the revitalizing throat-warming kick we cherish.
+            </p>
+          </div>
+
+          <!-- Cloves -->
+          <div class="spice-card reveal">
+            <div class="spice-icon-box"><i class="fa-solid fa-sparkles"></i></div>
+            <span class="spice-origin">Kanyakumari Coast</span>
+            <h4 class="spice-title">Sun-Dried Cloves</h4>
+            <p class="text-muted" style="font-size:0.875rem;line-height:1.6;">
+              Head-intact aromatic flower buds dried under coastal sunshine. Highly antimicrobial and comforting for digestion.
+            </p>
+          </div>
+
+          <!-- Black Pepper -->
+          <div class="spice-card reveal">
+            <div class="spice-icon-box"><i class="fa-solid fa-circle-dot"></i></div>
+            <span class="spice-origin">Malabar Coast</span>
+            <h4 class="spice-title">Tellicherry Black Pepper</h4>
+            <p class="text-muted" style="font-size:0.875rem;line-height:1.6;">
+              Extra bold vine-ripened black peppercorns that balance the rich sweetness of milk and unlock turmeric curcumin absorption.
+            </p>
+          </div>
+
+          <!-- Kashmiri Saffron -->
+          <div class="spice-card reveal">
+            <div class="spice-icon-box"><i class="fa-solid fa-crown"></i></div>
+            <span class="spice-origin">Pampore, Kashmir</span>
+            <h4 class="spice-title">Mongra Grade Saffron</h4>
+            <p class="text-muted" style="font-size:0.875rem;line-height:1.6;">
+              Deep crimson hand-plucked stigmas from the purple autumn crocus. Imparts royal golden hues and a sweet intoxicating aroma.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Responsible Sourcing Pillars -->
+    <section class="section">
+      <div class="container">
+        <div class="about-preview-grid">
+          <div class="reveal">
+            <span class="tagline-label"><i class="fa-solid fa-shield-heart"></i> Ethics & Sustainability</span>
+            <h2 class="section-title">Rooted in Responsibility</h2>
+            <p style="margin-bottom:20px;">
+              Our commitment goes far beyond brewing great tea. We believe the tea industry must urgently change how farming families are compensated and how packaging impacts the environment.
+            </p>
+            <ul style="display:flex;flex-direction:column;gap:16px;margin-bottom:28px;">
+              <li style="display:flex;align-items:flex-start;gap:12px;">
+                <i class="fa-solid fa-check-circle" style="color:var(--secondary);font-size:1.2rem;margin-top:2px;"></i>
+                <div>
+                  <strong>Guaranteed 25% Wage Premium:</strong> We pay above market standard directly to picker associations to support local healthcare and education.
+                </div>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:12px;">
+                <i class="fa-solid fa-check-circle" style="color:var(--secondary);font-size:1.2rem;margin-top:2px;"></i>
+                <div>
+                  <strong>Clay Kulhad Vessels:</strong> Our traditional unglazed earthenware cups are hand-thrown by local potters and naturally biodegrade into soil.
+                </div>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:12px;">
+                <i class="fa-solid fa-check-circle" style="color:var(--secondary);font-size:1.2rem;margin-top:2px;"></i>
+                <div>
+                  <strong>Pesticide-Free Testing:</strong> Every estate shipment is independently tested for zero chemical residue before entering our blend kitchen.
+                </div>
+              </li>
+            </ul>
+            <a href="menu.html" class="btn btn-primary">Taste the Quality Difference</a>
+          </div>
+
+          <div class="reveal">
+            <div class="about-img-stack" style="position:relative;">
+              <img src="assets/images/tea-sourcing-ethics.jpg" alt="Authentic Chai in Clay Kulhads with Tea Leaves and Spices overlooking Tea Plantation" style="border-radius:var(--radius-xl);box-shadow:var(--shadow-xl);width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--border);">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Farm-to-Cup 5-Step Process Timeline -->
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="tagline-label" style="background:rgba(214,168,95,0.2);color:var(--accent);">
+            <i class="fa-solid fa-route"></i> The Journey
+          </span>
+          <h2 class="section-title" style="color:#fff;">The Farm-to-Cup Process</h2>
+          <p class="section-description" style="color:rgba(255,255,255,0.85);">
+            From estate soils to your steaming cup, here is how each batch of Chai & Co. comes alive.
+          </p>
+        </div>
+
+        <div class="timeline-process reveal">
+          <div class="timeline-step">
+            <div class="timeline-step-number">01</div>
+            <h4 class="timeline-step-title" style="color:#fff;">Select</h4>
+            <p class="timeline-step-desc" style="color:rgba(255,255,255,0.7);">Cupping evaluations at peak harvest flushes.</p>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-step-number">02</div>
+            <h4 class="timeline-step-title" style="color:#fff;">Source</h4>
+            <p class="timeline-step-desc" style="color:rgba(255,255,255,0.7);">Fair-trade contracts with small estate growers.</p>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-step-number">03</div>
+            <h4 class="timeline-step-title" style="color:#fff;">Blend</h4>
+            <p class="timeline-step-desc" style="color:rgba(255,255,255,0.7);">Small-batch artisanal spice formulation.</p>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-step-number">04</div>
+            <h4 class="timeline-step-title" style="color:#fff;">Brew</h4>
+            <p class="timeline-step-desc" style="color:rgba(255,255,255,0.7);">Aerated, simmered, and pulled to perfection.</p>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-step-number">05</div>
+            <h4 class="timeline-step-title" style="color:#fff;">Serve</h4>
+            <p class="timeline-step-desc" style="color:rgba(255,255,255,0.7);">Poured in hot earthen kulhads with sincere care.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MULTI-COLUMN GLOBAL FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo" style="color:#fff;margin-bottom:14px;">
+            <div class="logo-icon" style="background:rgba(214,168,95,0.2);color:var(--accent);"><i class="fa-solid fa-mug-hot"></i></div>
+            <span>CHAI & CO.</span>
+          </div>
+          <p>
+            Brewed with Tradition. Served with Soul. Bringing authentic Indian chai culture to the modern café aesthetic since 2018.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://x.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Our House</a></li>
+            <li><a href="menu.html">Artisan Menu</a></li>
+            <li><a href="order.html">Order Online</a></li>
+            <li><a href="sourcing.html">Our Sourcing</a></li>
+            <li><a href="loyalty.html">Chai Rewards</a></li>
+            <li><a href="pricing.html">Event Catering</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Information</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html">Chai Chronicles</a></li>
+            <li><a href="contact.html">Find a Stall</a></li>
+            <li><a href="login.html">Member Sign In</a></li>
+            <li><a href="register.html">Join Rewards</a></li>
+            <li><a href="coming-soon.html">New Locations</a></li>
+            <li><a href="maintenance.html">System Status</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter-box">
+          <h4 class="footer-title">Visit Us</h4>
+          <p>
+            <i class="fa-solid fa-location-dot" style="color:var(--accent);margin-right:8px;"></i>
+            42 Heritage Haveli Way, C-Scheme, Jaipur, RJ 302001
+          </p>
+          <p>
+            <i class="fa-solid fa-phone" style="color:var(--accent);margin-right:8px;"></i>
+            +91 98290 12345
+          </p>
+          <p>
+            <i class="fa-solid fa-clock" style="color:var(--accent);margin-right:8px;"></i>
+            Open Daily: 7:00 AM – 11:30 PM
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 CHAI & CO. All Rights Reserved. Crafted with authentic passion.
+        </div>
+        <div style="display:flex;gap:20px;">
+          <a href="privacy.html" style="color:#8c7d70;">Privacy Policy</a>
+          <a href="terms.html" style="color:#8c7d70;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <div class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/forms.js"></script>
+</body>
+</html>

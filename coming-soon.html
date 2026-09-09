@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Something Fresh Is Brewing... — CHAI & CO.</title>
+  <meta name="description" content="A brand new CHAI & CO. tea house location and online experience is brewing. Subscribe for launch day privileges.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body style="min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;background:radial-gradient(circle at center, rgba(214,168,95,0.15) 0%, var(--bg-main) 70%);">
+  <!-- Topbar -->
+  <header style="padding:28px 0;">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon"><i class="fa-solid fa-mug-hot"></i></div>
+        <span>CHAI & CO.</span>
+      </a>
+
+      <div style="display:flex;gap:10px;">
+        <button type="button" class="header-tool-btn theme-toggle-btn" aria-label="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
+        <button type="button" class="header-tool-btn rtl-toggle-btn" aria-label="Layout Direction: LTR (Click for RTL)"><span class="btn-label" style="font-size:0.7rem;font-weight:700;">LTR</span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Countdown Area -->
+  <main id="main-content" style="padding:40px 20px;text-align:center;">
+    <div class="container" style="max-width:760px;">
+      <span class="tagline-label"><i class="fa-solid fa-hourglass-half"></i> Grand Opening Countdown</span>
+      <h1 style="font-size:clamp(2.2rem, 5vw, 3.8rem);margin:16px 0 20px;">Something Fresh Is Brewing...</h1>
+      <p class="text-muted" style="font-size:1.1rem;line-height:1.7;max-width:580px;margin:0 auto 48px;">
+        We are preparing a magnificent new sanctuary for tea lovers. Hand-painted clay cups, slow-simmered samovars, and secret spices await.
+      </p>
+
+      <!-- Live Vanilla JS Countdown -->
+      <div style="display:grid;grid-template-columns:repeat(4, 1fr);gap:16px;max-width:560px;margin:0 auto 48px;" class="reveal">
+        <div style="background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px 16px;box-shadow:var(--shadow-md);">
+          <div id="countdown-days" style="font-family:var(--font-heading);font-size:2.8rem;font-weight:800;color:var(--primary);line-height:1;">24</div>
+          <div style="font-size:0.75rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-top:6px;">Days</div>
+        </div>
+
+        <div style="background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px 16px;box-shadow:var(--shadow-md);">
+          <div id="countdown-hours" style="font-family:var(--font-heading);font-size:2.8rem;font-weight:800;color:var(--primary);line-height:1;">08</div>
+          <div style="font-size:0.75rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-top:6px;">Hours</div>
+        </div>
+
+        <div style="background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px 16px;box-shadow:var(--shadow-md);">
+          <div id="countdown-mins" style="font-family:var(--font-heading);font-size:2.8rem;font-weight:800;color:var(--primary);line-height:1;">42</div>
+          <div style="font-size:0.75rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-top:6px;">Minutes</div>
+        </div>
+
+        <div style="background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px 16px;box-shadow:var(--shadow-md);">
+          <div id="countdown-secs" style="font-family:var(--font-heading);font-size:2.8rem;font-weight:800;color:var(--terracotta);line-height:1;">19</div>
+          <div style="font-size:0.75rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-top:6px;">Seconds</div>
+        </div>
+      </div>
+
+      <!-- Email Notification Form -->
+      <form class="newsletter-form" style="display:flex;gap:10px;max-width:480px;margin:0 auto 36px;">
+        <input type="email" placeholder="Enter your email for opening invite..." class="form-control" required style="background:var(--bg-surface);border-radius:var(--radius-pill);padding:14px 22px;">
+        <button type="submit" class="btn btn-primary" style="flex-shrink:0;">Notify Me</button>
+      </form>
+
+      <!-- Social Links -->
+      <div style="display:flex;justify-content:center;gap:14px;">
+        <a href="#" class="btn-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="btn-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="btn-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+  </main>
+
+  <!-- MULTI-COLUMN GLOBAL FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo" style="color:#fff;margin-bottom:14px;">
+            <div class="logo-icon" style="background:rgba(214,168,95,0.2);color:var(--accent);"><i class="fa-solid fa-mug-hot"></i></div>
+            <span>CHAI & CO.</span>
+          </div>
+          <p>
+            Brewed with Tradition. Served with Soul. Bringing authentic Indian chai culture to the modern café aesthetic since 2018.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://x.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Our House</a></li>
+            <li><a href="menu.html">Artisan Menu</a></li>
+            <li><a href="order.html">Order Online</a></li>
+            <li><a href="sourcing.html">Our Sourcing</a></li>
+            <li><a href="loyalty.html">Chai Rewards</a></li>
+            <li><a href="pricing.html">Event Catering</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Information</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html">Chai Chronicles</a></li>
+            <li><a href="contact.html">Find a Stall</a></li>
+            <li><a href="login.html">Member Sign In</a></li>
+            <li><a href="register.html">Join Rewards</a></li>
+            <li><a href="coming-soon.html">New Locations</a></li>
+            <li><a href="maintenance.html">System Status</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter-box">
+          <h4 class="footer-title">Visit Us</h4>
+          <p>
+            <i class="fa-solid fa-location-dot" style="color:var(--accent);margin-right:8px;"></i>
+            42 Heritage Haveli Way, C-Scheme, Jaipur, RJ 302001
+          </p>
+          <p>
+            <i class="fa-solid fa-phone" style="color:var(--accent);margin-right:8px;"></i>
+            +91 98290 12345
+          </p>
+          <p>
+            <i class="fa-solid fa-clock" style="color:var(--accent);margin-right:8px;"></i>
+            Open Daily: 7:00 AM – 11:30 PM
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 CHAI & CO. All Rights Reserved. Crafted with authentic passion.
+        </div>
+        <div style="display:flex;gap:20px;">
+          <a href="privacy.html" style="color:#8c7d70;">Privacy Policy</a>
+          <a href="terms.html" style="color:#8c7d70;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Floating Button -->
+  <button type="button" class="back-to-top" aria-label="Scroll back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+  <div class="toast-container"></div>
+
+  <!-- Countdown Script -->
+  <script>
+    (function () {
+      // Set target date 24 days in the future
+      const targetDate = new Date();
+      targetDate.setDate(targetDate.getDate() + 24);
+      targetDate.setHours(targetDate.getHours() + 8);
+
+      const daysEl = document.getElementById('countdown-days');
+      const hoursEl = document.getElementById('countdown-hours');
+      const minsEl = document.getElementById('countdown-mins');
+      const secsEl = document.getElementById('countdown-secs');
+
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const diff = targetDate.getTime() - now;
+
+        if (diff <= 0) {
+          if (daysEl) daysEl.textContent = '00';
+          return;
+        }
+
+        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+        if (daysEl) daysEl.textContent = d < 10 ? '0' + d : d;
+        if (hoursEl) hoursEl.textContent = h < 10 ? '0' + h : h;
+        if (minsEl) minsEl.textContent = m < 10 ? '0' + m : m;
+        if (secsEl) secsEl.textContent = s < 10 ? '0' + s : s;
+      }
+
+      setInterval(updateCountdown, 1000);
+      updateCountdown();
+    })();
+  </script>
+
+  <!-- Scripts -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/forms.js"></script>
+</body>
+</html>

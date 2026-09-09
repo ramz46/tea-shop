@@ -1,0 +1,219 @@
+/* ==========================================================================
+   CHAI & CO. — Tea House & Specialty Chai Stall
+   RTL & LTR Direction Engine (rtl.css)
+   Activated via: <html dir="rtl"> or <html dir="ltr">
+   ========================================================================== */
+
+/* ==========================================================================
+   1. Base Direction Rules
+   ========================================================================== */
+[dir="ltr"] {
+  direction: ltr;
+  text-align: left;
+}
+
+[dir="rtl"] {
+  direction: rtl;
+}
+
+/* ==========================================================================
+   2. Sentence Flow & Full Stop (.) Preservation in RTL
+   English text in RTL containers must preserve correct left-to-right sentence flow
+   and ensure full stops (.), colons (:), and quotation marks stay at the end.
+   ========================================================================== */
+[dir="rtl"] p,
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6,
+[dir="rtl"] li,
+[dir="rtl"] blockquote,
+[dir="rtl"] .hero-subtitle,
+[dir="rtl"] .hero-title,
+[dir="rtl"] .page-header p,
+[dir="rtl"] .page-header h1,
+[dir="rtl"] .section-header p,
+[dir="rtl"] .section-title,
+[dir="rtl"] .chai-description,
+[dir="rtl"] .recipe-summary,
+[dir="rtl"] .recipe-step-highlight,
+[dir="rtl"] .pairing-strip-desc,
+[dir="rtl"] .brand-tagline,
+[dir="rtl"] .footer-col p,
+[dir="rtl"] .footer-desc,
+[dir="rtl"] .footer-copyright,
+[dir="rtl"] .dietary-note,
+[dir="rtl"] .card-desc,
+[dir="rtl"] .review-text,
+[dir="rtl"] .blog-excerpt,
+[dir="rtl"] .about-lead,
+[dir="rtl"] .faq-answer,
+[dir="rtl"] .recipe-ingredients-list li {
+  unicode-bidi: plaintext;
+}
+
+/* ==========================================================================
+   3. Alignment Rules (Center stays Center, Start aligns to Start)
+   ========================================================================== */
+[dir="rtl"] .text-center,
+[dir="rtl"] .section-header.text-center,
+[dir="rtl"] .page-header.text-center,
+[dir="rtl"] .hero-content.text-center,
+[dir="rtl"] .footer-bottom,
+[dir="rtl"] .footer-copyright,
+[dir="rtl"] .brand-eyebrow,
+[dir="rtl"] .menu-category-banner.text-center {
+  text-align: center !important;
+}
+
+[dir="rtl"] .section-header.text-start {
+  text-align: right;
+}
+
+/* ==========================================================================
+   4. Brand Logo & Breadcrumb Navigation
+   ========================================================================== */
+/* Brand logo CHAI & CO. should stay LTR so the dot is at the end */
+[dir="rtl"] .brand-logo-text,
+[dir="rtl"] .logo,
+[dir="rtl"] .brand-logo,
+[dir="rtl"] .header-brand,
+[dir="rtl"] .footer-brand {
+  direction: ltr;
+  unicode-bidi: isolate;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Breadcrumb navigation sequence (Home > Menu) */
+[dir="rtl"] .breadcrumb,
+[dir="rtl"] .page-header-nav,
+[dir="rtl"] .page-breadcrumbs,
+[dir="rtl"] nav[aria-label="breadcrumb"] {
+  direction: ltr;
+  display: inline-flex;
+  unicode-bidi: isolate;
+}
+
+/* ==========================================================================
+   5. Search Box & Inputs in RTL
+   ========================================================================== */
+[dir="rtl"] .menu-search-box {
+  position: relative;
+}
+
+[dir="rtl"] .menu-search-input {
+  padding-left: 20px !important;
+  padding-right: 44px !important;
+  text-align: right;
+  unicode-bidi: plaintext;
+}
+
+[dir="rtl"] .menu-search-icon {
+  left: auto !important;
+  right: 18px !important;
+}
+
+/* ==========================================================================
+   6. Numeric, Rating, Spec & Stepper Isolations
+   ========================================================================== */
+[dir="rtl"] .chai-price,
+[dir="rtl"] .chai-rating,
+[dir="rtl"] .chai-spec-pill,
+[dir="rtl"] .tab-count,
+[dir="rtl"] .rating-count,
+[dir="rtl"] .recipe-badge,
+[dir="rtl"] .recipe-time,
+[dir="rtl"] .brew-metrics,
+[dir="rtl"] .header-cart-count,
+[dir="rtl"] .chai-cart-stepper {
+  direction: ltr;
+  display: inline-flex;
+  align-items: center;
+  unicode-bidi: isolate;
+}
+
+/* ==========================================================================
+   7. Navigation & Drawers
+   ========================================================================== */
+/* Icon Flips */
+[dir="rtl"] .fa-arrow-right,
+[dir="rtl"] .fa-chevron-right,
+[dir="rtl"] .fa-arrow-left,
+[dir="rtl"] .fa-chevron-left {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .btn .fa-arrow-right {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .blog-read-more:hover {
+  gap: 12px;
+}
+
+/* Mobile Nav Drawer in RTL */
+[dir="rtl"] .mobile-nav-drawer {
+  right: auto;
+  left: 0;
+  transform: translateX(-100%);
+}
+[dir="rtl"] .mobile-nav-drawer.open {
+  transform: translateX(0);
+}
+
+/* Cart Drawer in RTL */
+[dir="rtl"] .cart-drawer {
+  right: auto;
+  left: 0;
+  transform: translateX(-100%);
+}
+[dir="rtl"] .cart-drawer.open {
+  transform: translateX(0);
+}
+
+/* Toast Notifications in RTL */
+[dir="rtl"] .toast-container {
+  right: auto;
+  left: 30px;
+}
+
+/* Back-to-Top Button in RTL */
+[dir="rtl"] .back-to-top {
+  left: auto;
+  right: 30px;
+}
+
+/* Hero Floating Card Alignment */
+[dir="rtl"] .hero-floating-card {
+  left: auto;
+  right: -24px;
+}
+
+/* Established Badge on About */
+[dir="rtl"] .about-badge-established {
+  left: auto;
+  right: -20px;
+}
+
+/* Sub image on About */
+[dir="rtl"] .about-sub-img {
+  right: auto;
+  left: 0;
+}
+
+/* Timeline direction */
+[dir="rtl"] .timeline-process::before {
+  background: repeating-linear-gradient(to left, var(--primary) 0, var(--primary) 10px, transparent 10px, transparent 20px);
+}
+
+/* ==========================================================================
+   8. Header RTL Toggle Button Active State
+   ========================================================================== */
+.rtl-toggle-btn.active {
+  background: var(--primary) !important;
+  color: #ffffff !important;
+  border-color: var(--primary) !important;
+}

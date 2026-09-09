@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHAI & CO. — Tea House & Specialty Chai Stall | Brewed with Tradition. Served with Soul.</title>
+  <meta name="description" content="CHAI & CO. is a premium specialty tea house and authentic Indian chai stall. Discover handcrafted masala chai, single-origin teas, Kashmiri kahwa, and artisan snacks.">
+  <meta name="keywords" content="chai, tea house, masala chai, specialty chai, Indian tea, Kashmiri kahwa, artisan cafe, chai stall">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="CHAI & CO. — Tea House & Specialty Chai Stall">
+  <meta property="og:description" content="Brewed with Tradition. Served with Soul. Experience handcrafted Indian chai made fresh to order.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Core Theme Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+  <!-- Accessibility Skip to Main Content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Preloader Screen -->
+  <div class="preloader">
+    <div class="preloader-cup">
+      <i class="fa-solid fa-mug-hot"></i>
+    </div>
+    <div class="preloader-brand">CHAI & CO.</div>
+    <div class="preloader-text">Brewing your experience...</div>
+  </div>
+
+  <!-- Global Sticky Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="Chai & Co. Homepage">
+        <div class="logo-icon"><i class="fa-solid fa-mug-hot"></i></div>
+        <span>CHAI & CO.</span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="order.html" class="nav-link" style="color:var(--terracotta);font-weight:700;"><i class="fa-solid fa-bag-shopping"></i> Order Online</a>
+        <a href="sourcing.html" class="nav-link">Our Sourcing</a>
+        <a href="loyalty.html" class="nav-link">Loyalty</a>
+        <a href="pricing.html" class="nav-link">Catering</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button type="button" class="header-tool-btn theme-toggle-btn" aria-label="Toggle Dark/Light Mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <!-- RTL Toggle -->
+        <button type="button" class="header-tool-btn rtl-toggle-btn" aria-label="Layout Direction: LTR (Click for RTL)">
+          <span class="btn-label" style="font-size:0.7rem;font-weight:700;">LTR</span>
+        </button>
+
+        <!-- Shopping Cart Trigger -->
+        <button type="button" class="header-tool-btn cart-toggle-btn" aria-label="Open Shopping Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="badge-count cart-count-badge" style="display:none;">0</span>
+        </button>
+
+        <!-- Order Now CTA Button -->
+        <a href="order.html" class="btn btn-primary btn-sm">
+          <i class="fa-solid fa-fire-burner"></i> Order Online
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button type="button" class="hamburger" aria-label="Open Mobile Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Offcanvas Drawer -->
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <div class="brand-logo" style="font-size:1.3rem;">
+        <div class="logo-icon" style="width:34px;height:34px;font-size:0.9rem;"><i class="fa-solid fa-mug-hot"></i></div>
+        <span>CHAI & CO.</span>
+      </div>
+      <button type="button" class="drawer-close-btn btn-icon" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="drawer-nav-list">
+      <a href="index.html" class="drawer-nav-link active">Home <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="about.html" class="drawer-nav-link">About Us <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="menu.html" class="drawer-nav-link">Our Menu <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="order.html" class="drawer-nav-link" style="color:var(--terracotta);font-weight:700;">Order Online <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="sourcing.html" class="drawer-nav-link">Our Sourcing <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="loyalty.html" class="drawer-nav-link">Chai Rewards <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="pricing.html" class="drawer-nav-link">Catering & Events <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="blog.html" class="drawer-nav-link">Stories & Blog <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="contact.html" class="drawer-nav-link">Contact Us <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="login.html" class="drawer-nav-link">Member Sign In <i class="fa-solid fa-user"></i></a>
+    </div>
+
+    <div class="drawer-footer">
+      <div style="display:flex;gap:10px;">
+        <button type="button" class="btn btn-outline btn-sm theme-toggle-btn" style="flex:1;">
+          <i class="fa-solid fa-moon"></i> Theme
+        </button>
+        <button type="button" class="btn btn-outline btn-sm rtl-toggle-btn" style="flex:1;">
+          <i class="fa-solid fa-right-left"></i> RTL
+        </button>
+      </div>
+      <a href="order.html" class="btn btn-primary" style="width:100%;">Proceed to Order</a>
+    </div>
+  </aside>
+
+  <!-- Global Slide-out Shopping Cart Drawer -->
+  <aside class="cart-drawer" aria-label="Shopping Cart">
+    <div class="cart-header">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <i class="fa-solid fa-bag-shopping" style="color:var(--primary);font-size:1.2rem;"></i>
+        <h3>Your Order (<span class="cart-count-badge">0</span>)</h3>
+      </div>
+      <button type="button" class="cart-close-btn btn-icon" aria-label="Close cart">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="cart-body">
+      <!-- Cart items injected dynamically by components.js -->
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-summary-row">
+        <span>Item Subtotal</span>
+        <span class="cart-subtotal-val">₹0</span>
+      </div>
+      <div class="cart-summary-row">
+        <span>GST & Restaurant Taxes (5%)</span>
+        <span class="cart-tax-val">₹0</span>
+      </div>
+      <div class="cart-summary-row total">
+        <span>Estimated Total</span>
+        <span class="cart-total-val">₹0</span>
+      </div>
+      <button type="button" class="btn btn-primary cart-checkout-btn" style="width:100%;margin-top:16px;">
+        Proceed to Order <i class="fa-solid fa-arrow-right"></i>
+      </button>
+      <p style="text-align:center;font-size:0.75rem;color:var(--text-light);margin-top:10px;">
+        Handcrafted with soul • 100% Satisfaction Guarantee
+      </p>
+    </div>
+  </aside>
+
+  <!-- Backdrop for drawers and modals -->
+  <div class="drawer-backdrop"></div>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+    <!-- 1. HERO SECTION -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content reveal">
+            <span class="tagline-label">
+              <i class="fa-solid fa-seedling"></i> Brewed with Tradition. Served with Soul.
+            </span>
+            <h1 class="hero-headline">
+              A Perfect Cup of <span>Chai,</span> Made Your Way.
+            </h1>
+            <p class="hero-desc">
+              Discover handcrafted chai blends, aromatic single-estate teas, and comforting Indian flavors. Every pot slow-simmered with freshly pounded spices and authentic passion.
+            </p>
+            <div class="hero-buttons">
+              <a href="menu.html" class="btn btn-primary btn-lg">
+                <i class="fa-solid fa-mug-hot"></i> Explore Our Menu
+              </a>
+              <a href="about.html" class="btn btn-primary btn-lg">
+                <i class="fa-solid fa-compass"></i> Visit Our Chai House
+              </a>
+            </div>
+
+            <!-- Social Proof Rating Strip (Clean non-overlay placement) -->
+            <div class="hero-social-proof">
+              <div class="hero-proof-badge">
+                <i class="fa-solid fa-award"></i>
+              </div>
+              <div class="hero-proof-content">
+                <div class="rating-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="hero-proof-text">
+                  <strong>4.9/5 Rating</strong>
+                  <span class="proof-sep">•</span>
+                  <span>From 25,000+ Chai Lovers</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-features">
+              <div class="hero-feature-item">
+                <div class="hero-feature-icon"><i class="fa-solid fa-leaf"></i></div>
+                <div class="hero-feature-text">
+                  <h5>Single-Estate Teas</h5>
+                  <p>Assam & Darjeeling estates</p>
+                </div>
+              </div>
+              <div class="hero-feature-item">
+                <div class="hero-feature-icon"><i class="fa-solid fa-mortar-pestle"></i></div>
+                <div class="hero-feature-text">
+                  <h5>6 Whole Spices</h5>
+                  <p>Crushed fresh per brew</p>
+                </div>
+              </div>
+              <div class="hero-feature-item">
+                <div class="hero-feature-icon"><i class="fa-solid fa-fire"></i></div>
+                <div class="hero-feature-text">
+                  <h5>Always Fresh</h5>
+                  <p>Simmered to order</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="hero-cup-wrapper">
+              <!-- Steam animation -->
+              <div class="steam-container">
+                <div class="steam-pipe"></div>
+                <div class="steam-pipe"></div>
+                <div class="steam-pipe"></div>
+              </div>
+              <img src="assets/images/hero-artisan-chai.jpg"
+                   alt="Authentic artisan Indian masala chai in handcrafted terracotta kulhad with creamy froth, cinnamon quills, cardamom, and vintage brass teapot"
+                   class="hero-cup-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. SIGNATURE CHAI SHOWCASE -->
+    <section class="section section-bg">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="tagline-label"><i class="fa-solid fa-star"></i> Master Blends</span>
+          <h2 class="section-title">Our Signature Chai</h2>
+          <p class="section-description">
+            Four iconic heritage recipes perfected over eight years of culinary craft and thousands of morning tastings.
+          </p>
+        </div>
+
+        <div class="grid grid-4">
+          <!-- 1. Masala Chai -->
+          <div class="chai-card reveal">
+            <div class="chai-card-image">
+              <span class="chai-badge badge-bestseller">Bestseller</span>
+              <button type="button" class="chai-card-fav" data-id="chai-01" aria-label="Add to favorites">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <img src="assets/images/classic-masala-chai.jpg" alt="Classic Masala Chai" loading="lazy">
+            </div>
+            <div class="chai-card-body">
+              <div class="chai-meta">
+                <span class="chai-category">Masala Chai</span>
+                <div class="chai-rating">
+                  <i class="fa-solid fa-star"></i> 4.9 <span class="text-muted">(320)</span>
+                </div>
+              </div>
+              <h4 class="chai-title">Classic Masala Chai</h4>
+              <p class="chai-description">Classic Indian chai with cardamom, ginger, cinnamon, and aromatic spices simmered in whole milk.</p>
+              <div class="chai-card-footer">
+                <div class="chai-footer-top-row">
+                  <div class="chai-price-block">
+                    <span class="chai-price">₹99</span>
+                    <span class="price-tax-label"><i class="fa-solid fa-circle-check"></i> Inclusive of taxes</span>
+                  </div>
+                  <button type="button" class="btn-card-action quick-view-btn" data-id="chai-01" aria-label="Recipe Notes for Classic Masala Chai">
+                    <i class="fa-regular fa-compass"></i> <span>Recipe Notes</span>
+                  </button>
+                </div>
+                <div class="chai-footer-action-row" data-product-id="chai-01">
+                  <button type="button" class="btn-card-action btn-add-cart add-cart-btn" data-id="chai-01" aria-label="Add Classic Masala Chai to order" title="Add to Order">
+                    <i class="fa-solid fa-plus"></i> <span>Add to Order</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Ginger Chai -->
+          <div class="chai-card reveal">
+            <div class="chai-card-image">
+              <span class="chai-badge">Fresh Root</span>
+              <button type="button" class="chai-card-fav" data-id="chai-02" aria-label="Add to favorites">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <img src="assets/images/adrak-elaichi-chai.jpg" alt="Adrak Ginger Chai" loading="lazy">
+            </div>
+            <div class="chai-card-body">
+              <div class="chai-meta">
+                <span class="chai-category">Masala Chai</span>
+                <div class="chai-rating">
+                  <i class="fa-solid fa-star"></i> 4.8 <span class="text-muted">(215)</span>
+                </div>
+              </div>
+              <h4 class="chai-title">Ginger (Adrak) Chai</h4>
+              <p class="chai-description">Fresh fiery ginger root crushed and blended with rich black estate tea, warm milk, and pure cane sweetness.</p>
+              <div class="chai-card-footer">
+                <div class="chai-footer-top-row">
+                  <div class="chai-price-block">
+                    <span class="chai-price">₹119</span>
+                    <span class="price-tax-label"><i class="fa-solid fa-circle-check"></i> Inclusive of taxes</span>
+                  </div>
+                  <button type="button" class="btn-card-action quick-view-btn" data-id="chai-02" aria-label="Recipe Notes for Ginger (Adrak) Chai">
+                    <i class="fa-regular fa-compass"></i> <span>Recipe Notes</span>
+                  </button>
+                </div>
+                <div class="chai-footer-action-row" data-product-id="chai-02">
+                  <button type="button" class="btn-card-action btn-add-cart add-cart-btn" data-id="chai-02" aria-label="Add Ginger (Adrak) Chai to order" title="Add to Order">
+                    <i class="fa-solid fa-plus"></i> <span>Add to Order</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Cardamom Chai -->
+          <div class="chai-card reveal">
+            <div class="chai-card-image">
+              <span class="chai-badge">Aromatic</span>
+              <button type="button" class="chai-card-fav" data-id="chai-03" aria-label="Add to favorites">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <img src="assets/images/cardamom-royale-chai.jpg" alt="Cardamom Royale Chai" loading="lazy">
+            </div>
+            <div class="chai-card-body">
+              <div class="chai-meta">
+                <span class="chai-category">Masala Chai</span>
+                <div class="chai-rating">
+                  <i class="fa-solid fa-star"></i> 4.9 <span class="text-muted">(180)</span>
+                </div>
+              </div>
+              <h4 class="chai-title">Cardamom Royale</h4>
+              <p class="chai-description">Smooth and silky chai infused with fragrant green Idukki cardamom pods and sweet honey undertones.</p>
+              <div class="chai-card-footer">
+                <div class="chai-footer-top-row">
+                  <div class="chai-price-block">
+                    <span class="chai-price">₹129</span>
+                    <span class="price-tax-label"><i class="fa-solid fa-circle-check"></i> Inclusive of taxes</span>
+                  </div>
+                  <button type="button" class="btn-card-action quick-view-btn" data-id="chai-03" aria-label="Recipe Notes for Cardamom Royale">
+                    <i class="fa-regular fa-compass"></i> <span>Recipe Notes</span>
+                  </button>
+                </div>
+                <div class="chai-footer-action-row" data-product-id="chai-03">
+                  <button type="button" class="btn-card-action btn-add-cart add-cart-btn" data-id="chai-03" aria-label="Add Cardamom Royale to order" title="Add to Order">
+                    <i class="fa-solid fa-plus"></i> <span>Add to Order</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Kashmiri Kahwa -->
+          <div class="chai-card reveal">
+            <div class="chai-card-image">
+              <span class="chai-badge badge-bestseller">Chef's Special</span>
+              <button type="button" class="chai-card-fav" data-id="chai-05" aria-label="Add to favorites">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <img src="assets/images/royal-kashmiri-kahwa.jpg" alt="Royal Kashmiri Kahwa" loading="lazy">
+            </div>
+            <div class="chai-card-body">
+              <div class="chai-meta">
+                <span class="chai-category">Specialty Tea</span>
+                <div class="chai-rating">
+                  <i class="fa-solid fa-star"></i> 5.0 <span class="text-muted">(142)</span>
+                </div>
+              </div>
+              <h4 class="chai-title">Kashmiri Kahwa</h4>
+              <p class="chai-description">Aromatic green tea infused with pure saffron strands, slivered almonds, cinnamon quill, and wild honey.</p>
+              <div class="chai-card-footer">
+                <div class="chai-footer-top-row">
+                  <div class="chai-price-block">
+                    <span class="chai-price">₹189</span>
+                    <span class="price-tax-label"><i class="fa-solid fa-circle-check"></i> Inclusive of taxes</span>
+                  </div>
+                  <button type="button" class="btn-card-action quick-view-btn" data-id="chai-05" aria-label="Recipe Notes for Kashmiri Kahwa">
+                    <i class="fa-regular fa-compass"></i> <span>Recipe Notes</span>
+                  </button>
+                </div>
+                <div class="chai-footer-action-row" data-product-id="chai-05">
+                  <button type="button" class="btn-card-action btn-add-cart add-cart-btn" data-id="chai-05" aria-label="Add Kashmiri Kahwa to order" title="Add to Order">
+                    <i class="fa-solid fa-plus"></i> <span>Add to Order</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. WHY CHAI & CO. -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="tagline-label"><i class="fa-solid fa-sparkles"></i> The Chai & Co. Promise</span>
+          <h2 class="section-title">Why Chai & Co. Is Different</h2>
+          <p class="section-description">
+            We honor the centuries-old legacy of the Indian tea stall while elevating every sip with artisan sourcing and culinary reverence.
+          </p>
+        </div>
+
+        <div class="grid grid-4">
+          <div class="feature-card reveal">
+            <div class="feature-icon-wrapper">
+              <i class="fa-solid fa-hands-holding-circle"></i>
+            </div>
+            <h4 class="feature-title">Handcrafted</h4>
+            <p class="feature-desc">Every single cup is individually prepared with care, precision, and heartfelt hospitality.</p>
+          </div>
+
+          <div class="feature-card reveal">
+            <div class="feature-icon-wrapper">
+              <i class="fa-solid fa-gem"></i>
+            </div>
+            <h4 class="feature-title">Premium Ingredients</h4>
+            <p class="feature-desc">Carefully selected high-altitude tea leaves and organic spices straight from smallholder family farms.</p>
+          </div>
+
+          <div class="feature-card reveal">
+            <div class="feature-icon-wrapper">
+              <i class="fa-solid fa-scroll"></i>
+            </div>
+            <h4 class="feature-title">Authentic Flavors</h4>
+            <p class="feature-desc">Deeply inspired by traditional Indian family recipes passed down across generations.</p>
+          </div>
+
+          <div class="feature-card reveal">
+            <div class="feature-icon-wrapper">
+              <i class="fa-solid fa-fire-flame-curved"></i>
+            </div>
+            <h4 class="feature-title">Freshly Brewed</h4>
+            <p class="feature-desc">Never pre-batched, powdered, or concentrated. Boiled and pulled fresh to order every time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. ABOUT PREVIEW & STATS -->
+    <section class="section section-bg">
+      <div class="container">
+        <div class="about-preview-grid">
+          <div class="about-single-media reveal">
+            <div class="about-badge-established">
+              <strong>2018</strong>
+              <span>Est. in Jaipur</span>
+            </div>
+            <img src="assets/images/heritage-tradition-chai.jpg" alt="Artisanal Handcrafted Chai in Terracotta Kulhad with Whole Spices in Jaipur Haveli" class="about-single-img" loading="lazy">
+          </div>
+
+          <div class="about-content reveal">
+            <span class="tagline-label"><i class="fa-solid fa-book-open"></i> Our Heritage</span>
+            <h2 class="section-title">More Than Tea. It's a Tradition.</h2>
+            <p style="margin-bottom:16px;">
+              CHAI & CO. was founded with a quiet promise: to rescue chai from syrups and artificial powders, returning it to the slow, soul-stirring ritual that has brought communities together across India for centuries.
+            </p>
+            <p style="margin-bottom:28px;">
+              From the bustling roadside stalls of Kolkata to the serene misty hills of Darjeeling, we source each leaf and spice with deep ethical respect. When you sit in our tea house, you share in a living heritage.
+            </p>
+            <a href="about.html" class="btn btn-primary">
+              Read Our Full Story <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <!-- Animated Stat Counters -->
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-number" data-target="15" data-suffix="+">0</div>
+                <div class="stat-label">Signature Blends</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number" data-target="25" data-suffix="K+">0</div>
+                <div class="stat-label">Happy Guests</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number" data-target="8" data-suffix="+">0</div>
+                <div class="stat-label">Years of Craft</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number" data-target="4.9" data-suffix="/5">0</div>
+                <div class="stat-label">Customer Rating</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. MENU PREVIEW (Interactive Filter) -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="tagline-label"><i class="fa-solid fa-utensils"></i> Fresh from the Stall</span>
+          <h2 class="section-title">Explore Our Artisan Menu</h2>
+          <p class="section-description">
+            Choose from freshly simmered hot chais, cooling iced brews, immunity herbal tisanes, and authentic street snacks.
+          </p>
+        </div>
+
+        <!-- Menu Filter Tabs -->
+        <div class="menu-controls reveal" style="justify-content:center;">
+          <div class="menu-filter-tabs">
+            <button type="button" class="filter-btn active" data-category="All">All Items <span class="tab-count">22</span></button>
+            <button type="button" class="filter-btn" data-category="Masala Chai">Masala Chai <span class="tab-count">4</span></button>
+            <button type="button" class="filter-btn" data-category="Herbal Tea">Herbal Tea <span class="tab-count">3</span></button>
+            <button type="button" class="filter-btn" data-category="Iced Tea">Iced Tea <span class="tab-count">3</span></button>
+            <button type="button" class="filter-btn" data-category="Coffee">Coffee <span class="tab-count">2</span></button>
+            <button type="button" class="filter-btn" data-category="Snacks">Snacks <span class="tab-count">4</span></button>
+            <button type="button" class="filter-btn" data-category="Desserts">Desserts <span class="tab-count">2</span></button>
+          </div>
+        </div>
+
+        <!-- Grid populated dynamically by menu.js -->
+        <div class="grid grid-3" id="home-menu-grid">
+          <!-- Cards injected via menu.js -->
+        </div>
+
+        <div style="text-align:center;margin-top:48px;" class="reveal">
+          <a href="menu.html" class="btn btn-outline btn-lg">
+            View Complete Interactive Menu (16+ Items) <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. SOURCING TIMELINE PREVIEW -->
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="tagline-label" style="background:rgba(214,168,95,0.2);color:var(--accent);">
+            <i class="fa-solid fa-mountain-sun"></i> Traceable & Ethical
+          </span>
+          <h2 class="section-title" style="color:#fff;">From the Tea Garden to Your Cup</h2>
+          <p class="section-description" style="color:rgba(255,255,255,0.85);">
+            We travel thousands of kilometers across Assam, Darjeeling, and Kerala to ensure every leaf and spice supports regenerative farming and equitable wages.
+          </p>
+        </div>
+
+        <div class="timeline-process reveal">
+          <div class="timeline-step">
+            <div class="timeline-step-number">01</div>
+            <h4 class="timeline-step-title" style="color:#fff;">Select</h4>
+            <p class="timeline-step-desc" style="color:rgba(255,255,255,0.7);">We visit estates to hand-taste early harvest leaves.</p>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-step-number">02</div>
+            <h4 class="timeline-step-title" style="color:#fff;">Source</h4>
+            <p class="timeline-step-desc" style="color:rgba(255,255,255,0.7);">Fair-trade partnerships with organic smallholders.</p>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-step-number">03</div>
+            <h4 class="timeline-step-title" style="color:#fff;">Blend</h4>
+            <p class="timeline-step-desc" style="color:rgba(255,255,255,0.7);">Crushed pod cardamom and ginger ratios calibrated daily.</p>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-step-number">04</div>
+            <h4 class="timeline-step-title" style="color:#fff;">Brew</h4>
+            <p class="timeline-step-desc" style="color:rgba(255,255,255,0.7);">Slow rolling simmer in authentic Indian vessels.</p>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-step-number">05</div>
+            <h4 class="timeline-step-title" style="color:#fff;">Serve</h4>
+            <p class="timeline-step-desc" style="color:rgba(255,255,255,0.7);">Poured aerated into earthen clay cups with warm smiles.</p>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:40px;" class="reveal">
+          <a href="sourcing.html" class="btn btn-outline-white">
+            Explore Our 6 Sacred Spices & Estates <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. TESTIMONIALS -->
+    <section class="section section-bg">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="tagline-label"><i class="fa-solid fa-heart"></i> Community Voices</span>
+          <h2 class="section-title">Loved by Chai Connoisseurs</h2>
+          <p class="section-description">Read what tea enthusiasts, food critics, and everyday travelers say about our brew.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="testimonial-card reveal">
+            <div>
+              <div class="testimonial-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-quote">
+                "The Kashmiri Kahwa took me right back to the valleys of Srinagar. Genuine saffron aroma, rich toasted almonds, and impeccable warmth."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Rohit Malhotra" class="author-avatar" loading="lazy">
+              <div class="author-info">
+                <h5>Rohit Malhotra</h5>
+                <span>Food & Travel Writer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal">
+            <div>
+              <div class="testimonial-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-quote">
+                "As someone raised in Mumbai, authentic ginger chai is almost impossible to find in modern cafes. Chai & Co. nailed the real ginger kick and creaminess!"
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Ananya Sharma" class="author-avatar" loading="lazy">
+              <div class="author-info">
+                <h5>Ananya Sharma</h5>
+                <span>Architect & Chai Devotee</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal">
+            <div>
+              <div class="testimonial-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-quote">
+                "Their Bun Maska paired with Cardamom Royale is the ultimate comfort ritual. The atmosphere feels deeply nostalgic yet gorgeously modern."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&q=80" alt="Devika Nair" class="author-avatar" loading="lazy">
+              <div class="author-info">
+                <h5>Devika Nair</h5>
+                <span>Tea Sommelier</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. INSTAGRAM / COMMUNITY GALLERY -->
+    <section class="section brew-journey-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="tagline-label"><i class="fa-brands fa-instagram"></i> @ChaiAndCoOfficial</span>
+          <h2 class="section-title">Follow the Brew Journey</h2>
+          <p class="section-description">Tag us in your daily chai rituals with #ChaiAndCo to be featured on our community board.</p>
+        </div>
+
+        <div class="brew-gallery-grid reveal">
+          <!-- 1. Masala Chai -->
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="brew-gallery-card" aria-label="View Masala Chai on Instagram">
+            <img src="assets/images/classic-masala-chai.jpg" alt="Heirloom Masala Chai in terracotta kulhad" loading="lazy">
+            <div class="brew-gallery-overlay">
+              <span class="brew-insta-badge"><i class="fa-brands fa-instagram"></i></span>
+              <div class="brew-gallery-info">
+                <span class="brew-tag">#ArtisanChai</span>
+                <p class="brew-caption">Simmered in copper degchis with hand-crushed cinnamon & cardamom.</p>
+                <div class="brew-metrics">
+                  <span><i class="fa-solid fa-heart"></i> 1.8k</span>
+                  <span><i class="fa-solid fa-comment"></i> 124</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- 2. Chai Craft Pour -->
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="brew-gallery-card" aria-label="View Chai Pouring Craft on Instagram">
+            <img src="assets/images/about-chai-craft.jpg" alt="Vintage copper kettle pour into kulhad" loading="lazy">
+            <div class="brew-gallery-overlay">
+              <span class="brew-insta-badge"><i class="fa-brands fa-instagram"></i></span>
+              <div class="brew-gallery-info">
+                <span class="brew-tag">#KulhadRitual</span>
+                <p class="brew-caption">Aerated three times from height for signature velvety froth.</p>
+                <div class="brew-metrics">
+                  <span><i class="fa-solid fa-heart"></i> 2.4k</span>
+                  <span><i class="fa-solid fa-comment"></i> 188</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- 3. Kashmiri Kahwa -->
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="brew-gallery-card" aria-label="View Royal Kashmiri Kahwa on Instagram">
+            <img src="assets/images/royal-kashmiri-kahwa.jpg" alt="Royal Kashmiri Kahwa in brass samovar" loading="lazy">
+            <div class="brew-gallery-overlay">
+              <span class="brew-insta-badge"><i class="fa-brands fa-instagram"></i></span>
+              <div class="brew-gallery-info">
+                <span class="brew-tag">#PamporeSaffron</span>
+                <p class="brew-caption">Pure saffron strands infused with roasted almond slivers.</p>
+                <div class="brew-metrics">
+                  <span><i class="fa-solid fa-heart"></i> 3.1k</span>
+                  <span><i class="fa-solid fa-comment"></i> 210</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- 4. Artisanal Pairing -->
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="brew-gallery-card" aria-label="View Golden Paneer Tikka Puff on Instagram">
+            <img src="assets/images/paneer-tikka-puff.jpg" alt="Fresh baked flaky paneer tikka puff" loading="lazy">
+            <div class="brew-gallery-overlay">
+              <span class="brew-insta-badge"><i class="fa-brands fa-instagram"></i></span>
+              <div class="brew-gallery-info">
+                <span class="brew-tag">#BakehouseSpecials</span>
+                <p class="brew-caption">Golden flaky puff pastry paired with fresh mint coriander chutney.</p>
+                <div class="brew-metrics">
+                  <span><i class="fa-solid fa-heart"></i> 1.5k</span>
+                  <span><i class="fa-solid fa-comment"></i> 96</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- 5. Spiced Mango Cold Brew -->
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="brew-gallery-card" aria-label="View Cold Mango Brew on Instagram">
+            <img src="assets/images/spiced-mango-iced-chai.jpg" alt="Tropical Spiced Mango Cold Brew" loading="lazy">
+            <div class="brew-gallery-overlay">
+              <span class="brew-insta-badge"><i class="fa-brands fa-instagram"></i></span>
+              <div class="brew-gallery-info">
+                <span class="brew-tag">#SummerChai</span>
+                <p class="brew-caption">Steeped 16 hours cold with Alphonso mango pulp & garden mint.</p>
+                <div class="brew-metrics">
+                  <span><i class="fa-solid fa-heart"></i> 1.9k</span>
+                  <span><i class="fa-solid fa-comment"></i> 143</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- 6. Heritage Jaipur Haveli -->
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="brew-gallery-card" aria-label="View Haveli Tea Lounge on Instagram">
+            <img src="assets/images/about-haveli-heritage.jpg" alt="Heritage Jaipur Haveli tea room ambience" loading="lazy">
+            <div class="brew-gallery-overlay">
+              <span class="brew-insta-badge"><i class="fa-brands fa-instagram"></i></span>
+              <div class="brew-gallery-info">
+                <span class="brew-tag">#JaipurHaveli</span>
+                <p class="brew-caption">Carved archways, copper vessels, and warm Jaipur hospitality.</p>
+                <div class="brew-metrics">
+                  <span><i class="fa-solid fa-heart"></i> 4.2k</span>
+                  <span><i class="fa-solid fa-comment"></i> 305</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="brew-gallery-action reveal" style="text-align:center;margin-top:36px;">
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="btn btn-outline" style="gap:10px;">
+            <i class="fa-brands fa-instagram" style="font-size:1.1rem;color:var(--terracotta);"></i> Follow Us @ChaiAndCoOfficial
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. NEWSLETTER BANNER -->
+    <section class="section-sm newsletter-banner-section">
+      <div class="container">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;" class="reveal">
+          <div>
+            <span class="tagline-label" style="margin-bottom:8px;">
+              <i class="fa-solid fa-envelope-open-text"></i> Chai Letters
+            </span>
+            <h3 style="margin-bottom:6px;">Get Fresh Chai Stories & 10% Off Your First Order</h3>
+            <p class="text-muted" style="margin:0;">Join 40,000+ tea lovers who read our weekly brewing chronicles.</p>
+          </div>
+          <form class="newsletter-form" style="display:flex;gap:8px;max-width:440px;width:100%;">
+            <input type="email" placeholder="Enter your email address..." class="form-control" required style="border-radius:var(--radius-pill);">
+            <button type="submit" class="btn btn-primary" style="flex-shrink:0;">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MULTI-COLUMN GLOBAL FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo" style="color:#fff;margin-bottom:14px;">
+            <div class="logo-icon" style="background:rgba(214,168,95,0.2);color:var(--accent);"><i class="fa-solid fa-mug-hot"></i></div>
+            <span>CHAI & CO.</span>
+          </div>
+          <p>
+            Brewed with Tradition. Served with Soul. Bringing authentic Indian chai culture to the modern café aesthetic since 2018.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://x.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Our House</a></li>
+            <li><a href="menu.html">Artisan Menu</a></li>
+            <li><a href="order.html">Order Online</a></li>
+            <li><a href="sourcing.html">Our Sourcing</a></li>
+            <li><a href="loyalty.html">Chai Rewards</a></li>
+            <li><a href="pricing.html">Event Catering</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Information</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html">Chai Chronicles</a></li>
+            <li><a href="contact.html">Find a Stall</a></li>
+            <li><a href="login.html">Member Sign In</a></li>
+            <li><a href="register.html">Join Rewards</a></li>
+            <li><a href="coming-soon.html">New Locations</a></li>
+            <li><a href="maintenance.html">System Status</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter-box">
+          <h4 class="footer-title">Visit Us</h4>
+          <p>
+            <i class="fa-solid fa-location-dot" style="color:var(--accent);margin-right:8px;"></i>
+            42 Heritage Haveli Way, C-Scheme, Jaipur, RJ 302001
+          </p>
+          <p>
+            <i class="fa-solid fa-phone" style="color:var(--accent);margin-right:8px;"></i>
+            +91 98290 12345
+          </p>
+          <p>
+            <i class="fa-solid fa-clock" style="color:var(--accent);margin-right:8px;"></i>
+            Open Daily: 7:00 AM – 11:30 PM
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 CHAI & CO. All Rights Reserved. Crafted with authentic passion.
+        </div>
+        <div style="display:flex;gap:20px;">
+          <a href="privacy.html" style="color:#8c7d70;">Privacy Policy</a>
+          <a href="terms.html" style="color:#8c7d70;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Floating Button -->
+  <button type="button" class="back-to-top" aria-label="Scroll back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Cookie Consent Banner -->
+  <div class="cookie-banner" role="dialog" aria-label="Cookie Preferences">
+    <div class="cookie-content">
+      <div class="cookie-icon-box">
+        <i class="fa-solid fa-cookie-bite"></i>
+      </div>
+      <div class="cookie-text">
+        <strong>We respect your brew</strong>
+        <p>We use essential cookies to remember your favorite artisan teas and craft a seamless ordering experience.</p>
+      </div>
+    </div>
+    <div class="cookie-actions">
+      <button type="button" class="btn-cookie-decline" id="cookie-decline">Decline</button>
+      <button type="button" class="btn-cookie-accept" id="cookie-accept"><i class="fa-solid fa-check"></i> Accept All</button>
+      <button type="button" class="cookie-close-btn" id="cookie-close" aria-label="Dismiss cookie notice"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container"></div>
+
+  <!-- Vanilla JavaScript Modules -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/forms.js"></script>
+</body>
+</html>

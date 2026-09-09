@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Online & Checkout — CHAI & CO. | Handcrafted Artisan Tea</title>
+  <meta name="description" content="Proceed to order from CHAI & CO. Choose dine-in table service, express home delivery, or self-pickup with secure online payments.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="Chai & Co. Homepage">
+        <div class="logo-icon"><i class="fa-solid fa-mug-hot"></i></div>
+        <span>CHAI & CO.</span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="order.html" class="nav-link active" style="color:var(--terracotta);font-weight:700;"><i class="fa-solid fa-bag-shopping"></i> Order Online</a>
+        <a href="sourcing.html" class="nav-link">Our Sourcing</a>
+        <a href="loyalty.html" class="nav-link">Loyalty</a>
+        <a href="pricing.html" class="nav-link">Catering</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="header-tool-btn theme-toggle-btn" aria-label="Toggle Dark/Light Mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button type="button" class="header-tool-btn rtl-toggle-btn" aria-label="Layout Direction: LTR (Click for RTL)">
+          <span class="btn-label" style="font-size:0.7rem;font-weight:700;">LTR</span>
+        </button>
+        <button type="button" class="header-tool-btn cart-toggle-btn" aria-label="Open Shopping Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="badge-count cart-count-badge" style="display:none;">0</span>
+        </button>
+        <button type="button" class="hamburger" aria-label="Open Mobile Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Drawer -->
+  <aside class="mobile-nav-drawer">
+    <div class="drawer-header">
+      <div class="brand-logo" style="font-size:1.3rem;">
+        <div class="logo-icon" style="width:34px;height:34px;font-size:0.9rem;"><i class="fa-solid fa-mug-hot"></i></div>
+        <span>CHAI & CO.</span>
+      </div>
+      <button type="button" class="drawer-close-btn btn-icon"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="drawer-nav-list">
+      <a href="index.html" class="drawer-nav-link">Home <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="menu.html" class="drawer-nav-link">Our Menu <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="order.html" class="drawer-nav-link active">Order Online <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="sourcing.html" class="drawer-nav-link">Our Sourcing <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="loyalty.html" class="drawer-nav-link">Loyalty & Rewards <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="contact.html" class="drawer-nav-link">Contact Us <i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+  </aside>
+
+  <!-- Cart Drawer -->
+  <aside class="cart-drawer" aria-label="Shopping Cart">
+    <div class="cart-header">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <i class="fa-solid fa-bag-shopping" style="color:var(--primary);font-size:1.2rem;"></i>
+        <h3>Your Order (<span class="cart-count-badge">0</span>)</h3>
+      </div>
+      <button type="button" class="cart-close-btn btn-icon"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cart-body"></div>
+    <div class="cart-footer">
+      <div class="cart-summary-row"><span>Item Subtotal</span><span class="cart-subtotal-val">₹0</span></div>
+      <div class="cart-summary-row"><span>GST Taxes (5%)</span><span class="cart-tax-val">₹0</span></div>
+      <div class="cart-summary-row total"><span>Total</span><span class="cart-total-val">₹0</span></div>
+      <button type="button" class="btn btn-primary cart-checkout-btn" style="width:100%;margin-top:16px;">
+        Proceed to Order <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </aside>
+
+  <div class="drawer-backdrop"></div>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+    <!-- Page Hero Banner -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="tagline-label"><i class="fa-solid fa-receipt"></i> Fresh & Direct</span>
+        <h1 class="page-hero-title">Proceed to Order</h1>
+        <p class="page-hero-subtitle" style="max-width:580px;margin:12px auto 0;font-size:1.05rem;color:var(--text-muted);line-height:1.65;text-align:center;">
+          Review your handcrafted brews, choose dine-in table or delivery, and complete your order with ease.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Checkout Section -->
+    <section class="section" style="padding-top:20px;">
+      <div class="container">
+
+        <!-- EMPTY STATE (shown if cart has no items) -->
+        <div id="order-empty-state" style="display:none;text-align:center;padding:50px 20px;background:var(--bg-surface);border-radius:var(--radius-xl);border:1px dashed var(--border);max-width:700px;margin:0 auto 40px;">
+          <div style="width:84px;height:84px;border-radius:50%;background:var(--primary-light);color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:2.5rem;margin:0 auto 20px;">
+            <i class="fa-solid fa-mug-hot"></i>
+          </div>
+          <h2 style="font-size:1.8rem;margin-bottom:8px;">Your Chai Tray is Currently Empty</h2>
+          <p class="text-muted" style="max-width:440px;margin:0 auto 24px;font-size:0.95rem;">
+            You haven't selected any artisanal blends or snacks yet. Pick from our chef recommendations below or explore the full interactive menu!
+          </p>
+          <a href="menu.html" class="btn btn-primary btn-lg" style="margin-bottom:32px;">
+            <i class="fa-solid fa-book-open"></i> Browse Full Artisan Menu (22+ Blends)
+          </a>
+
+          <!-- Quick 1-Click Add Recommendations -->
+          <div style="text-align:left;border-top:1px solid var(--border);padding-top:24px;">
+            <h4 style="font-size:1rem;margin-bottom:14px;color:var(--text-main);"><i class="fa-solid fa-fire" style="color:var(--terracotta);margin-right:6px;"></i> Quick Add Bestsellers:</h4>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(190px, 1fr));gap:12px;" id="empty-state-recs">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+        </div>
+
+        <!-- ACTIVE CHECKOUT CONTENT -->
+        <div id="order-checkout-container" class="order-layout-grid">
+          <!-- LEFT COLUMN: Forms & Options -->
+          <div class="order-forms-column">
+            
+            <!-- 1. Fulfillment Type Selector -->
+            <div class="order-card">
+              <div class="order-card-title">
+                <i class="fa-solid fa-bell-concierge"></i>
+                <span>1. Choose Order Type</span>
+              </div>
+
+              <div class="fulfillment-switcher">
+                <div class="fulfillment-btn active" data-type="delivery">
+                  <i class="fa-solid fa-motorcycle"></i>
+                  <span class="btn-title">Express Delivery</span>
+                  <span class="btn-subtitle">30 - 45 mins • Hot Pack</span>
+                </div>
+                <div class="fulfillment-btn" data-type="dine-in">
+                  <i class="fa-solid fa-mug-saucer"></i>
+                  <span class="btn-title">Dine-In Table</span>
+                  <span class="btn-subtitle">Table Service at Stall</span>
+                </div>
+                <div class="fulfillment-btn" data-type="pickup">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  <span class="btn-title">Store Pickup</span>
+                  <span class="btn-subtitle">Ready in 15 mins</span>
+                </div>
+              </div>
+
+              <!-- DINE-IN TABLE SELECTION (Hidden by default) -->
+              <div id="fulfillment-dine-in-box" style="display:none;background:var(--bg-surface-soft);padding:16px;border-radius:var(--radius-md);margin-bottom:14px;border:1px solid var(--border);">
+                <label style="font-weight:700;font-size:0.85rem;color:var(--text-main);display:block;margin-bottom:8px;">
+                  <i class="fa-solid fa-chair" style="color:var(--primary);margin-right:6px;"></i> Select Your Table Number:
+                </label>
+                <div class="table-selector-grid">
+                  <div class="table-pill active" data-table="Table 1">T-1</div>
+                  <div class="table-pill" data-table="Table 2">T-2</div>
+                  <div class="table-pill" data-table="Table 3">T-3</div>
+                  <div class="table-pill" data-table="Table 4">T-4</div>
+                  <div class="table-pill" data-table="Table 5">T-5</div>
+                  <div class="table-pill" data-table="Table 6">T-6</div>
+                  <div class="table-pill" data-table="Table 7">T-7</div>
+                  <div class="table-pill" data-table="Table 8">T-8</div>
+                  <div class="table-pill" data-table="Table 9">T-9</div>
+                  <div class="table-pill" data-table="Table 10">T-10</div>
+                  <div class="table-pill" data-table="Table 11">T-11</div>
+                  <div class="table-pill" data-table="Table 12">T-12</div>
+                </div>
+                <input type="hidden" id="selected-table-val" value="Table 1">
+              </div>
+
+              <!-- DELIVERY ADDRESS (Shown by default) -->
+              <div id="fulfillment-delivery-box">
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;">
+                  <div class="form-group" style="margin-bottom:0;">
+                    <label class="form-label" for="delivery-pincode">Pincode *</label>
+                    <input type="text" id="delivery-pincode" class="form-control" placeholder="e.g. 302001" value="302001" required>
+                  </div>
+                  <div class="form-group" style="margin-bottom:0;">
+                    <label class="form-label" for="delivery-area">Area / Locality *</label>
+                    <input type="text" id="delivery-area" class="form-control" placeholder="e.g. C-Scheme / Civil Lines" value="C-Scheme, Ashok Nagar" required>
+                  </div>
+                </div>
+                <div class="form-group" style="margin-bottom:0;">
+                  <label class="form-label" for="delivery-address">Street Address, Flat / House No. *</label>
+                  <input type="text" id="delivery-address" class="form-control" placeholder="Flat / House No., Building Name, Street" value="Flat 402, Royal Palms Residency" required>
+                </div>
+              </div>
+
+              <!-- PICKUP SLOT (Hidden by default) -->
+              <div id="fulfillment-pickup-box" style="display:none;background:var(--bg-surface-soft);padding:16px;border-radius:var(--radius-md);border:1px solid var(--border);">
+                <label class="form-label" for="pickup-time-select">Estimated Pickup Time Slot:</label>
+                <select id="pickup-time-select" class="form-control">
+                  <option value="In 15 Minutes">In 15 Minutes (Fastest)</option>
+                  <option value="In 30 Minutes">In 30 Minutes</option>
+                  <option value="In 45 Minutes">In 45 Minutes</option>
+                  <option value="In 1 Hour">In 1 Hour</option>
+                </select>
+                <div style="font-size:0.8rem;color:var(--text-muted);margin-top:8px;">
+                  <i class="fa-solid fa-location-dot" style="color:var(--primary);margin-right:4px;"></i> Pickup at: CHAI & CO. Artisan Tea Stall, MI Road, Jaipur
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Customer Information -->
+            <div class="order-card">
+              <div class="order-card-title">
+                <i class="fa-solid fa-user-check"></i>
+                <span>2. Customer Details</span>
+              </div>
+
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;">
+                <div class="form-group" style="margin-bottom:0;">
+                  <label class="form-label" for="cust-name">Full Name *</label>
+                  <input type="text" id="cust-name" class="form-control" placeholder="e.g. Aarav Sharma" value="Aarav Sharma" required>
+                </div>
+                <div class="form-group" style="margin-bottom:0;">
+                  <label class="form-label" for="cust-phone">WhatsApp / Mobile Number *</label>
+                  <input type="tel" id="cust-phone" class="form-control" placeholder="+91 98290 XXXXX" value="+91 98290 12345" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="cust-email">Email Address (for digital receipt)</label>
+                <input type="email" id="cust-email" class="form-control" placeholder="aarav@example.com" value="aarav@example.com">
+              </div>
+
+              <div class="form-group" style="margin-bottom:0;">
+                <label class="form-label" for="cust-notes">Special Brewing & Preparation Instructions</label>
+                <textarea id="cust-notes" class="form-control" rows="2" placeholder="e.g. Brew extra strong, less sugar in chai, extra mint chutney with samosas..."></textarea>
+              </div>
+            </div>
+
+            <!-- 3. Payment Method -->
+            <div class="order-card">
+              <div class="order-card-title">
+                <i class="fa-solid fa-credit-card"></i>
+                <span>3. Payment Method</span>
+              </div>
+
+              <div class="payment-method-selector">
+                <!-- UPI Option -->
+                <label class="payment-option-label active" data-method="upi">
+                  <div style="display:flex;align-items:center;gap:12px;">
+                    <input type="radio" name="payment-method" value="upi" checked>
+                    <div>
+                      <strong>Instant UPI / QR Code</strong>
+                      <div class="text-muted" style="font-size:0.75rem;">Google Pay, PhonePe, Paytm, BHIM</div>
+                    </div>
+                  </div>
+                  <div style="display:flex;gap:6px;font-size:1.1rem;color:var(--primary);">
+                    <i class="fa-brands fa-google-pay"></i>
+                    <i class="fa-solid fa-qrcode"></i>
+                  </div>
+                </label>
+
+                <div id="payment-upi-box" class="payment-details-box active">
+                  <div class="upi-qr-card">
+                    <div style="font-weight:700;font-size:0.8rem;color:var(--primary);margin-bottom:6px;">Scan to Pay via Any UPI App</div>
+                    <!-- Mock QR code generated dynamically or via SVG -->
+                    <div style="background:#fff;padding:8px;display:inline-block;border:2px solid #000;border-radius:8px;">
+                      <svg width="150" height="150" viewBox="0 0 100 100" fill="#000">
+                        <path d="M0 0h30v30H0zm5 5h20v20H5zm5 5h10v10H10zm60-10h30v30H70zm5 5h20v20H75zm5 5h10v10H80zM0 70h30v30H0zm5 5h20v20H5zm5 5h10v10H10zm35-70h10v10H45zm15 15h10v10H60zm-15 15h10v10H45zm15 15h10v10H60zm-30 0h10v10H30zm0 15h10v10H30zm15 0h10v10H45zm30-15h10v10H75zm15 0h10v10H90zm-15 15h10v10H75zm0 15h10v10H75zm15 0h10v10H90zm-45 0h10v10H45zm15 0h10v10H60zm-15 15h10v10H45zm15 0h10v10H60z"/>
+                      </svg>
+                    </div>
+                    <div style="font-family:monospace;font-size:0.75rem;font-weight:700;margin-top:8px;color:#2b2118;">UPI ID: chaiandco@icici</div>
+                    <div style="font-size:0.7rem;color:var(--text-muted);margin-top:2px;">Verified Merchant • CHAI & CO. JAIPUR</div>
+                  </div>
+                </div>
+
+                <!-- Cash on Delivery / Counter -->
+                <label class="payment-option-label" data-method="cash">
+                  <div style="display:flex;align-items:center;gap:12px;">
+                    <input type="radio" name="payment-method" value="cash">
+                    <div>
+                      <strong>Cash on Delivery / Pay at Counter</strong>
+                      <div class="text-muted" style="font-size:0.75rem;">Pay exact cash or swipe card upon receipt</div>
+                    </div>
+                  </div>
+                  <i class="fa-solid fa-money-bill-wave" style="color:var(--secondary);font-size:1.2rem;"></i>
+                </label>
+
+                <!-- Cards -->
+                <label class="payment-option-label" data-method="card">
+                  <div style="display:flex;align-items:center;gap:12px;">
+                    <input type="radio" name="payment-method" value="card">
+                    <div>
+                      <strong>Credit / Debit Card</strong>
+                      <div class="text-muted" style="font-size:0.75rem;">Visa, MasterCard, RuPay, Amex</div>
+                    </div>
+                  </div>
+                  <div style="display:flex;gap:6px;font-size:1.1rem;color:var(--text-muted);">
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                  </div>
+                </label>
+
+                <div id="payment-card-box" class="payment-details-box">
+                  <div class="form-group">
+                    <label class="form-label">Card Number</label>
+                    <input type="text" class="form-control" placeholder="4111 2222 3333 4444" maxlength="19">
+                  </div>
+                  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                    <div class="form-group" style="margin-bottom:0;">
+                      <label class="form-label">Valid Thru</label>
+                      <input type="text" class="form-control" placeholder="MM/YY" maxlength="5">
+                    </div>
+                    <div class="form-group" style="margin-bottom:0;">
+                      <label class="form-label">CVV</label>
+                      <input type="password" class="form-control" placeholder="•••" maxlength="4">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- RIGHT COLUMN: Order Summary Sticky Panel -->
+          <div class="order-summary-column">
+            <div class="order-summary-panel">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;border-bottom:1px solid var(--border-subtle);padding-bottom:10px;">
+                <h3 style="font-size:1.2rem;margin:0;">Order Tray (<span id="summary-items-count">0</span>)</h3>
+                <a href="menu.html" class="btn btn-primary btn-sm btn-add-items" style="font-size:0.75rem;padding:6px 14px;font-weight:700;">+ Add Items</a>
+              </div>
+
+              <!-- List of items in cart -->
+              <div class="order-items-list" id="checkout-items-list">
+                <!-- Injected via JavaScript -->
+              </div>
+
+              <!-- Coupon Code -->
+              <div class="coupon-box">
+                <input type="text" id="coupon-code-input" class="form-control" placeholder="Enter coupon code (e.g. CHAI10)" style="text-transform:uppercase;font-size:0.85rem;">
+                <button type="button" id="apply-coupon-btn" class="btn btn-primary btn-sm" style="white-space:nowrap;font-weight:700;padding:8px 20px;">Apply</button>
+              </div>
+              <div id="coupon-feedback" style="font-size:0.75rem;margin-top:-10px;margin-bottom:12px;display:none;"></div>
+
+              <!-- Bill Breakdown -->
+              <div class="bill-breakdown-row">
+                <span>Items Subtotal:</span>
+                <strong id="bill-subtotal">₹0</strong>
+              </div>
+              <div class="bill-breakdown-row">
+                <span>GST Tax (5%):</span>
+                <span id="bill-tax">₹0</span>
+              </div>
+              <div class="bill-breakdown-row">
+                <span>Fulfillment Fee:</span>
+                <span id="bill-delivery" style="color:var(--success);font-weight:600;">FREE</span>
+              </div>
+              <div class="bill-breakdown-row" id="bill-discount-row" style="display:none;color:var(--success);">
+                <span>Promo Discount (<span id="bill-discount-code"></span>):</span>
+                <strong id="bill-discount-val">-₹0</strong>
+              </div>
+              <div class="bill-breakdown-row total">
+                <span>Total Payable:</span>
+                <span id="bill-grand-total" style="color:var(--primary);">₹0</span>
+              </div>
+
+              <!-- Place Order CTA Button -->
+              <button type="button" id="confirm-order-btn" class="btn btn-primary btn-lg btn-confirm-order" style="width:100%;margin-top:20px;display:flex;align-items:center;justify-content:center;gap:10px;font-size:1.05rem;font-weight:700;">
+                <i class="fa-solid fa-lock"></i> <span>Place & Confirm Order</span>
+              </button>
+
+              <div style="display:flex;align-items:center;justify-content:center;gap:16px;margin-top:14px;color:var(--text-light);font-size:0.75rem;">
+                <span><i class="fa-solid fa-shield-halved" style="color:var(--secondary);"></i> 100% Authentic</span>
+                <span>•</span>
+                <span><i class="fa-solid fa-leaf" style="color:var(--success);"></i> Pure Vegetarian</span>
+                <span>•</span>
+                <span><i class="fa-solid fa-bolt" style="color:var(--terracotta);"></i> Fresh Brewed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ORDER CONFIRMATION & LIVE TRACKING SCREEN (Shown after order placement) -->
+        <div id="order-success-container" style="display:none;">
+          <div class="order-success-hero">
+            <div class="order-success-icon"><i class="fa-solid fa-check"></i></div>
+            <span class="tagline-label" style="background:var(--success-bg);color:var(--success);margin-bottom:8px;">
+              <i class="fa-solid fa-circle-check"></i> Order Confirmed
+            </span>
+            <h2 style="font-size:2.2rem;margin-bottom:8px;font-family:var(--font-heading);">Brewing with Passion!</h2>
+            <p class="text-muted" style="max-width:540px;margin:0 auto;font-size:1.05rem;">
+              Thank you for ordering with CHAI & CO. Your master artisan is now handcrafting your selections fresh from the kettle.
+            </p>
+
+            <div class="order-id-badge" id="confirmed-order-id">#CC-94812</div>
+            <div style="font-size:0.9rem;color:var(--text-muted);" id="confirmed-eta-text">
+              Estimated Service Time: <strong>18 - 25 mins</strong>
+            </div>
+
+            <!-- Live Status Progress Tracker -->
+            <div class="order-tracker-timeline">
+              <div class="order-tracker-progress" id="confirmed-tracker-progress" style="width:33%;"></div>
+
+              <div class="tracker-step completed">
+                <div class="tracker-dot"><i class="fa-solid fa-check"></i></div>
+                <div class="tracker-step-title">Order Received</div>
+              </div>
+
+              <div class="tracker-step active" id="tracker-step-brewing">
+                <div class="tracker-dot"><i class="fa-solid fa-fire-burner"></i></div>
+                <div class="tracker-step-title">Simmering in Kettle</div>
+              </div>
+
+              <div class="tracker-step" id="tracker-step-packing">
+                <div class="tracker-dot"><i class="fa-solid fa-box"></i></div>
+                <div class="tracker-step-title">Bakes Packed</div>
+              </div>
+
+              <div class="tracker-step" id="tracker-step-delivery">
+                <div class="tracker-dot"><i class="fa-solid fa-mug-hot"></i></div>
+                <div class="tracker-step-title" id="tracker-step-final-label">Table Served</div>
+              </div>
+            </div>
+
+            <!-- Receipt Card -->
+            <div class="receipt-card" id="printable-receipt">
+              <div class="receipt-header">
+                <div style="font-weight:800;font-size:1.2rem;letter-spacing:1px;">CHAI & CO.</div>
+                <div style="font-size:0.75rem;color:#74675b;">Artisan Tea House • MI Road, Jaipur</div>
+                <div style="font-size:0.75rem;color:#74675b;margin-top:4px;" id="receipt-timestamp"></div>
+                <div style="font-weight:700;font-size:0.85rem;margin-top:6px;color:var(--primary);" id="receipt-order-id"></div>
+              </div>
+
+              <div style="font-size:0.8rem;margin-bottom:12px;border-bottom:1px dashed #eadfd2;padding-bottom:10px;">
+                <div><strong>Customer:</strong> <span id="receipt-customer-name"></span> (<span id="receipt-customer-phone"></span>)</div>
+                <div><strong>Fulfillment:</strong> <span id="receipt-fulfillment-info"></span></div>
+                <div><strong>Payment:</strong> <span id="receipt-payment-info"></span></div>
+              </div>
+
+              <div id="receipt-items-table" style="font-size:0.85rem;margin-bottom:14px;">
+                <!-- Filled dynamically -->
+              </div>
+
+              <div style="border-top:1px dashed #eadfd2;padding-top:10px;font-size:0.85rem;">
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+                  <span>Subtotal:</span>
+                  <span id="receipt-subtotal"></span>
+                </div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+                  <span>GST (5%):</span>
+                  <span id="receipt-tax"></span>
+                </div>
+                <div style="display:flex;justify-content:space-between;font-weight:800;font-size:1rem;color:var(--primary);margin-top:6px;padding-top:6px;border-top:1px solid #eadfd2;">
+                  <span>Total Paid:</span>
+                  <span id="receipt-total"></span>
+                </div>
+              </div>
+
+              <div style="text-align:center;font-size:0.75rem;color:#9e8f81;margin-top:16px;">
+                Brewed with Tradition. Served with Soul. • Please visit again!
+              </div>
+            </div>
+
+            <!-- Receipt Actions -->
+            <div style="display:flex;gap:14px;justify-content:center;margin-top:28px;flex-wrap:wrap;">
+              <button type="button" class="btn btn-secondary" onclick="window.print();">
+                <i class="fa-solid fa-print"></i> Print Receipt
+              </button>
+              <a href="menu.html" class="btn btn-primary">
+                <i class="fa-solid fa-plus"></i> Order More Items
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- MULTI-COLUMN GLOBAL FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo" style="color:#fff;margin-bottom:14px;">
+            <div class="logo-icon" style="background:rgba(214,168,95,0.2);color:var(--accent);"><i class="fa-solid fa-mug-hot"></i></div>
+            <span>CHAI & CO.</span>
+          </div>
+          <p>
+            Brewed with Tradition. Served with Soul. Bringing authentic Indian chai culture to the modern café aesthetic since 2018.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://x.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Our House</a></li>
+            <li><a href="menu.html">Artisan Menu</a></li>
+            <li><a href="order.html">Order Online</a></li>
+            <li><a href="sourcing.html">Our Sourcing</a></li>
+            <li><a href="loyalty.html">Chai Rewards</a></li>
+            <li><a href="pricing.html">Event Catering</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Information</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html">Chai Chronicles</a></li>
+            <li><a href="contact.html">Find a Stall</a></li>
+            <li><a href="login.html">Member Sign In</a></li>
+            <li><a href="register.html">Join Rewards</a></li>
+            <li><a href="coming-soon.html">New Locations</a></li>
+            <li><a href="maintenance.html">System Status</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter-box">
+          <h4 class="footer-title">Visit Us</h4>
+          <p>
+            <i class="fa-solid fa-location-dot" style="color:var(--accent);margin-right:8px;"></i>
+            42 Heritage Haveli Way, C-Scheme, Jaipur, RJ 302001
+          </p>
+          <p>
+            <i class="fa-solid fa-phone" style="color:var(--accent);margin-right:8px;"></i>
+            +91 98290 12345
+          </p>
+          <p>
+            <i class="fa-solid fa-clock" style="color:var(--accent);margin-right:8px;"></i>
+            Open Daily: 7:00 AM – 11:30 PM
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 CHAI & CO. All Rights Reserved. Crafted with authentic passion.
+        </div>
+        <div style="display:flex;gap:20px;">
+          <a href="privacy.html" style="color:#8c7d70;">Privacy Policy</a>
+          <a href="terms.html" style="color:#8c7d70;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <div class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/forms.js"></script>
+
+  <!-- Dedicated Order Page Logic -->
+  <script>
+    (function () {
+      'use strict';
+
+      let discountAmount = 0;
+      let appliedCoupon = '';
+      let fulfillmentType = 'delivery';
+      let selectedTable = 'Table 1';
+
+      function renderCheckout() {
+        const cart = window.chaiCart ? window.chaiCart.getCart() : [];
+        const emptyState = document.getElementById('order-empty-state');
+        const checkoutContainer = document.getElementById('order-checkout-container');
+        const itemsList = document.getElementById('checkout-items-list');
+        const itemsCount = document.getElementById('summary-items-count');
+
+        if (!cart || cart.length === 0) {
+          if (emptyState) emptyState.style.display = 'block';
+          if (checkoutContainer) checkoutContainer.style.display = 'none';
+          renderEmptyStateRecs();
+          return;
+        }
+
+        if (emptyState) emptyState.style.display = 'none';
+        if (checkoutContainer) checkoutContainer.style.display = 'grid';
+
+        // Render Cart Items in Sticky Summary
+        let subtotal = 0;
+        let html = '';
+
+        cart.forEach(item => {
+          const itemTotal = item.price * item.quantity;
+          subtotal += itemTotal;
+          const customTag = item.customization ? `<div style="font-size:0.75rem;color:var(--terracotta);font-weight:600;"><i class="fa-solid fa-sliders" style="font-size:0.65rem;margin-right:4px;"></i>${item.customization}</div>` : '';
+          const itemId = item.cartItemId || item.id;
+
+          html += `
+            <div class="order-item-row" data-id="${itemId}">
+              <div style="display:flex;align-items:center;gap:10px;flex-grow:1;">
+                <img src="${item.image}" alt="${item.name}" style="width:46px;height:46px;border-radius:var(--radius-sm);object-fit:cover;" onerror="this.src='https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=100&q=80'">
+                <div>
+                  <div style="font-weight:700;color:var(--text-main);">${item.name}</div>
+                  ${customTag}
+                  <div style="font-size:0.8rem;color:var(--primary);font-weight:600;">₹${item.price} each</div>
+                </div>
+              </div>
+
+              <div style="display:flex;align-items:center;gap:10px;">
+                <div class="cart-qty-ctrl">
+                  <button type="button" class="qty-btn checkout-minus" data-id="${itemId}" aria-label="Decrease quantity"><i class="fa-solid fa-minus"></i></button>
+                  <span class="qty-value">${item.quantity}</span>
+                  <button type="button" class="qty-btn checkout-plus" data-id="${itemId}" aria-label="Increase quantity"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div style="font-weight:700;min-width:55px;text-align:right;">₹${itemTotal}</div>
+              </div>
+            </div>
+          `;
+        });
+
+        if (itemsList) itemsList.innerHTML = html;
+        if (itemsCount) itemsCount.textContent = cart.reduce((t, i) => t + i.quantity, 0);
+
+        // Bind Quantity Adjusters
+        if (itemsList) {
+          itemsList.querySelectorAll('.checkout-minus').forEach(btn => {
+            btn.addEventListener('click', () => {
+              if (window.chaiCart) {
+                window.chaiCart.updateQuantity(btn.dataset.id, -1);
+                renderCheckout();
+              }
+            });
+          });
+          itemsList.querySelectorAll('.checkout-plus').forEach(btn => {
+            btn.addEventListener('click', () => {
+              if (window.chaiCart) {
+                window.chaiCart.updateQuantity(btn.dataset.id, 1);
+                renderCheckout();
+              }
+            });
+          });
+        }
+
+        // Bill Totals
+        const tax = Math.round(subtotal * 0.05);
+        let deliveryFee = 0;
+        if (fulfillmentType === 'delivery') {
+          deliveryFee = subtotal >= 200 ? 0 : 30;
+        }
+
+        let total = subtotal + tax + deliveryFee - discountAmount;
+        if (total < 0) total = 0;
+
+        const subtotalEl = document.getElementById('bill-subtotal');
+        const taxEl = document.getElementById('bill-tax');
+        const deliveryEl = document.getElementById('bill-delivery');
+        const grandTotalEl = document.getElementById('bill-grand-total');
+
+        if (subtotalEl) subtotalEl.textContent = '₹' + subtotal;
+        if (taxEl) taxEl.textContent = '₹' + tax;
+        if (deliveryEl) {
+          if (fulfillmentType === 'dine-in') {
+            deliveryEl.textContent = 'Table Service (Included)';
+          } else if (fulfillmentType === 'pickup') {
+            deliveryEl.textContent = 'Store Pickup (FREE)';
+          } else {
+            deliveryEl.textContent = deliveryFee === 0 ? 'FREE (Orders > ₹200)' : '₹' + deliveryFee;
+          }
+        }
+        if (grandTotalEl) grandTotalEl.textContent = '₹' + total;
+      }
+
+      function renderEmptyStateRecs() {
+        const recsContainer = document.getElementById('empty-state-recs');
+        if (!recsContainer || !window.chaiMenu) return;
+
+        const bestsellers = window.chaiMenu.items.slice(0, 4);
+        recsContainer.innerHTML = bestsellers.map(item => `
+          <div style="background:var(--bg-surface-soft);border:1px solid var(--border);border-radius:var(--radius-md);padding:12px;display:flex;align-items:center;gap:10px;">
+            <img src="${item.image}" alt="${item.name}" style="width:50px;height:50px;border-radius:var(--radius-sm);object-fit:cover;">
+            <div style="flex-grow:1;">
+              <div style="font-weight:700;font-size:0.85rem;line-height:1.2;">${item.name}</div>
+              <div style="font-size:0.8rem;color:var(--primary);font-weight:700;">₹${item.price}</div>
+            </div>
+            <button type="button" class="btn btn-primary btn-sm quick-add-btn" data-id="${item.id}" style="padding:6px 10px;font-size:0.75rem;">
+              + Add
+            </button>
+          </div>
+        `).join('');
+
+        recsContainer.querySelectorAll('.quick-add-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const prod = window.chaiMenu.items.find(p => p.id === btn.dataset.id);
+            if (prod && window.chaiCart) {
+              window.chaiCart.addToCart(prod);
+              renderCheckout();
+            }
+          });
+        });
+      }
+
+      // Fulfillment Selector Switcher
+      document.querySelectorAll('.fulfillment-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.fulfillment-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          fulfillmentType = btn.dataset.type;
+
+          const deliveryBox = document.getElementById('fulfillment-delivery-box');
+          const dineInBox = document.getElementById('fulfillment-dine-in-box');
+          const pickupBox = document.getElementById('fulfillment-pickup-box');
+
+          if (deliveryBox) deliveryBox.style.display = fulfillmentType === 'delivery' ? 'block' : 'none';
+          if (dineInBox) dineInBox.style.display = fulfillmentType === 'dine-in' ? 'block' : 'none';
+          if (pickupBox) pickupBox.style.display = fulfillmentType === 'pickup' ? 'block' : 'none';
+
+          const finalLabel = document.getElementById('tracker-step-final-label');
+          if (finalLabel) {
+            finalLabel.textContent = fulfillmentType === 'delivery' ? 'Delivered' : (fulfillmentType === 'dine-in' ? 'Table Served' : 'Collected');
+          }
+
+          renderCheckout();
+        });
+      });
+
+      // Table Selector Pills
+      document.querySelectorAll('.table-pill').forEach(pill => {
+        pill.addEventListener('click', () => {
+          document.querySelectorAll('.table-pill').forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+          selectedTable = pill.dataset.table;
+          const hiddenInput = document.getElementById('selected-table-val');
+          if (hiddenInput) hiddenInput.value = selectedTable;
+        });
+      });
+
+      // Payment Method Options Toggle
+      document.querySelectorAll('.payment-option-label').forEach(label => {
+        label.addEventListener('click', () => {
+          document.querySelectorAll('.payment-option-label').forEach(l => l.classList.remove('active'));
+          label.classList.add('active');
+          const radio = label.querySelector('input[type="radio"]');
+          if (radio) radio.checked = true;
+
+          const method = label.dataset.method;
+          const upiBox = document.getElementById('payment-upi-box');
+          const cardBox = document.getElementById('payment-card-box');
+
+          if (upiBox) upiBox.classList.toggle('active', method === 'upi');
+          if (cardBox) cardBox.classList.toggle('active', method === 'card');
+        });
+      });
+
+      // Coupon Code Application
+      const couponBtn = document.getElementById('apply-coupon-btn');
+      const couponInput = document.getElementById('coupon-code-input');
+      const couponFeedback = document.getElementById('coupon-feedback');
+      const discountRow = document.getElementById('bill-discount-row');
+      const discountCodeEl = document.getElementById('bill-discount-code');
+      const discountValEl = document.getElementById('bill-discount-val');
+
+      if (couponBtn && couponInput) {
+        couponBtn.addEventListener('click', () => {
+          const code = couponInput.value.trim().toUpperCase();
+          const cart = window.chaiCart ? window.chaiCart.getCart() : [];
+          const subtotal = cart.reduce((t, i) => t + (i.price * i.quantity), 0);
+
+          if (!code) {
+            couponFeedback.style.display = 'block';
+            couponFeedback.style.color = 'var(--error)';
+            couponFeedback.textContent = 'Please enter a valid coupon code.';
+            return;
+          }
+
+          if (code === 'CHAI10') {
+            discountAmount = Math.round(subtotal * 0.10);
+            appliedCoupon = 'CHAI10 (10% Off)';
+            couponFeedback.style.display = 'block';
+            couponFeedback.style.color = 'var(--success)';
+            couponFeedback.textContent = '🎉 Coupon CHAI10 applied! 10% discount saved.';
+            discountRow.style.display = 'flex';
+            discountCodeEl.textContent = 'CHAI10';
+            discountValEl.textContent = '-₹' + discountAmount;
+          } else if (code === 'WELCOME') {
+            discountAmount = 50;
+            appliedCoupon = 'WELCOME (₹50 Flat Off)';
+            couponFeedback.style.display = 'block';
+            couponFeedback.style.color = 'var(--success)';
+            couponFeedback.textContent = '🎉 Coupon WELCOME applied! ₹50 discount saved.';
+            discountRow.style.display = 'flex';
+            discountCodeEl.textContent = 'WELCOME';
+            discountValEl.textContent = '-₹' + discountAmount;
+          } else {
+            couponFeedback.style.display = 'block';
+            couponFeedback.style.color = 'var(--error)';
+            couponFeedback.textContent = 'Invalid promo code. Try CHAI10 or WELCOME.';
+            discountAmount = 0;
+            discountRow.style.display = 'none';
+          }
+          renderCheckout();
+        });
+      }
+
+      // Order Placement CTA
+      const placeOrderBtn = document.getElementById('confirm-order-btn');
+      if (placeOrderBtn) {
+        placeOrderBtn.addEventListener('click', () => {
+          const cart = window.chaiCart ? window.chaiCart.getCart() : [];
+          if (!cart || cart.length === 0) {
+            if (window.showToast) window.showToast('Please add items to your cart before proceeding!', 'error');
+            return;
+          }
+
+          const custName = document.getElementById('cust-name')?.value.trim() || 'Valued Guest';
+          const custPhone = document.getElementById('cust-phone')?.value.trim() || '+91 98290 12345';
+          const custEmail = document.getElementById('cust-email')?.value.trim() || 'guest@example.com';
+          const custNotes = document.getElementById('cust-notes')?.value.trim() || '';
+
+          let fulfillmentInfo = '';
+          if (fulfillmentType === 'delivery') {
+            const addr = document.getElementById('delivery-address')?.value.trim() || 'Jaipur Central';
+            const area = document.getElementById('delivery-area')?.value.trim() || '';
+            const pin = document.getElementById('delivery-pincode')?.value.trim() || '302001';
+            fulfillmentInfo = `Delivery to: ${addr}, ${area} (${pin})`;
+          } else if (fulfillmentType === 'dine-in') {
+            fulfillmentInfo = `Dine-In (${selectedTable})`;
+          } else {
+            const slot = document.getElementById('pickup-time-select')?.value || 'In 15 Mins';
+            fulfillmentInfo = `Self Pickup (${slot}) at MI Road Stall`;
+          }
+
+          const selectedPaymentRadio = document.querySelector('input[name="payment-method"]:checked');
+          const paymentMethod = selectedPaymentRadio ? selectedPaymentRadio.value.toUpperCase() : 'UPI';
+
+          // Calculate final totals
+          const subtotal = cart.reduce((t, i) => t + (i.price * i.quantity), 0);
+          const tax = Math.round(subtotal * 0.05);
+          const deliveryFee = fulfillmentType === 'delivery' ? (subtotal >= 200 ? 0 : 30) : 0;
+          const grandTotal = Math.max(0, subtotal + tax + deliveryFee - discountAmount);
+
+          // Generate Unique Order ID
+          const orderNumber = 'ORD-' + Math.floor(1000 + Math.random() * 9000);
+          const orderIdFormatted = '#' + orderNumber;
+          const timestamp = new Date().toLocaleDateString('en-IN', { month: 'short', day: '2-digit', hour: '2-digit', minute: '2-digit' });
+
+          const orderRecord = {
+            id: orderNumber,
+            customerName: custName,
+            customerPhone: custPhone,
+            customerEmail: custEmail,
+            fulfillmentType,
+            fulfillmentInfo,
+            notes: custNotes,
+            paymentMethod,
+            items: cart.map(i => ({
+              name: i.name,
+              quantity: i.quantity,
+              price: i.price,
+              customization: i.customization || ''
+            })),
+            itemsSummaryText: cart.map(i => `${i.quantity}x ${i.name}${i.customization ? ' (' + i.customization + ')' : ''}`).join(', '),
+            subtotal,
+            tax,
+            deliveryFee,
+            discount: discountAmount,
+            totalAmount: grandTotal,
+            timestamp,
+            status: 'preparing'
+          };
+
+          // Save order to localStorage
+          if (window.chaiOrders) {
+            window.chaiOrders.saveOrder(orderRecord);
+          }
+
+          // Clear active cart
+          if (window.chaiCart) {
+            window.chaiCart.clearCart();
+          }
+
+          // Show confirmation UI
+          document.getElementById('order-checkout-container').style.display = 'none';
+          const successContainer = document.getElementById('order-success-container');
+          successContainer.style.display = 'block';
+          window.scrollTo({ top: 120, behavior: 'smooth' });
+
+          // Populate Confirmation & Receipt
+          document.getElementById('confirmed-order-id').textContent = orderIdFormatted;
+          document.getElementById('receipt-order-id').textContent = 'Order ID: ' + orderIdFormatted;
+          document.getElementById('receipt-timestamp').textContent = timestamp;
+          document.getElementById('receipt-customer-name').textContent = custName;
+          document.getElementById('receipt-customer-phone').textContent = custPhone;
+          document.getElementById('receipt-fulfillment-info').textContent = fulfillmentInfo;
+          document.getElementById('receipt-payment-info').textContent = paymentMethod + ' (Verified)';
+          document.getElementById('receipt-subtotal').textContent = '₹' + subtotal;
+          document.getElementById('receipt-tax').textContent = '₹' + tax;
+          document.getElementById('receipt-total').textContent = '₹' + grandTotal;
+
+          const receiptTable = document.getElementById('receipt-items-table');
+          if (receiptTable) {
+            receiptTable.innerHTML = orderRecord.items.map(item => `
+              <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+                <div>
+                  <strong>${item.quantity}x</strong> ${item.name}
+                  ${item.customization ? `<div style="font-size:0.7rem;color:#74675b;">${item.customization}</div>` : ''}
+                </div>
+                <div>₹${item.price * item.quantity}</div>
+              </div>
+            `).join('');
+          }
+
+          if (window.showToast) {
+            window.showToast(`🎉 Order ${orderIdFormatted} Placed! Kitchen is brewing your chai.`, 'success', 6000);
+          }
+
+          // Simulated Live Progress Step advancement
+          setTimeout(() => {
+            const brewStep = document.getElementById('tracker-step-brewing');
+            const packStep = document.getElementById('tracker-step-packing');
+            const progress = document.getElementById('confirmed-tracker-progress');
+            if (brewStep && packStep && progress) {
+              brewStep.classList.remove('active');
+              brewStep.classList.add('completed');
+              packStep.classList.add('active');
+              progress.style.width = '66%';
+            }
+          }, 6000);
+        });
+      }
+
+      // Initial Render
+      document.addEventListener('DOMContentLoaded', () => {
+        renderCheckout();
+      });
+      window.addEventListener('chaiCart:updated', renderCheckout);
+      // Safety fallback
+      setTimeout(renderCheckout, 200);
+    })();
+  </script>
+</body>
+</html>

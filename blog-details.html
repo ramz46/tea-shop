@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Sacred Art of Brewing Authentic Indian Masala Chai — CHAI & CO.</title>
+  <meta name="description" content="A masterclass on the exact ratio of crushed green cardamom, ginger, whole milk, and Assam CTC tea for brewing the perfect Indian masala chai.">
+  <meta name="keywords" content="masala chai recipe, how to brew chai, cardamom ginger tea, authentic chai ratio, assam tea guide">
+  <meta name="robots" content="index, follow">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="preloader">
+    <div class="preloader-cup"><i class="fa-solid fa-mug-hot"></i></div>
+    <div class="preloader-brand">CHAI & CO.</div>
+    <div class="preloader-text">Loading story...</div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="Chai & Co. Homepage">
+        <div class="logo-icon"><i class="fa-solid fa-mug-hot"></i></div>
+        <span>CHAI & CO.</span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="sourcing.html" class="nav-link">Our Sourcing</a>
+        <a href="loyalty.html" class="nav-link">Loyalty</a>
+        <a href="pricing.html" class="nav-link">Catering</a>
+        <a href="blog.html" class="nav-link active">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="header-tool-btn theme-toggle-btn" aria-label="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
+        <button type="button" class="header-tool-btn rtl-toggle-btn" aria-label="Layout Direction: LTR (Click for RTL)"><span class="btn-label" style="font-size:0.7rem;font-weight:700;">LTR</span></button>
+        <button type="button" class="header-tool-btn cart-toggle-btn" aria-label="Open Cart"><i class="fa-solid fa-bag-shopping"></i><span class="badge-count cart-count-badge" style="display:none;">0</span></button>
+        <button type="button" class="hamburger" aria-label="Open Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <aside class="mobile-nav-drawer">
+    <div class="drawer-header">
+      <div class="brand-logo" style="font-size:1.3rem;">
+        <div class="logo-icon" style="width:34px;height:34px;font-size:0.9rem;"><i class="fa-solid fa-mug-hot"></i></div>
+        <span>CHAI & CO.</span>
+      </div>
+      <button type="button" class="drawer-close-btn btn-icon"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="drawer-nav-list">
+      <a href="index.html" class="drawer-nav-link">Home <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="about.html" class="drawer-nav-link">About Us <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="menu.html" class="drawer-nav-link">Our Menu <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="sourcing.html" class="drawer-nav-link">Our Sourcing <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="loyalty.html" class="drawer-nav-link">Chai Rewards <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="pricing.html" class="drawer-nav-link">Catering <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="blog.html" class="drawer-nav-link active">Blog <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="contact.html" class="drawer-nav-link">Contact Us <i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+  </aside>
+
+  <!-- Cart Drawer -->
+  <aside class="cart-drawer">
+    <div class="cart-header">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <i class="fa-solid fa-bag-shopping" style="color:var(--primary);font-size:1.2rem;"></i>
+        <h3>Your Order (<span class="cart-count-badge">0</span>)</h3>
+      </div>
+      <button type="button" class="cart-close-btn btn-icon"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cart-body"></div>
+    <div class="cart-footer">
+      <div class="cart-summary-row"><span>Subtotal</span><span class="cart-subtotal-val">₹0</span></div>
+      <div class="cart-summary-row"><span>GST (5%)</span><span class="cart-tax-val">₹0</span></div>
+      <div class="cart-summary-row total"><span>Total</span><span class="cart-total-val">₹0</span></div>
+      <button type="button" class="btn btn-primary cart-checkout-btn" style="width:100%;margin-top:16px;">
+        Proceed to Order <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </aside>
+  <div class="drawer-backdrop"></div>
+
+  <!-- MAIN ARTICLE -->
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <span class="tagline-label"><i class="fa-solid fa-book-open"></i> Recipes & Heritage</span>
+        <h1 class="page-hero-title">The Sacred Art of Brewing Authentic Indian Masala Chai</h1>
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></span>
+          <a href="blog.html">Blog</a>
+          <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></span>
+          <span style="color:var(--text-main);font-weight:600;">Article</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="blog-details-grid">
+          <!-- Article Content -->
+          <article class="blog-article-content reveal">
+            <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-bottom:28px;padding-bottom:18px;border-bottom:1px solid var(--border);">
+              <div style="display:flex;align-items:center;gap:12px;">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&q=80" alt="Aarav Sharma" style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
+                <div>
+                  <strong style="display:block;font-size:0.95rem;">Aarav Sharma</strong>
+                  <span class="text-muted" style="font-size:0.8rem;">Master Tea Sommelier • Aug 24, 2026</span>
+                </div>
+              </div>
+              <div style="display:flex;gap:8px;">
+                <button type="button" class="btn-icon btn-sm" aria-label="Share on X" onclick="navigator.clipboard.writeText(window.location.href);alert('Article link copied!');"><i class="fa-brands fa-x-twitter"></i></button>
+                <button type="button" class="btn-icon btn-sm" aria-label="Share on Facebook"><i class="fa-brands fa-facebook-f"></i></button>
+                <button type="button" class="btn-icon btn-sm" aria-label="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
+              </div>
+            </div>
+
+            <!-- Featured Image -->
+            <div style="border-radius:var(--radius-xl);overflow:hidden;margin-bottom:36px;box-shadow:var(--shadow-md);">
+              <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=1200&q=80" alt="Hot Masala Chai Pot" style="width:100%;height:auto;display:block;">
+            </div>
+
+            <p>
+              In every corner of India, from early morning platform vendors in old Delhi to sleepy hill-station stops in Munnar, the day begins with the melodic clang of a brass ladle striking the side of a pot. Masala chai is not merely a morning beverage; it is a shared cultural ritual, a comforting antidote to winter chills, and an aromatic expression of love.
+            </p>
+
+            <p>
+              Yet in Western coffee chains and modern supermarkets, chai has frequently been degraded into sticky sugary syrups, cloying concentrates, or synthetic powders devoid of genuine spice character. Today, we open the notebook of Chai & Co. to reveal the authentic, time-honored principles of true Indian chai.
+            </p>
+
+            <blockquote>
+              "Real chai cannot be rushed with a teabag in a paper cup. It requires fire, the bruising of whole pods, and the patience of a rolling boil."
+            </blockquote>
+
+            <h2>1. The Foundation: Whole Orthodox & CTC Tea</h2>
+            <p>
+              The most common mistake when making masala chai is using delicate green tea or light English Breakfast bags. True chai requires high-grown Assam CTC (Crush, Tear, Curl) black tea leaves. The granular CTC structure yields a bold, astringent, deep reddish-brown infusion that can withstand generous amounts of whole milk without tasting diluted.
+            </p>
+
+            <h2>2. The Sacred Spice Ratios (Per 2 Cups)</h2>
+            <p>
+              At Chai & Co., our kitchen adheres to an exact ratio to achieve balance—where no single spice overwhelms the tea itself:
+            </p>
+            <ul style="margin-bottom:24px;display:flex;flex-direction:column;gap:10px;">
+              <li><strong>4 Green Cardamom Pods:</strong> Lightly cracked in a stone mortar until the dark seeds peek out.</li>
+              <li><strong>1 Inch Fresh Ginger Root:</strong> Coarsely pounded with the skin on to extract fiery juice.</li>
+              <li><strong>1 Small Stick Ceylon Cinnamon:</strong> Broken into small slivers for woody sweetness.</li>
+              <li><strong>2 Sun-Dried Cloves:</strong> For deep, warming, clove-oil aromatics.</li>
+              <li><strong>3 Tellicherry Black Peppercorns:</strong> To provide a subtle back-of-the-throat tingle.</li>
+            </ul>
+
+            <div style="background:var(--bg-surface-soft);border:1px solid var(--border);border-radius:var(--radius-md);padding:24px;margin:32px 0;">
+              <h4 style="margin-bottom:10px;"><i class="fa-solid fa-fire-burner" style="color:var(--primary);margin-right:8px;"></i> Step-by-Step Brewing Masterclass</h4>
+              <ol style="margin-left:20px;display:flex;flex-direction:column;gap:10px;font-size:0.95rem;">
+                <li><strong>The Water Extraction:</strong> Bring 1 cup of filtered cold water to a rolling boil with your crushed spices and ginger. Let it bubble vigorously for 3 minutes until the water turns pale gold and fragrant.</li>
+                <li><strong>Add the Tea:</strong> Add 2 generous teaspoons of Assam CTC black tea. Lower heat to medium and simmer for 2 minutes. The liquid will turn a deep mahogany.</li>
+                <li><strong>The Milk Simmer:</strong> Pour in 1 cup of creamy whole milk (or oat milk). Increase the flame until the chai rises to the lip of the pot, then lower the heat. Repeat this "double rise" three times to emulsify the dairy fat.</li>
+                <li><strong>Sweeten & Aerate:</strong> Stir in raw unrefined cane sugar or crushed jaggery. Strain through a fine brass sieve from a height of 12 inches to froth the tea naturally before serving into earthenware kulhads.</li>
+              </ol>
+            </div>
+
+            <!-- Tags -->
+            <div style="display:flex;flex-wrap:wrap;gap:8px;margin:36px 0;padding-top:24px;border-top:1px solid var(--border);">
+              <span class="tagline-label" style="margin:0;">#MasalaChai</span>
+              <span class="tagline-label" style="margin:0;">#IndianTraditions</span>
+              <span class="tagline-label" style="margin:0;">#BrewingGuide</span>
+              <span class="tagline-label" style="margin:0;">#AssamTea</span>
+              <span class="tagline-label" style="margin:0;">#ChaiAndCo</span>
+            </div>
+
+            <!-- Author Bio Card -->
+            <div style="background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px;display:flex;align-items:center;gap:20px;margin-bottom:48px;">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Aarav Sharma" style="width:72px;height:72px;border-radius:50%;object-fit:cover;flex-shrink:0;">
+              <div>
+                <h4 style="margin-bottom:4px;">Written by Aarav Sharma</h4>
+                <p class="text-muted" style="margin:0;font-size:0.875rem;">
+                  Aarav is the founder and tea sommelier of Chai & Co. He spent over a decade traveling tea estates in Assam, Darjeeling, and Sri Lanka studying indigenous spice botany.
+                </p>
+              </div>
+            </div>
+
+            <!-- Interactive Comment Demo Form -->
+            <div class="card" style="padding:32px;">
+              <h3 style="font-size:1.35rem;margin-bottom:6px;">Leave a Thought or Recipe Question</h3>
+              <p class="text-muted" style="font-size:0.875rem;margin-bottom:20px;">Have a secret spice blend of your own? Share it with our community.</p>
+
+              <form id="comment-demo-form" onsubmit="event.preventDefault(); window.showToast('Thank you! Your comment was posted successfully.', 'success'); this.reset();">
+                <div class="grid grid-2" style="gap:16px;">
+                  <div class="form-group">
+                    <label class="form-label" for="cmt-name">Your Name</label>
+                    <input type="text" id="cmt-name" class="form-control" placeholder="Rohan Gupta" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="cmt-email">Email Address</label>
+                    <input type="email" id="cmt-email" class="form-control" placeholder="rohan@example.com" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cmt-text">Comment</label>
+                  <textarea id="cmt-text" class="form-control" rows="4" placeholder="Write your comment..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Post Comment</button>
+              </form>
+            </div>
+          </article>
+
+          <!-- Right Sidebar -->
+          <aside class="reveal">
+            <!-- Search Widget -->
+            <div class="sidebar-widget">
+              <h4 class="widget-title">Search Articles</h4>
+              <div class="menu-search-box">
+                <input type="text" class="menu-search-input" placeholder="Type and hit enter...">
+                <i class="fa-solid fa-magnifying-glass menu-search-icon"></i>
+              </div>
+            </div>
+
+            <!-- Categories Widget -->
+            <div class="sidebar-widget">
+              <h4 class="widget-title">Categories</h4>
+              <ul style="display:flex;flex-direction:column;gap:10px;font-size:0.9rem;">
+                <li style="display:flex;justify-content:space-between;"><a href="blog.html">Recipes</a> <span class="text-muted">(12)</span></li>
+                <li style="display:flex;justify-content:space-between;"><a href="blog.html">Tea Culture</a> <span class="text-muted">(8)</span></li>
+                <li style="display:flex;justify-content:space-between;"><a href="blog.html">Sourcing & Estates</a> <span class="text-muted">(15)</span></li>
+                <li style="display:flex;justify-content:space-between;"><a href="blog.html">Ayurveda & Health</a> <span class="text-muted">(6)</span></li>
+                <li style="display:flex;justify-content:space-between;"><a href="blog.html">Café Stories</a> <span class="text-muted">(9)</span></li>
+              </ul>
+            </div>
+
+            <!-- Recent Posts Widget -->
+            <div class="sidebar-widget">
+              <h4 class="widget-title">Recent Stories</h4>
+              <div style="display:flex;flex-direction:column;gap:16px;">
+                <div style="display:flex;gap:12px;align-items:center;">
+                  <img src="https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&w=100&q=80" alt="Kashmiri Kahwa" style="width:60px;height:60px;border-radius:var(--radius-sm);object-fit:cover;">
+                  <div>
+                    <h5 style="font-size:0.85rem;line-height:1.3;margin-bottom:4px;"><a href="blog-details.html">Why Kashmiri Kahwa Is the Ultimate Elixir</a></h5>
+                    <span class="text-muted" style="font-size:0.75rem;">Aug 12, 2026</span>
+                  </div>
+                </div>
+
+                <div style="display:flex;gap:12px;align-items:center;">
+                  <img src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&w=100&q=80" alt="Darjeeling Tea" style="width:60px;height:60px;border-radius:var(--radius-sm);object-fit:cover;">
+                  <div>
+                    <h5 style="font-size:0.85rem;line-height:1.3;margin-bottom:4px;"><a href="blog-details.html">Journey to the Clouds: Spring Flush Darjeeling</a></h5>
+                    <span class="text-muted" style="font-size:0.75rem;">Aug 18, 2026</span>
+                  </div>
+                </div>
+
+                <div style="display:flex;gap:12px;align-items:center;">
+                  <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=100&q=80" alt="Bun Maska" style="width:60px;height:60px;border-radius:var(--radius-sm);object-fit:cover;">
+                  <div>
+                    <h5 style="font-size:0.85rem;line-height:1.3;margin-bottom:4px;"><a href="blog-details.html">The Irani Café Culture: Bun Maska & Nostalgia</a></h5>
+                    <span class="text-muted" style="font-size:0.75rem;">Jul 15, 2026</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Newsletter Box -->
+            <div class="sidebar-widget" style="background:var(--primary-light);border-color:var(--primary);">
+              <h4 style="font-size:1.15rem;margin-bottom:8px;color:var(--primary);">Subscribe to Chronicles</h4>
+              <p class="text-muted" style="font-size:0.85rem;margin-bottom:16px;">Directly delivered to your inbox every Friday morning.</p>
+              <form class="newsletter-form" style="display:flex;flex-direction:column;gap:8px;">
+                <input type="email" placeholder="Your email address" class="form-control" required style="background:#fff;">
+                <button type="submit" class="btn btn-primary btn-sm">Join Readers</button>
+              </form>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MULTI-COLUMN GLOBAL FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo" style="color:#fff;margin-bottom:14px;">
+            <div class="logo-icon" style="background:rgba(214,168,95,0.2);color:var(--accent);"><i class="fa-solid fa-mug-hot"></i></div>
+            <span>CHAI & CO.</span>
+          </div>
+          <p>
+            Brewed with Tradition. Served with Soul. Bringing authentic Indian chai culture to the modern café aesthetic since 2018.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://x.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Our House</a></li>
+            <li><a href="menu.html">Artisan Menu</a></li>
+            <li><a href="order.html">Order Online</a></li>
+            <li><a href="sourcing.html">Our Sourcing</a></li>
+            <li><a href="loyalty.html">Chai Rewards</a></li>
+            <li><a href="pricing.html">Event Catering</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Information</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html">Chai Chronicles</a></li>
+            <li><a href="contact.html">Find a Stall</a></li>
+            <li><a href="login.html">Member Sign In</a></li>
+            <li><a href="register.html">Join Rewards</a></li>
+            <li><a href="coming-soon.html">New Locations</a></li>
+            <li><a href="maintenance.html">System Status</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter-box">
+          <h4 class="footer-title">Visit Us</h4>
+          <p>
+            <i class="fa-solid fa-location-dot" style="color:var(--accent);margin-right:8px;"></i>
+            42 Heritage Haveli Way, C-Scheme, Jaipur, RJ 302001
+          </p>
+          <p>
+            <i class="fa-solid fa-phone" style="color:var(--accent);margin-right:8px;"></i>
+            +91 98290 12345
+          </p>
+          <p>
+            <i class="fa-solid fa-clock" style="color:var(--accent);margin-right:8px;"></i>
+            Open Daily: 7:00 AM – 11:30 PM
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 CHAI & CO. All Rights Reserved. Crafted with authentic passion.
+        </div>
+        <div style="display:flex;gap:20px;">
+          <a href="privacy.html" style="color:#8c7d70;">Privacy Policy</a>
+          <a href="terms.html" style="color:#8c7d70;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <div class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/forms.js"></script>
+</body>
+</html>

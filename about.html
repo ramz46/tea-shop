@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — CHAI & CO. | Our Story, Mission & Masters</title>
+  <meta name="description" content="Discover the story behind CHAI & CO. How we began in Jaipur in 2018, our mission to revive genuine Indian chai culture, and our passionate team of tea curators.">
+  <meta name="keywords" content="about chai and co, tea house story, artisan tea makers, tea sommelier, indian chai culture">
+  <meta name="robots" content="index, follow">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="preloader-cup"><i class="fa-solid fa-mug-hot"></i></div>
+    <div class="preloader-brand">CHAI & CO.</div>
+    <div class="preloader-text">Loading our story...</div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="Chai & Co. Homepage">
+        <div class="logo-icon"><i class="fa-solid fa-mug-hot"></i></div>
+        <span>CHAI & CO.</span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="sourcing.html" class="nav-link">Our Sourcing</a>
+        <a href="loyalty.html" class="nav-link">Loyalty</a>
+        <a href="pricing.html" class="nav-link">Catering</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="header-tool-btn theme-toggle-btn" aria-label="Toggle Dark/Light Mode"><i class="fa-solid fa-moon"></i></button>
+        <button type="button" class="header-tool-btn rtl-toggle-btn" aria-label="Layout Direction: LTR (Click for RTL)"><span class="btn-label" style="font-size:0.7rem;font-weight:700;">LTR</span></button>
+        <button type="button" class="header-tool-btn cart-toggle-btn" aria-label="Open Cart"><i class="fa-solid fa-bag-shopping"></i><span class="badge-count cart-count-badge" style="display:none;">0</span></button>
+        <button type="button" class="hamburger" aria-label="Open Mobile Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <aside class="mobile-nav-drawer">
+    <div class="drawer-header">
+      <div class="brand-logo" style="font-size:1.3rem;">
+        <div class="logo-icon" style="width:34px;height:34px;font-size:0.9rem;"><i class="fa-solid fa-mug-hot"></i></div>
+        <span>CHAI & CO.</span>
+      </div>
+      <button type="button" class="drawer-close-btn btn-icon"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="drawer-nav-list">
+      <a href="index.html" class="drawer-nav-link">Home <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="about.html" class="drawer-nav-link active">About Us <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="menu.html" class="drawer-nav-link">Our Menu <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="sourcing.html" class="drawer-nav-link">Our Sourcing <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="loyalty.html" class="drawer-nav-link">Chai Rewards <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="pricing.html" class="drawer-nav-link">Catering & Events <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="blog.html" class="drawer-nav-link">Stories & Blog <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="contact.html" class="drawer-nav-link">Contact Us <i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+  </aside>
+
+  <!-- Cart Drawer -->
+  <aside class="cart-drawer">
+    <div class="cart-header">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <i class="fa-solid fa-bag-shopping" style="color:var(--primary);font-size:1.2rem;"></i>
+        <h3>Your Order (<span class="cart-count-badge">0</span>)</h3>
+      </div>
+      <button type="button" class="cart-close-btn btn-icon"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cart-body"></div>
+    <div class="cart-footer">
+      <div class="cart-summary-row"><span>Subtotal</span><span class="cart-subtotal-val">₹0</span></div>
+      <div class="cart-summary-row"><span>GST (5%)</span><span class="cart-tax-val">₹0</span></div>
+      <div class="cart-summary-row total"><span>Total</span><span class="cart-total-val">₹0</span></div>
+      <button type="button" class="btn btn-primary cart-checkout-btn" style="width:100%;margin-top:16px;">
+        Proceed to Order <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </aside>
+  <div class="drawer-backdrop"></div>
+
+  <!-- MAIN -->
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <span class="tagline-label"><i class="fa-solid fa-seedling"></i> Our Heritage</span>
+        <h1 class="page-hero-title">More Than Tea. It's a <span class="font-italic text-gradient">Timeless Tradition</span>.</h1>
+        <p class="page-hero-subtitle" style="max-width:680px;margin:14px auto 0;font-size:1.05rem;line-height:1.75;color:var(--text-muted);">
+          From a quiet haveli lane in Jaipur to an artisan tea sanctuary celebrating India's sacred spice alchemy and living culinary craftsmanship.
+        </p>
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></span>
+          <span style="color:var(--text-main);font-weight:600;">About</span>
+        </div>
+
+        <!-- Atmospheric Heritage Showcase Banner -->
+        <div class="about-hero-banner reveal">
+          <img src="assets/images/about-haveli-heritage.jpg" alt="CHAI & CO. Heritage Haveli Tea Sanctuary in Jaipur">
+          <div class="about-hero-overlay">
+            <div style="color:#fff;max-width:640px;text-align:start;">
+              <span class="tagline-label" style="background:rgba(214,168,95,0.22);color:var(--accent);border:1px solid rgba(214,168,95,0.35);margin-bottom:10px;">The Haveli Sanctuary • Jaipur</span>
+              <h3 style="color:#ffffff;font-size:1.85rem;margin-bottom:8px;letter-spacing:-0.01em;line-height:1.25;">Where Heritage Meets Artisan Craft</h3>
+              <p style="color:#f2e6db;font-size:0.95rem;margin:0;line-height:1.65;">
+                Slow-simmering brass pots, hand-ground organic spices, and morning sunlight dancing through carved Rajasthani arches.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. Our Story -->
+    <section class="section">
+      <div class="container">
+        <div class="about-preview-grid">
+          <div class="about-single-media reveal">
+            <div class="about-badge-established">
+              <strong>2018</strong>
+              <span>Jaipur Heritage</span>
+            </div>
+            <img src="assets/images/about-chai-craft.jpg" alt="Traditional Indian Chai Hand-Poured from Kettle with Aromatic Spices" class="about-single-img" loading="lazy">
+          </div>
+
+          <div class="reveal">
+            <span class="tagline-label"><i class="fa-solid fa-fire-burner"></i> Rooted in Authenticity</span>
+            <h2 class="section-title">Brewed with <span class="font-italic" style="color:var(--terracotta);">Tradition</span>. Served with <span class="font-italic" style="color:var(--primary);">Soul</span>.</h2>
+            <p class="lead-editorial" style="margin-bottom:18px;">
+              CHAI & CO. began in a quiet sunlit lane in Jaipur with a single brass pot, a mortar and pestle, and an unapologetic obsession with brewing authentic, unhurried chai. In an era dominated by artificial concentrates and powdered syrups, we believed people craved something profoundly real: the rhythm of slow rolling bubbles, aromatic crushed pods, and warmth that sinks deep into the spirit.
+            </p>
+            <p style="font-size:0.98rem;line-height:1.8;color:var(--text-muted);margin-bottom:24px;">
+              Over eight years, our humble corner stall transformed into a contemporary sanctuary of tea culture. Today, we partner directly with over 45 organic family-run estates across Assam, Darjeeling, and Kerala to bring single-origin orthodox leaves directly from soil to saucer.
+            </p>
+
+            <blockquote class="about-quote-card">
+              <p class="quote-text">
+                "We don't brew tea merely to fill a cup; we brew it to pause time, nourish human connection, and honor generations of Indian tea craftsmanship."
+              </p>
+              <cite class="quote-author">
+                <strong>Aarav Sharma</strong> — Founder & Master Tea Sommelier
+              </cite>
+            </blockquote>
+
+            <div class="about-cta-buttons" style="display:flex;gap:14px;flex-wrap:wrap;margin-top:20px;">
+              <a href="menu.html" class="btn btn-primary"><i class="fa-solid fa-mug-hot" style="margin-right:6px;"></i>Taste Our Blends</a>
+              <a href="sourcing.html" class="btn btn-primary"><i class="fa-solid fa-leaf" style="margin-right:6px;"></i>Our Ethical Sourcing</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Mission & Vision -->
+    <section class="section section-bg">
+      <div class="container">
+        <div class="grid grid-2">
+          <div class="feature-card reveal" style="text-align:start;padding:48px 36px;">
+            <div class="feature-icon-wrapper" style="margin:0 0 20px 0;"><i class="fa-solid fa-compass"></i></div>
+            <h3 style="font-size:1.6rem;margin-bottom:14px;">Our Mission</h3>
+            <p style="font-size:1rem;line-height:1.7;">
+              To bring authentic, memorable chai rituals to everyday modern life without compromise. We preserve heritage Indian recipes while creating an inclusive, beautiful gathering space where every conversation is nourished by real ingredients.
+            </p>
+          </div>
+
+          <div class="feature-card reveal" style="text-align:start;padding:48px 36px;">
+            <div class="feature-icon-wrapper" style="margin:0 0 20px 0;"><i class="fa-solid fa-eye"></i></div>
+            <h3 style="font-size:1.6rem;margin-bottom:14px;">Our Vision</h3>
+            <p style="font-size:1rem;line-height:1.7;">
+              To become the world's most cherished destination celebrating Indian tea craftsmanship. We champion fair living wages for tea pickers, eliminate single-use plastics, and foster warm human connections over steaming clay cups.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Our Values -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="tagline-label"><i class="fa-solid fa-heart"></i> Guiding Principles</span>
+          <h2 class="section-title">The Values That Shape Every Pot</h2>
+          <p class="section-description">Our standard for every leaf plucked, every spice ground, and every customer welcomed.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="feature-card reveal">
+            <div class="feature-icon-wrapper"><i class="fa-solid fa-mortar-pestle"></i></div>
+            <h4 class="feature-title">Uncompromising Authenticity</h4>
+            <p class="feature-desc">We never cut corners with tea bags, syrups, or artificial flavour drops. Genuine whole spices only.</p>
+          </div>
+
+          <div class="feature-card reveal">
+            <div class="feature-icon-wrapper"><i class="fa-solid fa-scale-balanced"></i></div>
+            <h4 class="feature-title">Fair Farmer Partnerships</h4>
+            <p class="feature-desc">We purchase directly from certified estates, ensuring 20-35% above fair-trade floor prices for estate workers.</p>
+          </div>
+
+          <div class="feature-card reveal">
+            <div class="feature-icon-wrapper"><i class="fa-solid fa-bell-concierge"></i></div>
+            <h4 class="feature-title">Radical Hospitality</h4>
+            <p class="feature-desc">Inspired by <em>"Atithi Devo Bhava"</em> (Guest is divine), our stalls and cafes are sanctuaries of warmth and generosity.</p>
+          </div>
+
+          <div class="feature-card reveal">
+            <div class="feature-icon-wrapper"><i class="fa-solid fa-recycle"></i></div>
+            <h4 class="feature-title">Sustainable Rituals</h4>
+            <p class="feature-desc">Traditional unglazed terracotta kulhad cups return to the earth naturally. 100% compostable packaging.</p>
+          </div>
+
+          <div class="feature-card reveal">
+            <div class="feature-icon-wrapper"><i class="fa-solid fa-people-group"></i></div>
+            <h4 class="feature-title">Community First</h4>
+            <p class="feature-desc">Chai stalls have historically been the town squares of India. We keep that communal spirit alive today.</p>
+          </div>
+
+          <div class="feature-card reveal">
+            <div class="feature-icon-wrapper"><i class="fa-solid fa-award"></i></div>
+            <h4 class="feature-title">Artisanal Mastery</h4>
+            <p class="feature-desc">Our chai makers undergo a rigorous 4-month culinary training in heat control, spice ratios, and aeration.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Team Members -->
+    <section class="section section-bg">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="tagline-label"><i class="fa-solid fa-user-group"></i> Artisans & Curators</span>
+          <h2 class="section-title">Meet Our Chai Masters</h2>
+          <p class="section-description">The passionate culinary minds and sommeliers dedicated to brewing perfection.</p>
+        </div>
+
+        <div class="grid grid-4">
+          <!-- Member 1 -->
+          <div class="chai-card reveal" style="text-align:center;">
+            <div style="height:280px;overflow:hidden;">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="Aarav Sharma" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div style="padding:24px;">
+              <h4 style="margin-bottom:4px;">Aarav Sharma</h4>
+              <span class="chai-category" style="color:var(--primary);margin-bottom:12px;display:block;">Founder & Master Blender</span>
+              <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:16px;">
+                Trained in estate cupping across Upper Assam. Aarav formulates all proprietary spice ratios.
+              </p>
+              <div style="display:flex;justify-content:center;gap:10px;">
+                <a href="#" class="btn-icon btn-sm" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="btn-icon btn-sm" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Member 2 -->
+          <div class="chai-card reveal" style="text-align:center;">
+            <div style="height:280px;overflow:hidden;">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=500&q=80" alt="Meera Sengupta" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div style="padding:24px;">
+              <h4 style="margin-bottom:4px;">Meera Sengupta</h4>
+              <span class="chai-category" style="color:var(--primary);margin-bottom:12px;display:block;">Head Chai Specialist</span>
+              <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:16px;">
+                Leading kitchen standards and barista training across all tea house stalls for over 5 years.
+              </p>
+              <div style="display:flex;justify-content:center;gap:10px;">
+                <a href="#" class="btn-icon btn-sm" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="btn-icon btn-sm" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Member 3 -->
+          <div class="chai-card reveal" style="text-align:center;">
+            <div style="height:280px;overflow:hidden;">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80" alt="Kabir Mehta" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div style="padding:24px;">
+              <h4 style="margin-bottom:4px;">Kabir Mehta</h4>
+              <span class="chai-category" style="color:var(--primary);margin-bottom:12px;display:block;">Café Operations Director</span>
+              <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:16px;">
+                Culinary historian and guest experience leader ensuring fast, soulful, and welcoming service.
+              </p>
+              <div style="display:flex;justify-content:center;gap:10px;">
+                <a href="#" class="btn-icon btn-sm" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="btn-icon btn-sm" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Member 4 -->
+          <div class="chai-card reveal" style="text-align:center;">
+            <div style="height:280px;overflow:hidden;">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80" alt="Mirza Baig" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div style="padding:24px;">
+              <h4 style="margin-bottom:4px;">Mirza Baig</h4>
+              <span class="chai-category" style="color:var(--primary);margin-bottom:12px;display:block;">Kashmiri Tea Curator</span>
+              <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:16px;">
+                Fourth-generation saffron trader and specialist in copper samovar Kashmiri Kahwa brews.
+              </p>
+              <div style="display:flex;justify-content:center;gap:10px;">
+                <a href="#" class="btn-icon btn-sm" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="btn-icon btn-sm" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Milestones -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="tagline-label"><i class="fa-solid fa-clock-rotate-left"></i> Timeline</span>
+          <h2 class="section-title">Our Growth Through the Years</h2>
+        </div>
+
+        <div class="timeline-process reveal">
+          <div class="timeline-step">
+            <div class="timeline-step-number">2018</div>
+            <h4 class="timeline-step-title">First Stall</h4>
+            <p class="timeline-step-desc">A small 40 sq.ft stall opened in Jaipur selling 3 signature chais.</p>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-step-number">2020</div>
+            <h4 class="timeline-step-title">Direct Trade</h4>
+            <p class="timeline-step-desc">Formed direct partnerships with Assam and Idukki cardamom growers.</p>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-step-number">2022</div>
+            <h4 class="timeline-step-title">Flagship House</h4>
+            <p class="timeline-step-desc">Opened our heritage haveli flagship with full street food kitchen.</p>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-step-number">2024</div>
+            <h4 class="timeline-step-title">Chai Rewards</h4>
+            <p class="timeline-step-desc">Launched digital community rewards reaching 25,000+ members.</p>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-step-number">2026</div>
+            <h4 class="timeline-step-title">16+ Artisan Blends</h4>
+            <p class="timeline-step-desc">Recognized nationally for culinary innovation and tea tourism.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MULTI-COLUMN GLOBAL FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo" style="color:#fff;margin-bottom:14px;">
+            <div class="logo-icon" style="background:rgba(214,168,95,0.2);color:var(--accent);"><i class="fa-solid fa-mug-hot"></i></div>
+            <span>CHAI & CO.</span>
+          </div>
+          <p>
+            Brewed with Tradition. Served with Soul. Bringing authentic Indian chai culture to the modern café aesthetic since 2018.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://x.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Our House</a></li>
+            <li><a href="menu.html">Artisan Menu</a></li>
+            <li><a href="order.html">Order Online</a></li>
+            <li><a href="sourcing.html">Our Sourcing</a></li>
+            <li><a href="loyalty.html">Chai Rewards</a></li>
+            <li><a href="pricing.html">Event Catering</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Information</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html">Chai Chronicles</a></li>
+            <li><a href="contact.html">Find a Stall</a></li>
+            <li><a href="login.html">Member Sign In</a></li>
+            <li><a href="register.html">Join Rewards</a></li>
+            <li><a href="coming-soon.html">New Locations</a></li>
+            <li><a href="maintenance.html">System Status</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter-box">
+          <h4 class="footer-title">Visit Us</h4>
+          <p>
+            <i class="fa-solid fa-location-dot" style="color:var(--accent);margin-right:8px;"></i>
+            42 Heritage Haveli Way, C-Scheme, Jaipur, RJ 302001
+          </p>
+          <p>
+            <i class="fa-solid fa-phone" style="color:var(--accent);margin-right:8px;"></i>
+            +91 98290 12345
+          </p>
+          <p>
+            <i class="fa-solid fa-clock" style="color:var(--accent);margin-right:8px;"></i>
+            Open Daily: 7:00 AM – 11:30 PM
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 CHAI & CO. All Rights Reserved. Crafted with authentic passion.
+        </div>
+        <div style="display:flex;gap:20px;">
+          <a href="privacy.html" style="color:#8c7d70;">Privacy Policy</a>
+          <a href="terms.html" style="color:#8c7d70;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <div class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/forms.js"></script>
+</body>
+</html>
