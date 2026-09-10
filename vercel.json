@@ -2,22 +2,21 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "trailingSlash": false,
-  "routes": [
-    { "src": "/login", "dest": "/login.html" },
-    { "src": "/register", "dest": "/register.html" },
-    { "src": "/contact", "dest": "/contact.html" },
-    { "src": "/menu", "dest": "/menu.html" },
-    { "src": "/order", "dest": "/order.html" },
-    { "src": "/about", "dest": "/about.html" },
-    { "src": "/loyalty", "dest": "/loyalty.html" },
-    { "src": "/pricing", "dest": "/pricing.html" },
-    { "src": "/sourcing", "dest": "/sourcing.html" },
-    { "src": "/blog", "dest": "/blog.html" },
-    { "src": "/blog-details", "dest": "/blog-details.html" },
-    { "src": "/coming-soon", "dest": "/coming-soon.html" },
-    { "src": "/maintenance", "dest": "/maintenance.html" },
-    { "src": "/privacy", "dest": "/privacy.html" },
-    { "src": "/terms", "dest": "/terms.html" },
-    { "handle": "filesystem" }
+  "rewrites": [
+    { "source": "/login", "destination": "/login.html" },
+    { "source": "/register", "destination": "/register.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/menu", "destination": "/menu.html" },
+    { "source": "/order", "destination": "/order.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/loyalty", "destination": "/loyalty.html" },
+    { "source": "/pricing", "destination": "/pricing.html" },
+    { "source": "/sourcing", "destination": "/sourcing.html" },
+    { "source": "/blog", "destination": "/blog.html" },
+    { "source": "/blog-details", "destination": "/blog-details.html" },
+    { "source": "/coming-soon", "destination": "/coming-soon.html" },
+    { "source": "/maintenance", "destination": "/maintenance.html" },
+    { "source": "/privacy", "destination": "/privacy.html" },
+    { "source": "/terms", "destination": "/terms.html" }
   ]
 }
