@@ -4492,25 +4492,32 @@ textarea.form-control {
   background-size: cover;
   background-position: center 35%;
   background-repeat: no-repeat;
-  opacity: 0.72;
-  filter: contrast(1.05) saturate(1.1);
+  opacity: 0.82;
+  filter: brightness(0.97) contrast(1.04) saturate(1.15);
   transform: scale(1.02);
   transition: opacity 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
   z-index: 0;
   pointer-events: none;
 }
 
-/* Dual-Mode Gradient Veil Layer - Light Mode Default */
+/* Dual-Mode Gradient Veil Layer - Warm Editorial Light Mode */
 .page-hero::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(253, 251, 247, 0.52) 0%,
-    rgba(253, 248, 237, 0.38) 45%,
-    rgba(253, 251, 247, 0.68) 100%
-  );
+  background: 
+    radial-gradient(
+      ellipse 85% 65% at 50% 48%,
+      rgba(255, 253, 249, 0.55) 0%,
+      rgba(254, 248, 238, 0.68) 55%,
+      rgba(251, 244, 232, 0.88) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(253, 251, 247, 0.42) 0%,
+      rgba(253, 248, 237, 0.28) 45%,
+      rgba(251, 244, 232, 0.92) 100%
+    );
   z-index: 1;
   pointer-events: none;
   transition: background 0.35s ease;
@@ -4524,65 +4531,91 @@ textarea.form-control {
   align-items: center;
   justify-content: center;
   text-align: center;
+  max-width: 980px;
 }
 
+/* Luxury Chai & Spiced Copper Editorial Title */
 .page-hero-title {
   font-family: var(--font-heading);
   font-size: clamp(2.3rem, 5vw, 3.4rem);
   font-weight: 700;
-  letter-spacing: -0.02em;
-  color: #1a1209;
-  margin-bottom: 12px;
+  letter-spacing: -0.025em;
+  color: #2b170c;
+  background: linear-gradient(135deg, #26140a 0%, #45210e 45%, #7a3a14 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 14px;
   text-align: center;
   position: relative;
-  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.95), 0 0 20px rgba(255, 255, 255, 0.85);
+  filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.7));
 }
 
+/* Warm Champagne Frosted Glass Tagline Pill */
 .page-hero .tagline-label {
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  background: rgba(255, 255, 255, 0.94);
-  color: #92400e;
-  border: 1px solid rgba(217, 119, 6, 0.28);
-  box-shadow: 0 3px 12px rgba(180, 83, 9, 0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  background: rgba(255, 249, 240, 0.88);
+  color: #964719;
+  border: 1px solid rgba(194, 120, 48, 0.32);
+  box-shadow: 0 4px 18px rgba(78, 42, 16, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  padding: 6px 18px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
 }
 
+/* Velvety Spiced Mocha Subtitle */
 .page-hero-subtitle,
 .page-hero p {
   font-family: var(--font-serif-accent, var(--font-heading));
-  font-size: 1.18rem;
+  font-size: 1.22rem;
   font-style: italic;
   font-weight: 500;
-  line-height: 1.65;
-  letter-spacing: 0.01em;
-  color: #2b1f14;
+  line-height: 1.7;
+  letter-spacing: 0.015em;
+  color: #423023;
+  max-width: 720px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   position: relative;
-  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.95), 0 0 12px rgba(255, 255, 255, 0.8);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.55);
 }
 
+/* Editorial Floating Breadcrumb Capsule */
 .breadcrumbs {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  flex-wrap: wrap;
+  gap: 10px;
   font-size: var(--font-size-sm);
   font-weight: 600;
-  color: #3b2c1f;
+  color: #554133;
   position: relative;
-  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9);
+  margin-top: 18px;
+  background: rgba(255, 250, 242, 0.78);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(210, 180, 150, 0.40);
+  padding: 6px 20px;
+  border-radius: 999px;
+  box-shadow: 0 2px 12px rgba(45, 25, 12, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 .breadcrumbs a {
-  color: #2b1f14;
+  color: #3b2819;
+  transition: color 0.2s ease;
 }
 .breadcrumbs a:hover {
   color: var(--primary);
 }
 .breadcrumb-separator {
-  font-size: 0.75rem;
-  color: #785a44;
+  font-size: 0.7rem;
+  color: #a88d77;
 }
 
 /* Specific Page Hero Banner Image Mappings */
