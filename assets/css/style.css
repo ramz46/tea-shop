@@ -1391,7 +1391,7 @@ p {
 
 /* Card Body Content */
 .chai-card-body {
-  padding: 24px 22px 22px;
+  padding: 22px 18px 20px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -1523,6 +1523,8 @@ p {
 }
 .recipe-box-ingredients {
   color: var(--text-muted);
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Artisan Brewing Guide Cards */
@@ -1725,27 +1727,32 @@ p {
 .chai-card-footer {
   display: flex;
   flex-direction: column;
-  gap: 13px;
-  padding-top: 16px;
+  gap: 12px;
+  padding-top: 14px;
   border-top: 1px solid var(--border-subtle);
   margin-top: auto;
+  width: 100%;
 }
 
 .chai-footer-top-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  width: 100%;
 }
 
 .chai-price-block {
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  flex-shrink: 1;
 }
 
 .chai-price {
   font-family: var(--font-heading);
-  font-size: 1.42rem;
+  font-size: 1.36rem;
   font-weight: 800;
   color: var(--text-main);
   line-height: 1.1;
@@ -1754,7 +1761,7 @@ p {
   gap: 2px;
 }
 .chai-price .currency-symbol {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--terracotta);
   font-weight: 700;
 }
@@ -1767,6 +1774,7 @@ p {
   display: flex;
   align-items: center;
   gap: 4px;
+  white-space: nowrap;
 }
 .price-tax-label i {
   color: #2e7d32;
@@ -1787,14 +1795,16 @@ p {
   background: var(--bg-surface);
   border: 1.5px solid var(--border);
   color: var(--text-muted);
-  padding: 6px 14px;
-  font-size: 0.8rem;
+  padding: 5px 12px;
+  font-size: 0.78rem;
   font-weight: 600;
   border-radius: var(--radius-pill);
-  gap: 6px;
+  gap: 5px;
   cursor: pointer;
   position: relative;
   transition: all 0.24s cubic-bezier(0.2, 0.8, 0.2, 1);
+  flex-shrink: 0;
+  max-width: 100%;
 }
 .quick-view-btn:hover {
   border-color: var(--secondary);
@@ -1804,7 +1814,7 @@ p {
   box-shadow: 0 4px 12px rgba(180, 83, 9, 0.18), 0 0 0 1px rgba(180, 83, 9, 0.2);
 }
 .quick-view-btn i {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   color: var(--primary);
   transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
 }

@@ -59,6 +59,16 @@ html, body {
 }
 
 /* --------------------------------------------------------------------------
+   2B. MEDIUM LAPTOPS / NARROW DESKTOPS (< 1080px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1080px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+/* --------------------------------------------------------------------------
    3. LAPTOPS & TABLETS LANDSCAPE (< 992px)
    -------------------------------------------------------------------------- */
 @media (max-width: 991.98px) {
@@ -219,8 +229,28 @@ html, body {
     padding: 36px 0;
   }
 
-  .grid-3, .grid-2 {
+  .grid-4,
+  .grid-3,
+  .grid-2 {
     grid-template-columns: 1fr;
+  }
+
+  /* Signature Chai & Product Cards Mobile Optimization */
+  .chai-card-body {
+    padding: 20px 18px 18px;
+  }
+
+  .chai-footer-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+  }
+
+  .quick-view-btn {
+    padding: 5px 12px;
+    font-size: 0.76rem;
   }
 
   .stats-grid {
@@ -541,6 +571,21 @@ html, body {
     font-size: 0.88rem !important;
   }
 
+  /* Chai Card Mobile Optimization */
+  .chai-card-body {
+    padding: 18px 16px 16px;
+  }
+
+  .chai-price {
+    font-size: 1.3rem;
+  }
+
+  .quick-view-btn {
+    padding: 5px 11px;
+    font-size: 0.75rem;
+    gap: 5px;
+  }
+
   .cookie-banner {
     flex-direction: column;
     align-items: stretch;
@@ -663,6 +708,29 @@ html, body {
     padding: 24px 18px;
   }
 
+  /* Chai Card Small Mobile Optimization */
+  .chai-card-body {
+    padding: 16px 14px 15px;
+  }
+
+  .chai-footer-top-row {
+    gap: 6px 8px;
+  }
+
+  .chai-price {
+    font-size: 1.25rem;
+  }
+
+  .quick-view-btn {
+    padding: 4px 10px;
+    font-size: 0.72rem;
+    gap: 4px;
+  }
+
+  .price-tax-label {
+    font-size: 0.65rem;
+  }
+
   .footer-newsletter-form {
     flex-direction: column;
   }
@@ -715,6 +783,29 @@ html, body {
   }
   .brew-caption {
     display: none;
+  }
+
+  /* Chai Card Ultra-compact Mobile */
+  .chai-card-body {
+    padding: 14px 12px 14px;
+  }
+
+  .chai-price {
+    font-size: 1.18rem;
+  }
+
+  .quick-view-btn {
+    padding: 4px 8px;
+    font-size: 0.7rem;
+    gap: 3px;
+  }
+
+  .quick-view-btn i {
+    font-size: 0.72rem;
+  }
+
+  .price-tax-label {
+    font-size: 0.62rem;
   }
 }
 
