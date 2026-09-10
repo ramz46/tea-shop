@@ -321,7 +321,7 @@
           }
 
           setTimeout(() => {
-            const redirectUrl = new URLSearchParams(window.location.search).get('redirect') || 'order.html';
+            const redirectUrl = new URLSearchParams(window.location.search).get('redirect') || 'index.html';
             window.location.href = redirectUrl;
           }, 1000);
         } else {
@@ -437,7 +437,8 @@
         }
 
         setTimeout(() => {
-          window.location.href = 'order.html';
+          const redirectUrl = new URLSearchParams(window.location.search).get('redirect') || 'index.html';
+          window.location.href = redirectUrl;
         }, 1500);
       }, 900);
     });
@@ -656,7 +657,10 @@
             const users = getUsers();
             const demo = users[0];
             setCurrentUser(demo);
-            setTimeout(() => { window.location.href = 'order.html'; }, 1000);
+            setTimeout(() => {
+              const redirectUrl = new URLSearchParams(window.location.search).get('redirect') || 'index.html';
+              window.location.href = redirectUrl;
+            }, 1000);
           }
         } else {
           if (window.showToast) {
@@ -665,7 +669,10 @@
           const users = getUsers();
           const demo = users[0];
           setCurrentUser(demo);
-          setTimeout(() => { window.location.href = 'order.html'; }, 1000);
+          setTimeout(() => {
+            const redirectUrl = new URLSearchParams(window.location.search).get('redirect') || 'index.html';
+            window.location.href = redirectUrl;
+          }, 1000);
         }
       });
     });

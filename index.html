@@ -24,6 +24,19 @@
   <link rel="stylesheet" href="assets/css/responsive.css?v=2.6">
   <link rel="stylesheet" href="assets/css/dark-mode.css?v=2.6">
   <link rel="stylesheet" href="assets/css/rtl.css">
+
+  <!-- Auth Gate: Keep index.html as homepage and redirect unauthenticated visitors to login.html -->
+  <script>
+    (function () {
+      try {
+        var user = localStorage.getItem('chai_current_user');
+        if (!user) {
+          var target = window.location.pathname + window.location.search;
+          window.location.replace('login.html?redirect=' + encodeURIComponent(target || 'index.html'));
+        }
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
   <!-- Accessibility Skip to Main Content -->
