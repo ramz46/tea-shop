@@ -4481,7 +4481,6 @@ textarea.form-control {
   border-bottom: 1px solid var(--border);
   position: relative;
   overflow: hidden;
-  isolation: isolate;
 }
 
 /* Atmospheric Background Photographic Layer */
@@ -4489,14 +4488,14 @@ textarea.form-control {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: var(--hero-banner-img, none);
+  background-image: var(--hero-bg, none);
   background-size: cover;
   background-position: center 35%;
   background-repeat: no-repeat;
-  opacity: 0.28;
+  opacity: 0.42;
   transform: scale(1.02);
   transition: opacity 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-  z-index: -2;
+  z-index: 0;
   pointer-events: none;
 }
 
@@ -4507,23 +4506,18 @@ textarea.form-control {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(253, 251, 247, 0.90) 0%,
-    rgba(253, 248, 237, 0.82) 48%,
-    rgba(253, 251, 247, 0.98) 100%
-  ),
-  radial-gradient(
-    ellipse 85% 70% at 50% 50%,
-    rgba(255, 255, 255, 0.70) 0%,
-    rgba(253, 248, 237, 0.92) 100%
+    rgba(253, 251, 247, 0.82) 0%,
+    rgba(253, 248, 237, 0.68) 48%,
+    rgba(253, 251, 247, 0.94) 100%
   );
-  z-index: -1;
+  z-index: 1;
   pointer-events: none;
   transition: background 0.35s ease;
 }
 
 .page-hero .container {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -4582,37 +4576,62 @@ textarea.form-control {
 }
 
 /* Specific Page Hero Banner Image Mappings */
+.page-hero-menu::before {
+  background-image: url('/assets/images/banner-menu.jpg') !important;
+}
 .page-hero-menu {
-  --hero-banner-img: url('../images/banner-menu.jpg');
+  --hero-bg: url('/assets/images/banner-menu.jpg');
 }
 
+.page-hero-contact::before {
+  background-image: url('/assets/images/banner-contact.jpg') !important;
+}
 .page-hero-contact {
-  --hero-banner-img: url('../images/banner-contact.jpg');
+  --hero-bg: url('/assets/images/banner-contact.jpg');
 }
 
+.page-hero-pricing::before,
+.page-hero-catering::before {
+  background-image: url('/assets/images/banner-catering.jpg') !important;
+}
 .page-hero-pricing,
 .page-hero-catering {
-  --hero-banner-img: url('../images/banner-catering.jpg');
+  --hero-bg: url('/assets/images/banner-catering.jpg');
 }
 
+.page-hero-loyalty::before {
+  background-image: url('/assets/images/banner-loyalty.jpg') !important;
+}
 .page-hero-loyalty {
-  --hero-banner-img: url('../images/banner-loyalty.jpg');
+  --hero-bg: url('/assets/images/banner-loyalty.jpg');
 }
 
+.page-hero-blog::before {
+  background-image: url('/assets/images/banner-blog.jpg') !important;
+}
 .page-hero-blog {
-  --hero-banner-img: url('../images/banner-blog.jpg');
+  --hero-bg: url('/assets/images/banner-blog.jpg');
 }
 
+.page-hero-about::before {
+  background-image: url('/assets/images/about-haveli-heritage.jpg') !important;
+}
 .page-hero-about {
-  --hero-banner-img: url('../images/about-haveli-heritage.jpg');
+  --hero-bg: url('/assets/images/about-haveli-heritage.jpg');
 }
 
+.page-hero-sourcing::before {
+  background-image: url('/assets/images/tea-sourcing-ethics.jpg') !important;
+}
 .page-hero-sourcing {
-  --hero-banner-img: url('../images/tea-sourcing-ethics.jpg');
+  --hero-bg: url('/assets/images/tea-sourcing-ethics.jpg');
 }
 
+.page-hero-order::before {
+  background-image: url('/assets/images/banner-menu.jpg') !important;
+}
 .page-hero-order {
-  --hero-banner-img: url('../images/banner-menu.jpg');
+  --hero-bg: url('/assets/images/banner-menu.jpg');
 }
 
 /* --------------------------------------------------------------------------
