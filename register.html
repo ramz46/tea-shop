@@ -20,11 +20,12 @@
   <link rel="stylesheet" href="assets/css/responsive.css">
   <link rel="stylesheet" href="assets/css/dark-mode.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/auth.css">
 </head>
-<body>
+<body class="auth-page-body">
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Header -->
+  <!-- Global Scrolled Header -->
   <header class="site-header scrolled">
     <div class="container header-container">
       <a href="index.html" class="brand-logo" aria-label="Chai & Co. Homepage">
@@ -35,81 +36,196 @@
       <div class="header-actions">
         <button type="button" class="header-tool-btn theme-toggle-btn" aria-label="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
         <button type="button" class="header-tool-btn rtl-toggle-btn" aria-label="Layout Direction: LTR (Click for RTL)"><span class="btn-label" style="font-size:0.7rem;font-weight:700;">LTR</span></button>
-        <a href="index.html" class="btn btn-outline btn-sm"><i class="fa-solid fa-arrow-left"></i> Home</a>
+        <a href="index.html" class="btn btn-outline btn-sm"><i class="fa-solid fa-arrow-left"></i> Return Home</a>
       </div>
     </div>
   </header>
 
-  <main id="main-content" style="min-height:90vh;display:flex;align-items:center;justify-content:center;padding:120px 20px 60px;">
-    <div class="auth-card reveal" style="max-width:520px;width:100%;padding:40px 36px;box-shadow:var(--shadow-lg);">
-      <div style="text-align:center;margin-bottom:24px;">
-        <span class="tagline-label" style="margin-bottom:10px;">
-          <i class="fa-solid fa-crown"></i> 50 Instant Points Bonus
-        </span>
-        <h2 style="font-size:1.6rem;margin-bottom:6px;">Join Chai Rewards</h2>
-        <p class="text-muted" style="font-size:0.875rem;margin:0;">Start earning points on every steaming cup from your first visit</p>
+  <!-- Main Auth Split Section -->
+  <main id="main-content" class="auth-main-section">
+    <div class="auth-ambient-glow"></div>
+
+    <div class="auth-split-card">
+      <!-- Left Visual / Member Perks Pane -->
+      <div class="auth-visual-pane">
+        <div class="auth-steam-container">
+          <div class="auth-steam-puff"></div>
+          <div class="auth-steam-puff"></div>
+          <div class="auth-steam-puff"></div>
+        </div>
+
+        <div class="auth-visual-content">
+          <div class="auth-visual-header">
+            <span class="auth-visual-badge">
+              <i class="fa-solid fa-crown"></i> 50 Instant Points Bonus
+            </span>
+            <h1 class="auth-visual-title">Begin Your Slow-Brew Journey.</h1>
+            <p class="auth-visual-desc">
+              Join our guild of slow-steeped chai lovers. Earn points from your very first clay kulhad and unlock member-only tasting privileges.
+            </p>
+          </div>
+
+          <div class="auth-perks-list">
+            <div class="auth-perk-item">
+              <div class="auth-perk-icon"><i class="fa-solid fa-award"></i></div>
+              <div class="auth-perk-text">
+                <h4>Silver Spiced (Tier 1)</h4>
+                <p>Earn 1 point per ₹10 spent, birthday brew on the house.</p>
+              </div>
+            </div>
+
+            <div class="auth-perk-item">
+              <div class="auth-perk-icon"><i class="fa-solid fa-crown"></i></div>
+              <div class="auth-perk-text">
+                <h4>Gold Reserve (Tier 2)</h4>
+                <p>1.5x points multiplier, free oat milk & jaggery upgrades.</p>
+              </div>
+            </div>
+
+            <div class="auth-perk-item">
+              <div class="auth-perk-icon"><i class="fa-solid fa-gem"></i></div>
+              <div class="auth-perk-text">
+                <h4>Royal Darbari (Tier 3)</h4>
+                <p>2x points, private tea sommelier tastings & annual gift.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- VIP Membership Preview Card -->
+        <div class="auth-vip-preview">
+          <div class="vip-card-info">
+            <h5>New Member Card</h5>
+            <div class="vip-card-num">CHAI • 2026 • NEW</div>
+          </div>
+          <div class="vip-badge-pill">
+            <i class="fa-solid fa-gift"></i> +50 Bonus Pts
+          </div>
+        </div>
       </div>
 
-      <form id="register-form" novalidate>
-        <div class="form-group">
-          <label class="form-label" for="reg-name">Full Name *</label>
-          <input type="text" id="reg-name" class="form-control" placeholder="Rohan Sharma" required>
-          <div class="form-error-msg"></div>
+      <!-- Right Form Pane -->
+      <div class="auth-form-pane">
+        <!-- Interactive Mode Switch Tabs -->
+        <div class="auth-nav-tabs">
+          <a href="login.html" class="auth-nav-tab">
+            <i class="fa-solid fa-lock"></i> Sign In
+          </a>
+          <button type="button" class="auth-nav-tab active" aria-selected="true">
+            <i class="fa-solid fa-user-plus"></i> Join Rewards
+          </button>
         </div>
 
-        <div class="grid grid-2" style="gap:16px;">
-          <div class="form-group">
-            <label class="form-label" for="reg-email">Email Address *</label>
-            <input type="email" id="reg-email" class="form-control" placeholder="rohan@example.com" required>
-            <div class="form-error-msg"></div>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="reg-phone">Mobile Number *</label>
-            <input type="tel" id="reg-phone" class="form-control" placeholder="+91 98290 12345" required>
-            <div class="form-error-msg"></div>
-          </div>
+        <div class="auth-header-block">
+          <h2>Create Member Account</h2>
+          <p>Claim your 50 instant Chai Rewards welcome bonus points.</p>
         </div>
 
-        <div class="form-group">
-          <label class="form-label" for="reg-password">Create Password (min. 8 characters) *</label>
-          <div class="password-toggle-wrapper">
-            <input type="password" id="reg-password" class="form-control" placeholder="••••••••" required>
-            <button type="button" class="password-toggle-btn" aria-label="Toggle visibility"><i class="fa-solid fa-eye"></i></button>
+        <!-- Main Registration Form -->
+        <form id="auth-register-form" novalidate>
+          <div class="auth-form-group">
+            <label for="reg-name">Full Name *</label>
+            <div class="input-icon-box">
+              <i class="fa-regular fa-user field-icon"></i>
+              <input type="text" id="reg-name" class="form-control" placeholder="Rohan Sharma" required autocomplete="name">
+            </div>
+            <div class="auth-error-feedback"></div>
           </div>
-          <div class="strength-meter">
-            <div id="strength-bar" class="strength-bar"></div>
-          </div>
-          <div id="strength-text" style="font-size:0.75rem;color:var(--text-light);margin-top:4px;"></div>
-          <div class="form-error-msg"></div>
-        </div>
 
-        <div class="form-group">
-          <label class="form-label" for="reg-confirm-password">Confirm Password *</label>
-          <div class="password-toggle-wrapper">
-            <input type="password" id="reg-confirm-password" class="form-control" placeholder="••••••••" required>
-            <button type="button" class="password-toggle-btn" aria-label="Toggle visibility"><i class="fa-solid fa-eye"></i></button>
-          </div>
-          <div class="form-error-msg"></div>
-        </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+            <div class="auth-form-group">
+              <label for="reg-email">Email Address *</label>
+              <div class="input-icon-box">
+                <i class="fa-regular fa-envelope field-icon"></i>
+                <input type="email" id="reg-email" class="form-control" placeholder="rohan@example.com" required autocomplete="email">
+              </div>
+              <div class="auth-error-feedback"></div>
+            </div>
 
-        <div class="form-group" style="margin-bottom:24px;">
-          <div style="display:flex;align-items:flex-start;gap:10px;">
-            <input type="checkbox" id="reg-terms" required style="margin-top:4px;accent-color:var(--primary);">
-            <label for="reg-terms" style="font-size:0.8rem;color:var(--text-muted);cursor:pointer;line-height:1.5;">
-              I agree to the <a href="terms.html" style="color:var(--primary);text-decoration:underline;">Terms of Service</a> & <a href="privacy.html" style="color:var(--primary);text-decoration:underline;">Privacy Policy</a>, and consent to receive Chai Rewards notifications.
+            <div class="auth-form-group">
+              <label for="reg-phone">Mobile Number *</label>
+              <div class="input-icon-box">
+                <i class="fa-solid fa-phone field-icon"></i>
+                <input type="tel" id="reg-phone" class="form-control" placeholder="+91 98290 12345" required autocomplete="tel">
+              </div>
+              <div class="auth-error-feedback"></div>
+            </div>
+          </div>
+
+          <div class="auth-form-group">
+            <label for="reg-password">Create Password (min. 8 characters) *</label>
+            <div class="input-icon-box">
+              <i class="fa-solid fa-lock field-icon"></i>
+              <input type="password" id="reg-password" class="form-control" placeholder="••••••••" required autocomplete="new-password">
+              <button type="button" class="auth-pwd-toggle" aria-label="Toggle password visibility">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+
+            <!-- Real-time Password Strength Meter & Live Checklist -->
+            <div id="pwd-strength-box" class="pwd-strength-container">
+              <div class="pwd-strength-bar">
+                <div id="pwd-strength-bar-fill" class="pwd-strength-fill"></div>
+              </div>
+              <div class="pwd-requirements-list">
+                <div id="req-len" class="pwd-req-item"><i class="fa-regular fa-circle"></i> Min. 8 characters</div>
+                <div id="req-upper" class="pwd-req-item"><i class="fa-regular fa-circle"></i> Uppercase letter</div>
+                <div id="req-num" class="pwd-req-item"><i class="fa-regular fa-circle"></i> At least 1 number</div>
+                <div id="req-sym" class="pwd-req-item"><i class="fa-regular fa-circle"></i> Special symbol</div>
+              </div>
+            </div>
+            <div class="auth-error-feedback"></div>
+          </div>
+
+          <div class="auth-form-group">
+            <label for="reg-confirm-password">Confirm Password *</label>
+            <div class="input-icon-box">
+              <i class="fa-solid fa-lock field-icon"></i>
+              <input type="password" id="reg-confirm-password" class="form-control" placeholder="••••••••" required autocomplete="new-password">
+              <button type="button" class="auth-pwd-toggle" aria-label="Toggle password visibility">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+            <div id="pwd-match-status" class="pwd-match-badge"></div>
+            <div class="auth-error-feedback"></div>
+          </div>
+
+          <div class="auth-form-group" style="margin-bottom:20px;">
+            <label class="auth-remember-label" for="reg-terms">
+              <input type="checkbox" id="reg-terms" required>
+              <span style="font-size:0.8rem;line-height:1.4;">
+                I agree to the <a href="terms.html" style="color:var(--primary);text-decoration:underline;" target="_blank">Terms of Service</a> &amp; <a href="privacy.html" style="color:var(--primary);text-decoration:underline;" target="_blank">Privacy Policy</a>, and consent to receive Chai Rewards notifications.
+              </span>
             </label>
+            <div class="auth-error-feedback"></div>
           </div>
-          <div class="form-error-msg"></div>
+
+          <button type="submit" class="btn-auth-submit">
+            <i class="fa-solid fa-crown"></i> Create Account & Claim 50 Points
+          </button>
+        </form>
+
+        <div class="auth-divider">
+          <span>or join instantly with</span>
         </div>
 
-        <button type="submit" class="btn btn-primary" style="width:100%;">
-          Create Account & Claim 50 Points
-        </button>
-      </form>
+        <!-- Social Quick Actions -->
+        <div class="auth-social-grid">
+          <button type="button" class="btn-social-auth" data-provider="Google" aria-label="Join with Google">
+            <i class="fa-brands fa-google" style="color:#ea4335;"></i> Google
+          </button>
+          <button type="button" class="btn-social-auth" data-provider="Apple" aria-label="Join with Apple">
+            <i class="fa-brands fa-apple"></i> Apple
+          </button>
+          <button type="button" class="btn-social-auth" data-provider="phone" aria-label="Join with Phone OTP">
+            <i class="fa-solid fa-mobile-screen" style="color:var(--primary);"></i> Phone OTP
+          </button>
+        </div>
 
-      <div style="text-align:center;margin-top:24px;padding-top:20px;border-top:1px solid var(--border);font-size:0.875rem;">
-        <span class="text-muted">Already a member?</span>
-        <a href="login.html" style="font-weight:700;color:var(--primary);margin-left:4px;">Sign In Here</a>
+        <div style="text-align:center;margin-top:14px;font-size:0.875rem;">
+          <span class="text-muted">Already a member?</span>
+          <a href="login.html" style="font-weight:700;color:var(--primary);margin-left:4px;">Sign In Here</a>
+        </div>
       </div>
     </div>
   </main>
@@ -188,7 +304,7 @@
     </div>
   </footer>
 
-  <!-- Back to Top Floating Button -->
+  <!-- Floating Elements & Scripts -->
   <button type="button" class="back-to-top" aria-label="Scroll back to top">
     <i class="fa-solid fa-arrow-up"></i>
   </button>
@@ -197,6 +313,6 @@
   <!-- Scripts -->
   <script src="assets/js/theme.js"></script>
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/forms.js"></script>
+  <script src="assets/js/auth.js"></script>
 </body>
 </html>

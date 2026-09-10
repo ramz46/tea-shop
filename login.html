@@ -20,11 +20,12 @@
   <link rel="stylesheet" href="assets/css/responsive.css">
   <link rel="stylesheet" href="assets/css/dark-mode.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/auth.css">
 </head>
-<body>
+<body class="auth-page-body">
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Header -->
+  <!-- Global Scrolled Header -->
   <header class="site-header scrolled">
     <div class="container header-container">
       <a href="index.html" class="brand-logo" aria-label="Chai & Co. Homepage">
@@ -40,61 +41,252 @@
     </div>
   </header>
 
-  <main id="main-content" style="min-height:90vh;display:flex;align-items:center;justify-content:center;padding:120px 20px 60px;">
-    <div class="auth-card reveal" style="max-width:460px;width:100%;padding:40px 36px;box-shadow:var(--shadow-lg);">
-      <div style="text-align:center;margin-bottom:28px;">
-        <div class="brand-logo" style="justify-content:center;font-size:1.8rem;margin-bottom:8px;">
-          <div class="logo-icon"><i class="fa-solid fa-mug-hot"></i></div>
-          <span>CHAI & CO.</span>
+  <!-- Main Auth Split Section -->
+  <main id="main-content" class="auth-main-section">
+    <div class="auth-ambient-glow"></div>
+
+    <div class="auth-split-card">
+      <!-- Left Visual / Member Perks Pane -->
+      <div class="auth-visual-pane">
+        <div class="auth-steam-container">
+          <div class="auth-steam-puff"></div>
+          <div class="auth-steam-puff"></div>
+          <div class="auth-steam-puff"></div>
         </div>
-        <h2 style="font-size:1.5rem;margin-bottom:6px;">Welcome Back</h2>
-        <p class="text-muted" style="font-size:0.875rem;margin:0;">Sign in to access your Chai Rewards & order history</p>
+
+        <div class="auth-visual-content">
+          <div class="auth-visual-header">
+            <span class="auth-visual-badge">
+              <i class="fa-solid fa-crown"></i> Heritage Chai Rewards
+            </span>
+            <h1 class="auth-visual-title">Every Sip Has Its Privileges.</h1>
+            <p class="auth-visual-desc">
+              Step back into our sanctuary of slow brews. Access your handcrafted reserves, order tracking, and earned rewards points.
+            </p>
+          </div>
+
+          <div class="auth-perks-list">
+            <div class="auth-perk-item">
+              <div class="auth-perk-icon"><i class="fa-solid fa-star"></i></div>
+              <div class="auth-perk-text">
+                <h4>50 Instant Welcome Points</h4>
+                <p>Credited immediately upon joining our rewards table.</p>
+              </div>
+            </div>
+
+            <div class="auth-perk-item">
+              <div class="auth-perk-icon"><i class="fa-solid fa-cake-candles"></i></div>
+              <div class="auth-perk-text">
+                <h4>Birthday Handcrafted Brew</h4>
+                <p>Complimentary reserve chai & artisanal bakery treat.</p>
+              </div>
+            </div>
+
+            <div class="auth-perk-item">
+              <div class="auth-perk-icon"><i class="fa-solid fa-leaf"></i></div>
+              <div class="auth-perk-text">
+                <h4>Secret Harvest Pre-Access</h4>
+                <p>Priority tasting allocations for rare flush teas.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- VIP Membership Preview Card -->
+        <div class="auth-vip-preview">
+          <div class="vip-card-info">
+            <h5>Member Loyalty Card</h5>
+            <div class="vip-card-num">CHAI • 8492 • 7104</div>
+          </div>
+          <div class="vip-badge-pill">
+            <i class="fa-solid fa-sparkles"></i> Gold Reserve
+          </div>
+        </div>
       </div>
 
-      <!-- Demo Credentials Notice -->
-      <div style="background:var(--primary-light);border:1px dashed var(--primary);padding:12px;border-radius:var(--radius-md);margin-bottom:22px;font-size:0.8rem;">
-        <strong><i class="fa-solid fa-circle-info"></i> Demo Credentials:</strong><br>
-        Email: <code>member@chaiandco.in</code><br>
-        Password: <code>ChaiLover2026</code>
-      </div>
-
-      <form id="login-form" novalidate>
-        <div class="form-group">
-          <label class="form-label" for="login-email">Email Address</label>
-          <input type="email" id="login-email" class="form-control" placeholder="member@chaiandco.in" required value="member@chaiandco.in">
-          <div class="form-error-msg"></div>
+      <!-- Right Form Pane -->
+      <div class="auth-form-pane">
+        <!-- Interactive Mode Switch Tabs -->
+        <div class="auth-nav-tabs">
+          <button type="button" class="auth-nav-tab active" aria-selected="true">
+            <i class="fa-solid fa-lock"></i> Sign In
+          </button>
+          <a href="register.html" class="auth-nav-tab">
+            <i class="fa-solid fa-user-plus"></i> Join Rewards
+          </a>
         </div>
 
-        <div class="form-group">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-            <label class="form-label" for="login-password" style="margin-bottom:0;">Password</label>
-            <a href="#" onclick="alert('Demo notice: In production, a reset link is emailed.');return false;" style="font-size:0.8rem;color:var(--primary);">Forgot password?</a>
+        <div class="auth-header-block">
+          <h2>Welcome Back</h2>
+          <p>Enter your credentials to manage orders & redeem points.</p>
+        </div>
+
+        <!-- 1-Click Demo Credentials Auto-Filler -->
+        <div class="auth-demo-banner">
+          <div class="demo-banner-text">
+            <strong><i class="fa-solid fa-key" style="color:var(--primary);margin-right:4px;"></i> Demo Account:</strong><br>
+            <code>member@chaiandco.in</code> &bull; <code>ChaiLover2026</code>
           </div>
-          <div class="password-toggle-wrapper">
-            <input type="password" id="login-password" class="form-control" placeholder="••••••••" required value="ChaiLover2026">
-            <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility">
-              <i class="fa-solid fa-eye"></i>
-            </button>
+          <button type="button" id="btn-autofill-demo" class="btn-demo-autofill" aria-label="Auto fill demo credentials">
+            <i class="fa-solid fa-bolt"></i> Auto Fill
+          </button>
+        </div>
+
+        <!-- Main Login Form -->
+        <form id="auth-login-form" novalidate>
+          <div class="auth-form-group">
+            <label for="login-email">Email Address *</label>
+            <div class="input-icon-box">
+              <i class="fa-regular fa-envelope field-icon"></i>
+              <input type="email" id="login-email" class="form-control" placeholder="member@chaiandco.in" required autocomplete="email">
+            </div>
+            <div class="auth-error-feedback"></div>
           </div>
-          <div class="form-error-msg"></div>
+
+          <div class="auth-form-group">
+            <label for="login-password">Password *</label>
+            <div class="input-icon-box">
+              <i class="fa-solid fa-lock field-icon"></i>
+              <input type="password" id="login-password" class="form-control" placeholder="••••••••" required autocomplete="current-password">
+              <button type="button" class="auth-pwd-toggle" aria-label="Toggle password visibility">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+            <div class="auth-error-feedback"></div>
+          </div>
+
+          <div class="auth-helpers-row">
+            <label class="auth-remember-label" for="login-remember">
+              <input type="checkbox" id="login-remember" checked>
+              <span>Remember this browser</span>
+            </label>
+            <button type="button" class="auth-forgot-link trigger-forgot-pwd">Forgot password?</button>
+          </div>
+
+          <button type="submit" class="btn-auth-submit">
+            <i class="fa-solid fa-mug-hot"></i> Sign In to Chai Rewards
+          </button>
+        </form>
+
+        <div class="auth-divider">
+          <span>or continue with</span>
         </div>
 
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:24px;">
-          <input type="checkbox" id="login-remember" checked style="accent-color:var(--primary);">
-          <label for="login-remember" style="font-size:0.85rem;color:var(--text-muted);cursor:pointer;">Remember this browser for 30 days</label>
+        <!-- Social Quick Actions -->
+        <div class="auth-social-grid">
+          <button type="button" class="btn-social-auth" data-provider="Google" aria-label="Sign in with Google">
+            <i class="fa-brands fa-google" style="color:#ea4335;"></i> Google
+          </button>
+          <button type="button" class="btn-social-auth" data-provider="Apple" aria-label="Sign in with Apple">
+            <i class="fa-brands fa-apple"></i> Apple
+          </button>
+          <button type="button" class="btn-social-auth" data-provider="phone" aria-label="Sign in with Phone OTP">
+            <i class="fa-solid fa-mobile-screen" style="color:var(--primary);"></i> Phone OTP
+          </button>
         </div>
 
-        <button type="submit" class="btn btn-primary" style="width:100%;">
-          Sign In to Chai Rewards
-        </button>
-      </form>
-
-      <div style="text-align:center;margin-top:24px;padding-top:20px;border-top:1px solid var(--border);font-size:0.875rem;">
-        <span class="text-muted">Don't have a Rewards account?</span>
-        <a href="register.html" style="font-weight:700;color:var(--primary);margin-left:4px;">Join for Free</a>
+        <div style="text-align:center;margin-top:14px;font-size:0.875rem;">
+          <span class="text-muted">New to Chai & Co.?</span>
+          <a href="register.html" style="font-weight:700;color:var(--primary);margin-left:4px;">Join for Free (Get 50 Pts)</a>
+        </div>
       </div>
     </div>
   </main>
+
+  <!-- 3-Step Interactive Forgot Password Modal -->
+  <div id="forgot-modal" class="auth-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="forgot-modal-title">
+    <div class="auth-modal-card">
+      <button type="button" id="close-forgot-modal" class="auth-modal-close" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Step 1: Request OTP -->
+      <div id="forgot-step-1" class="forgot-step-pane">
+        <div style="text-align:center;margin-bottom:20px;">
+          <div class="logo-icon" style="margin:0 auto 12px;background:var(--primary-light);color:var(--primary);"><i class="fa-solid fa-key"></i></div>
+          <h3 id="forgot-modal-title" style="font-family:var(--font-heading);font-size:1.5rem;margin-bottom:6px;">Reset Password</h3>
+          <p class="text-muted" style="font-size:0.85rem;margin:0;">Enter your registered email to receive a 4-digit verification code.</p>
+        </div>
+
+        <form id="forgot-step1-form">
+          <div class="auth-form-group">
+            <label for="forgot-email">Account Email Address</label>
+            <div class="input-icon-box">
+              <i class="fa-regular fa-envelope field-icon"></i>
+              <input type="email" id="forgot-email" class="form-control" placeholder="member@chaiandco.in" required>
+            </div>
+            <div id="forgot-step1-err" class="auth-error-feedback"></div>
+          </div>
+
+          <button type="submit" class="btn-auth-submit" style="height:44px;margin-top:8px;">
+            Send Verification Code
+          </button>
+        </form>
+      </div>
+
+      <!-- Step 2: Enter 4-Digit OTP -->
+      <div id="forgot-step-2" class="forgot-step-pane" style="display:none;">
+        <div style="text-align:center;margin-bottom:16px;">
+          <div class="logo-icon" style="margin:0 auto 12px;background:var(--secondary-light);color:var(--secondary);"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3 style="font-family:var(--font-heading);font-size:1.5rem;margin-bottom:6px;">Enter 4-Digit Code</h3>
+          <p class="text-muted" style="font-size:0.85rem;margin:0;">We sent a code to your email. (Demo: enter <strong>1234</strong>)</p>
+        </div>
+
+        <form id="forgot-step2-form">
+          <div class="otp-input-row">
+            <input type="text" maxlength="1" class="otp-box" inputmode="numeric" autofocus>
+            <input type="text" maxlength="1" class="otp-box" inputmode="numeric">
+            <input type="text" maxlength="1" class="otp-box" inputmode="numeric">
+            <input type="text" maxlength="1" class="otp-box" inputmode="numeric">
+          </div>
+          <div id="forgot-step2-err" class="auth-error-feedback" style="text-align:center;justify-content:center;"></div>
+
+          <button type="submit" class="btn-auth-submit" style="height:44px;margin-top:8px;">
+            Verify Code
+          </button>
+
+          <div style="text-align:center;margin-top:14px;font-size:0.82rem;">
+            <span class="text-muted">Didn't receive code?</span>
+            <button type="button" id="btn-resend-otp" class="auth-forgot-link" style="margin-left:4px;" disabled>
+              Resend Code <span id="otp-timer"></span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Step 3: Set New Password -->
+      <div id="forgot-step-3" class="forgot-step-pane" style="display:none;">
+        <div style="text-align:center;margin-bottom:20px;">
+          <div class="logo-icon" style="margin:0 auto 12px;background:var(--success-bg);color:var(--success);"><i class="fa-solid fa-lock-open"></i></div>
+          <h3 style="font-family:var(--font-heading);font-size:1.5rem;margin-bottom:6px;">Create New Password</h3>
+          <p class="text-muted" style="font-size:0.85rem;margin:0;">Choose a strong password with at least 8 characters.</p>
+        </div>
+
+        <form id="forgot-step3-form">
+          <div class="auth-form-group">
+            <label for="forgot-new-pwd">New Password</label>
+            <div class="input-icon-box">
+              <i class="fa-solid fa-lock field-icon"></i>
+              <input type="password" id="forgot-new-pwd" class="form-control" placeholder="••••••••" required>
+            </div>
+          </div>
+
+          <div class="auth-form-group">
+            <label for="forgot-confirm-pwd">Confirm New Password</label>
+            <div class="input-icon-box">
+              <i class="fa-solid fa-lock field-icon"></i>
+              <input type="password" id="forgot-confirm-pwd" class="form-control" placeholder="••••••••" required>
+            </div>
+            <div id="forgot-step3-err" class="auth-error-feedback"></div>
+          </div>
+
+          <button type="submit" class="btn-auth-submit" style="height:44px;margin-top:8px;">
+            Update & Sign In
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <!-- MULTI-COLUMN GLOBAL FOOTER -->
   <footer class="site-footer">
@@ -170,7 +362,7 @@
     </div>
   </footer>
 
-  <!-- Back to Top Floating Button -->
+  <!-- Floating Elements & Scripts -->
   <button type="button" class="back-to-top" aria-label="Scroll back to top">
     <i class="fa-solid fa-arrow-up"></i>
   </button>
@@ -179,6 +371,6 @@
   <!-- Scripts -->
   <script src="assets/js/theme.js"></script>
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/forms.js"></script>
+  <script src="assets/js/auth.js"></script>
 </body>
 </html>
