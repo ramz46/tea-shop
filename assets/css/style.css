@@ -356,6 +356,8 @@ p {
   cursor: pointer;
   white-space: nowrap;
   border: 2px solid transparent;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .btn:active {
@@ -660,6 +662,8 @@ p {
               border-color 0.2s ease,
               box-shadow 0.2s ease;
   position: relative;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 .header-tool-btn:hover {
   background: var(--primary-light);

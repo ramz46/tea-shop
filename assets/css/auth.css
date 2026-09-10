@@ -856,6 +856,12 @@
   }
 }
 
+.auth-input-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
 @media (max-width: 576px) {
   .auth-main-section {
     padding: 95px 14px 40px;
@@ -871,6 +877,11 @@
 
   .auth-form-pane {
     padding: 28px 20px;
+  }
+
+  .auth-input-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 
   .auth-social-grid {

@@ -294,38 +294,91 @@
   }
 
   // --------------------------------------------------------------------------
-  // 8. SCROLL REVEAL (IntersectionObserver)
+  // 8. SCROLL REVEAL (IntersectionObserver with Inspect Mode & Resize Support)
   // --------------------------------------------------------------------------
   function initScrollReveal() {
     const elements = document.querySelectorAll('.reveal:not(.revealed)');
     if (!elements.length) return;
 
+    // Check if an element is currently in or near viewport
+    const isElementInView = (el) => {
+      const rect = el.getBoundingClientRect();
+      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+      return rect.top <= windowHeight + 100 && rect.bottom >= -50;
+    };
+
+    const revealElement = (el, delay = 0) => {
+      if (el.classList.contains('revealed')) return;
+      if (delay > 0) {
+        setTimeout(() => el.classList.add('revealed'), delay);
+      } else {
+        el.classList.add('revealed');
+      }
+    };
+
     if ('IntersectionObserver' in window) {
       const observer = new IntersectionObserver(
         (entries, obs) => {
+          let batchIndex = 0;
           entries.forEach(entry => {
             if (entry.isIntersecting) {
-              entry.target.classList.add('revealed');
-              obs.unobserve(entry.target);
+              const el = entry.target;
+              // Add slight sequential stagger for elements entering together
+              const staggerDelay = Math.min(batchIndex * 60, 240);
+              revealElement(el, staggerDelay);
+              obs.unobserve(el);
+              batchIndex++;
             }
           });
         },
-        { threshold: 0.08, rootMargin: '0px 0px -20px 0px' }
+        { threshold: 0.01, rootMargin: '0px 0px 80px 0px' }
       );
 
       elements.forEach(el => {
-        // If element is already in viewport or above fold, reveal immediately
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-          el.classList.add('revealed');
+        if (isElementInView(el)) {
+          revealElement(el);
         } else {
           observer.observe(el);
         }
+      });
+
+      // Handle inspect mode resize / orientation change
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          const remaining = document.querySelectorAll('.reveal:not(.revealed)');
+          remaining.forEach(el => {
+            if (isElementInView(el)) {
+              revealElement(el);
+              observer.unobserve(el);
+            }
+          });
+        }, 150);
+      }, { passive: true });
+
+      window.addEventListener('orientationchange', () => {
+        setTimeout(() => {
+          const remaining = document.querySelectorAll('.reveal:not(.revealed)');
+          remaining.forEach(el => {
+            if (isElementInView(el)) {
+              revealElement(el);
+              observer.unobserve(el);
+            }
+          });
+        }, 200);
       });
     } else {
       // Fallback: reveal immediately
       elements.forEach(el => el.classList.add('revealed'));
     }
+
+    // Safety fallback: guarantee no element remains hidden after 1.5s
+    setTimeout(() => {
+      document.querySelectorAll('.reveal:not(.revealed)').forEach(el => {
+        el.classList.add('revealed');
+      });
+    }, 1500);
   }
 
   window.initScrollReveal = initScrollReveal;
