@@ -13,6 +13,11 @@
     { "src": "/pricing", "dest": "/pricing.html" },
     { "src": "/sourcing", "dest": "/sourcing.html" },
     { "src": "/blog", "dest": "/blog.html" },
+    { "src": "/blog-details", "dest": "/blog-details.html" },
+    { "src": "/coming-soon", "dest": "/coming-soon.html" },
+    { "src": "/maintenance", "dest": "/maintenance.html" },
+    { "src": "/privacy", "dest": "/privacy.html" },
+    { "src": "/terms", "dest": "/terms.html" },
     { "handle": "filesystem" }
   ]
 }

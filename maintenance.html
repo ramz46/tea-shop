@@ -16,26 +16,29 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=2.1">
+  <link rel="stylesheet" href="assets/css/responsive.css?v=2.1">
   <link rel="stylesheet" href="assets/css/dark-mode.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
 </head>
 <body style="min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;">
-  <header style="padding:28px 0;">
-    <div class="container" style="display:flex;justify-content:space-between;align-items:center;">
-      <a href="index.html" class="brand-logo">
+  <!-- Global Scrolled Header -->
+  <header class="site-header scrolled">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="Chai & Co. Homepage">
         <div class="logo-icon"><i class="fa-solid fa-mug-hot"></i></div>
         <span>CHAI & CO.</span>
       </a>
-      <div style="display:flex;gap:10px;">
+
+      <div class="header-actions">
         <button type="button" class="header-tool-btn theme-toggle-btn" aria-label="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
         <button type="button" class="header-tool-btn rtl-toggle-btn" aria-label="Layout Direction: LTR (Click for RTL)"><span class="btn-label" style="font-size:0.7rem;font-weight:700;">LTR</span></button>
+        <a href="index.html" class="btn btn-outline btn-sm"><i class="fa-solid fa-arrow-left"></i> Return Home</a>
       </div>
     </div>
   </header>
 
-  <main id="main-content" style="padding:60px 20px;text-align:center;">
+  <main id="main-content" style="padding:100px 20px 60px;text-align:center;">
     <div class="container" style="max-width:680px;">
       <!-- Steaming cup animation icon -->
       <div style="width:110px;height:110px;border-radius:50%;background:var(--primary-light);display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:3.5rem;margin:0 auto 28px;animation:pulseCup 2s infinite ease-in-out;">
@@ -147,6 +150,6 @@
 
   <!-- Scripts -->
   <script src="assets/js/theme.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=2.1"></script>
 </body>
 </html>
