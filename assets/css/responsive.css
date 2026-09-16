@@ -38,11 +38,7 @@ html, body {
     display: flex !important;
   }
 
-  .header-actions .btn,
-  .header-actions .header-order-btn,
-  .header-actions .btn-primary {
-    display: none !important; /* Keep order CTA in mobile drawer to save header space */
-  }
+  /* Keep desktop nav items clean while drawer handles collapsed links */
 
   .hero-grid {
     gap: 36px;
@@ -204,6 +200,9 @@ html, body {
   }
   .header-actions {
     gap: 6px;
+  }
+  .header-actions .header-order-btn {
+    display: none !important;
   }
   .header-tool-btn,
   .header-auth-link {

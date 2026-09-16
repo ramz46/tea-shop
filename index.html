@@ -12,11 +12,11 @@
   <meta property="og:type" content="website">
 
   <!-- Favicon matching CHAI & CO. Logo Mark -->
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
-  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png?v=3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png?v=3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png?v=3.0">
+  <link rel="shortcut icon" href="favicon.ico?v=3.0">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,9 +27,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Core Theme Styles -->
-  <link rel="stylesheet" href="assets/css/style.css?v=2.6">
-  <link rel="stylesheet" href="assets/css/responsive.css?v=2.6">
-  <link rel="stylesheet" href="assets/css/dark-mode.css?v=2.6">
+  <link rel="stylesheet" href="assets/css/style.css?v=2.7">
+  <link rel="stylesheet" href="assets/css/responsive.css?v=2.7">
+  <link rel="stylesheet" href="assets/css/dark-mode.css?v=2.7">
   <link rel="stylesheet" href="assets/css/rtl.css">
 
   <!-- Auth Gate: Keep index.html as homepage and redirect unauthenticated visitors to login.html -->
@@ -70,7 +70,6 @@
         <a href="index.html" class="nav-link active">Home</a>
         <a href="about.html" class="nav-link">About</a>
         <a href="menu.html" class="nav-link">Menu</a>
-        <a href="order.html" class="nav-link" style="color:var(--terracotta);font-weight:700;"><i class="fa-solid fa-bag-shopping"></i> Order Online</a>
         <a href="sourcing.html" class="nav-link">Our Sourcing</a>
         <a href="loyalty.html" class="nav-link">Loyalty</a>
         <a href="pricing.html" class="nav-link">Catering</a>
@@ -101,8 +100,8 @@
         </button>
 
         <!-- Order Now CTA Button -->
-        <a href="order.html" class="btn btn-primary btn-sm">
-          <i class="fa-solid fa-fire-burner"></i> Order Online
+        <a href="order.html" class="header-order-btn" aria-label="Order Online">
+          <i class="fa-solid fa-fire-burner"></i> <span>Order Online</span>
         </a>
 
         <!-- Mobile Hamburger Toggle -->

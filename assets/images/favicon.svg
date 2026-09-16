@@ -3,22 +3,18 @@
     <!-- CHAI & CO. Warm Artisanal Terracotta & Honey Amber Gradient -->
     <linearGradient id="chaiBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#d97706" />
-      <stop offset="45%" stop-color="#b45309" />
+      <stop offset="50%" stop-color="#b45309" />
       <stop offset="100%" stop-color="#88360d" />
     </linearGradient>
     <!-- Subtle Golden Rim Glow -->
     <linearGradient id="goldRim" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#fde68a" stop-opacity="0.65" />
-      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.2" />
+      <stop offset="0%" stop-color="#fde68a" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.3" />
     </linearGradient>
-    <filter id="softGlow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="1.5" stdDeviation="2" flood-color="#000000" flood-opacity="0.22" />
-    </filter>
   </defs>
 
   <!-- Chai & Co. Icon Squircle Background matching header logo -->
-  <rect x="3" y="3" width="58" height="58" rx="16" fill="url(#chaiBg)" filter="url(#softGlow)" />
-  <rect x="3" y="3" width="58" height="58" rx="16" fill="none" stroke="url(#goldRim)" stroke-width="1.5" />
+  <rect x="3" y="3" width="58" height="58" rx="16" fill="url(#chaiBg)" stroke="url(#goldRim)" stroke-width="1.5" />
 
   <!-- Steaming Chai Cup Mark matching .brand-logo .logo-icon -->
   <g transform="translate(13.5, 13.5) scale(0.0722)" fill="#ffffff">

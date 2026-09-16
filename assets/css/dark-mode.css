@@ -145,14 +145,15 @@
 
 [data-theme="dark"] .header-order-btn {
   background: linear-gradient(135deg, #c88f3e 0%, #995f1c 100%);
-  color: #ffffff;
+  color: #ffffff !important;
   font-weight: 700;
+  border: 1px solid rgba(212, 163, 89, 0.35);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
 }
 [data-theme="dark"] .header-order-btn:hover {
   background: linear-gradient(135deg, #dca351 0%, #ad722c 100%);
-  color: #ffffff;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+  color: #ffffff !important;
+  box-shadow: 0 4px 16px rgba(212, 163, 89, 0.35);
 }
 
 /* Page Hero - Dual-Mode Atmospheric Banner Layer */
