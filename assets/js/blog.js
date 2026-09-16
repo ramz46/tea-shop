@@ -16,7 +16,7 @@
       authorRole: 'Master Tea Sommelier',
       date: 'Aug 24, 2026',
       readTime: '6 min read',
-      image: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80',
+      image: 'assets/images/authentic-masala-chai-brewing.jpg',
       excerpt: 'Uncover the centuries-old balance between crushed cardamom, piquant ginger, and slow-simmered Assam orthodox leaf tea.',
       featured: true
     },
@@ -91,7 +91,7 @@
     return `
       <article class="blog-card revealed" data-category="${post.category}">
         <div class="blog-card-img">
-          <img src="${post.image}" alt="${post.title}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80'">
+          <img src="${post.image}" alt="${post.title}" loading="lazy" onerror="this.src='assets/images/authentic-masala-chai-brewing.jpg'">
         </div>
         <div class="blog-card-body">
           <div class="blog-meta">
