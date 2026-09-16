@@ -137,11 +137,11 @@
       if (pageNumbersContainer) {
         let buttonsHtml = '';
         for (let i = 1; i <= totalPages; i++) {
-          buttonsHtml += `<button type="button" class="filter-btn ${i === currentPage ? 'active' : ''}" style="padding:8px 16px;" data-page="${i}">${i}</button>`;
+          buttonsHtml += `<button type="button" class="blog-page-btn ${i === currentPage ? 'active' : ''}" data-page="${i}" aria-label="Page ${i}">${i}</button>`;
         }
         pageNumbersContainer.innerHTML = buttonsHtml;
 
-        pageNumbersContainer.querySelectorAll('.filter-btn').forEach(btn => {
+        pageNumbersContainer.querySelectorAll('.blog-page-btn').forEach(btn => {
           btn.addEventListener('click', () => {
             currentPage = parseInt(btn.dataset.page, 10);
             filterAndRender();
@@ -152,7 +152,7 @@
 
       if (prevBtn) {
         prevBtn.disabled = currentPage === 1;
-        prevBtn.style.opacity = currentPage === 1 ? '0.4' : '1';
+        prevBtn.setAttribute('aria-disabled', currentPage === 1);
         prevBtn.onclick = () => {
           if (currentPage > 1) {
             currentPage--;
@@ -164,7 +164,7 @@
 
       if (nextBtn) {
         nextBtn.disabled = currentPage === totalPages;
-        nextBtn.style.opacity = currentPage === totalPages ? '0.4' : '1';
+        nextBtn.setAttribute('aria-disabled', currentPage === totalPages);
         nextBtn.onclick = () => {
           if (currentPage < totalPages) {
             currentPage++;

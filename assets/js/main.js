@@ -388,7 +388,7 @@
   // --------------------------------------------------------------------------
   function initButtonFeedback() {
     document.addEventListener('click', e => {
-      const btn = e.target.closest('.btn, .btn-primary, .btn-secondary, .btn-accent, .btn-outline, .btn-add-cart, .header-order-btn, .filter-btn, .header-tool-btn, .header-icon-btn, .back-to-top, .auth-submit-btn, .newsletter-submit');
+      const btn = e.target.closest('.btn, .btn-primary, .btn-secondary, .btn-accent, .btn-outline, .btn-add-cart, .header-order-btn, .filter-btn, .blog-read-more, .blog-page-btn, .blog-page-nav-btn, .header-tool-btn, .header-icon-btn, .back-to-top, .auth-submit-btn, .newsletter-submit');
       if (!btn) return;
       btn.classList.remove('ripple-animating');
       void btn.offsetWidth; // force reflow

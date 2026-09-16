@@ -24,10 +24,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/css/style.css?v=2.6">
-  <link rel="stylesheet" href="assets/css/responsive.css?v=2.6">
-  <link rel="stylesheet" href="assets/css/dark-mode.css?v=2.6">
-  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=3.1">
+  <link rel="stylesheet" href="assets/css/responsive.css?v=3.1">
+  <link rel="stylesheet" href="assets/css/dark-mode.css?v=3.1">
+  <link rel="stylesheet" href="assets/css/rtl.css?v=3.1">
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -126,11 +126,11 @@
     <!-- Featured Article Banner -->
     <section class="section-sm">
       <div class="container">
-        <div class="card reveal" style="display:grid;grid-template-columns:1.2fr 1fr;align-items:center;margin-bottom:0;overflow:hidden;">
-          <div style="height:380px;overflow:hidden;">
+        <div class="card reveal blog-featured-card" style="margin-bottom:0;overflow:hidden;">
+          <div class="featured-img-wrap" style="height:380px;overflow:hidden;">
             <img src="assets/images/authentic-masala-chai-brewing.jpg" alt="The Sacred Art of Brewing Authentic Indian Masala Chai" style="width:100%;height:100%;object-fit:cover;">
           </div>
-          <div style="padding:40px;">
+          <div class="featured-content-wrap" style="padding:40px;">
             <span class="chai-badge badge-bestseller" style="position:static;display:inline-block;margin-bottom:14px;">Featured Story</span>
             <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:8px;">Aug 24, 2026 • 6 min read • By Aarav Sharma</div>
             <h2 style="font-size:1.8rem;line-height:1.3;margin-bottom:14px;">
@@ -139,7 +139,7 @@
             <p class="text-muted" style="font-size:0.95rem;line-height:1.7;margin-bottom:24px;">
               Discover the centuries-old balance between crushed green cardamom, piquant ginger, and slow-simmered Assam leaf tea. A step-by-step masterclass from our tea sommelier.
             </p>
-            <a href="blog-details.html" class="btn btn-primary">
+            <a href="blog-details.html" class="btn btn-primary blog-featured-btn">
               Read Full Article <i class="fa-solid fa-arrow-right"></i>
             </a>
           </div>
@@ -172,10 +172,10 @@
         </div>
 
         <!-- Pagination Controls -->
-        <div id="blog-pagination" style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:56px;" class="reveal">
-          <button type="button" class="btn-icon btn-sm" id="blog-prev-page" aria-label="Previous Page"><i class="fa-solid fa-chevron-left"></i></button>
-          <div id="blog-page-numbers" style="display:flex;gap:8px;"></div>
-          <button type="button" class="btn-icon btn-sm" id="blog-next-page" aria-label="Next Page"><i class="fa-solid fa-chevron-right"></i></button>
+        <div id="blog-pagination" class="blog-pagination-wrap reveal">
+          <button type="button" class="blog-page-nav-btn" id="blog-prev-page" aria-label="Previous Page"><i class="fa-solid fa-chevron-left"></i></button>
+          <div id="blog-page-numbers" class="blog-page-numbers"></div>
+          <button type="button" class="blog-page-nav-btn" id="blog-next-page" aria-label="Next Page"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
       </div>
     </section>
@@ -260,9 +260,9 @@
 
   <!-- Scripts -->
   <script src="assets/js/theme.js"></script>
-  <script src="assets/js/main.js?v=2.1"></script>
+  <script src="assets/js/main.js?v=3.1"></script>
   <script src="assets/js/components.js"></script>
-  <script src="assets/js/blog.js"></script>
+  <script src="assets/js/blog.js?v=3.1"></script>
   <script src="assets/js/forms.js"></script>
   <script src="assets/js/auth.js"></script>
 </body>
