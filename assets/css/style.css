@@ -640,6 +640,7 @@ p {
   position: relative;
   display: inline-flex;
   align-items: center;
+  flex-shrink: 0;
 }
 .nav-item-dropdown .nav-link {
   display: inline-flex;

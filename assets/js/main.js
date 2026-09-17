@@ -132,13 +132,12 @@
       if (toggleBtn && menu) {
         toggleBtn.addEventListener('click', (e) => {
           if (window.innerWidth < 1200) {
-            // If the dropdown isn't open yet, open it
-            if (!dropdown.classList.contains('open') && !menu.classList.contains('show')) {
-              e.preventDefault();
-              e.stopPropagation();
-              dropdown.classList.add('open');
-              menu.classList.add('show');
+            e.preventDefault();
+            e.stopPropagation();
+            const isOpen = dropdown.classList.toggle('open');
+            menu.classList.toggle('show', isOpen);
 
+            if (isOpen) {
               const closeMenuHandler = (evt) => {
                 if (!dropdown.contains(evt.target)) {
                   dropdown.classList.remove('open');
@@ -152,6 +151,18 @@
         });
       }
     });
+
+    // Smoothly auto-center active nav-link in mobile horizontal capsule nav-menu
+    const navMenu = document.querySelector('.nav-menu');
+    if (navMenu) {
+      const activeLink = navMenu.querySelector('.nav-link.active');
+      if (activeLink) {
+        setTimeout(() => {
+          const scrollTarget = activeLink.offsetLeft - (navMenu.clientWidth / 2) + (activeLink.clientWidth / 2);
+          navMenu.scrollTo({ left: Math.max(0, scrollTarget), behavior: 'smooth' });
+        }, 120);
+      }
+    }
 
     // ESC key support
     document.addEventListener('keydown', e => {
