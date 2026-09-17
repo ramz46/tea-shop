@@ -6,14 +6,31 @@
 (function () {
   'use strict';
 
-  // Email regex
+  // Strict RFC-compliant email regex
   function isValidEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if (!email || typeof email !== 'string') return false;
+    const trimmed = email.trim();
+    if (trimmed.length < 6 || trimmed.length > 254 || trimmed.includes('..') || /\s/.test(trimmed)) {
+      return false;
+    }
+    const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z]{2,})+$/;
+    return regex.test(trimmed);
   }
 
-  // Phone regex (support international/Indian numbers)
+  // Phone regex (support international and Indian numbers, strict digits 10-15)
   function isValidPhone(phone) {
-    return /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/.test(phone.replace(/\s+/g, ''));
+    if (!phone || typeof phone !== 'string') return false;
+    const cleaned = phone.replace(/[\s\-\(\)\+]/g, '');
+    if (!/^\d+$/.test(cleaned)) return false;
+    return cleaned.length >= 10 && cleaned.length <= 15;
+  }
+
+  // Filter out any alphabets and non-phone characters in real-time
+  function setupPhoneInputFilter(input) {
+    if (!input) return;
+    input.addEventListener('input', () => {
+      input.value = input.value.replace(/[a-zA-Z]/g, '').replace(/[^\d\s\+\-\(\)]/g, '');
+    });
   }
 
   // Set error state on a field
@@ -28,6 +45,7 @@
       group.appendChild(errorEl);
     }
     errorEl.textContent = message;
+    errorEl.style.display = 'block';
   }
 
   // Clear error state
@@ -36,7 +54,10 @@
     if (!group) return;
     group.classList.remove('has-error');
     const errorEl = group.querySelector('.form-error-msg');
-    if (errorEl) errorEl.textContent = '';
+    if (errorEl) {
+      errorEl.textContent = '';
+      errorEl.style.display = 'none';
+    }
   }
 
   // --------------------------------------------------------------------------
@@ -102,6 +123,24 @@
     const form = document.getElementById('contact-form');
     if (!form) return;
 
+    const emailInput = form.querySelector('#contact-email');
+    const phoneInput = form.querySelector('#contact-phone');
+
+    if (phoneInput) {
+      setupPhoneInputFilter(phoneInput);
+    }
+
+    if (emailInput) {
+      emailInput.addEventListener('blur', () => {
+        const val = emailInput.value.trim();
+        if (val && !isValidEmail(val)) {
+          setError(emailInput, 'Please enter a valid email address (e.g. name@example.com).');
+        } else {
+          clearError(emailInput);
+        }
+      });
+    }
+
     form.addEventListener('submit', e => {
       e.preventDefault();
       let isValid = true;
@@ -122,7 +161,7 @@
 
       if (email) {
         if (!isValidEmail(email.value.trim())) {
-          setError(email, 'Please enter a valid email address.');
+          setError(email, 'Please enter a valid email address (e.g. name@example.com).');
           isValid = false;
         } else {
           clearError(email);
@@ -131,7 +170,7 @@
 
       if (phone && phone.value.trim() !== '') {
         if (!isValidPhone(phone.value.trim())) {
-          setError(phone, 'Please enter a valid phone number or leave blank.');
+          setError(phone, 'Please enter a valid 10-digit phone number (numbers only).');
           isValid = false;
         } else {
           clearError(phone);
@@ -228,6 +267,24 @@
     const form = document.getElementById('register-form');
     if (!form) return;
 
+    const emailInput = form.querySelector('#reg-email');
+    const phoneInput = form.querySelector('#reg-phone');
+
+    if (phoneInput) {
+      setupPhoneInputFilter(phoneInput);
+    }
+
+    if (emailInput) {
+      emailInput.addEventListener('blur', () => {
+        const val = emailInput.value.trim();
+        if (val && !isValidEmail(val)) {
+          setError(emailInput, 'Please enter a valid email address (e.g. name@example.com).');
+        } else {
+          clearError(emailInput);
+        }
+      });
+    }
+
     form.addEventListener('submit', e => {
       e.preventDefault();
       let isValid = true;
@@ -245,12 +302,12 @@
       } else if (name) clearError(name);
 
       if (email && !isValidEmail(email.value.trim())) {
-        setError(email, 'Please enter a valid email address.');
+        setError(email, 'Please enter a valid email address (e.g. name@example.com).');
         isValid = false;
       } else if (email) clearError(email);
 
       if (phone && !isValidPhone(phone.value.trim())) {
-        setError(phone, 'Please enter a valid mobile number.');
+        setError(phone, 'Please enter a valid 10-digit mobile number (numbers only).');
         isValid = false;
       } else if (phone) clearError(phone);
 
@@ -300,7 +357,7 @@
         const input = form.querySelector('input[type="email"]');
         if (!input || !isValidEmail(input.value.trim())) {
           if (window.showToast) {
-            window.showToast('Please enter a valid email address.', 'error');
+            window.showToast('Please enter a valid email address (e.g. name@example.com).', 'error');
           }
           return;
         }
@@ -321,20 +378,67 @@
     const form = document.getElementById('catering-inquiry-form');
     if (!form) return;
 
+    const phoneInput = form.querySelector('#cater-phone');
+    const emailInput = form.querySelector('#cater-email');
+
+    if (phoneInput) {
+      setupPhoneInputFilter(phoneInput);
+    }
+
+    if (emailInput) {
+      emailInput.addEventListener('blur', () => {
+        const val = emailInput.value.trim();
+        if (val && !isValidEmail(val)) {
+          setError(emailInput, 'Please enter a valid email address (e.g. name@example.com).');
+        } else {
+          clearError(emailInput);
+        }
+      });
+    }
+
     form.addEventListener('submit', e => {
       e.preventDefault();
+      let isValid = true;
+
       const name = form.querySelector('#cater-name');
       const email = form.querySelector('#cater-email');
+      const phone = form.querySelector('#cater-phone');
       const guests = form.querySelector('#cater-guests');
 
       if (!name || name.value.trim().length < 2) {
-        if (name) setError(name, 'Please enter your name.');
-        return;
+        if (name) setError(name, 'Please enter your full name (at least 2 characters).');
+        isValid = false;
+      } else if (name) {
+        clearError(name);
       }
+
       if (!email || !isValidEmail(email.value.trim())) {
-        if (email) setError(email, 'Please enter a valid email address.');
-        return;
+        if (email) setError(email, 'Please enter a valid email address (e.g. name@example.com).');
+        isValid = false;
+      } else if (email) {
+        clearError(email);
       }
+
+      if (phone && phone.value.trim() !== '') {
+        if (!isValidPhone(phone.value.trim())) {
+          setError(phone, 'Please enter a valid 10-digit phone number (numbers only).');
+          isValid = false;
+        } else {
+          clearError(phone);
+        }
+      }
+
+      if (guests && guests.value) {
+        const val = parseInt(guests.value, 10);
+        if (isNaN(val) || val < 5) {
+          setError(guests, 'Please enter an estimated guest count (minimum 5).');
+          isValid = false;
+        } else {
+          clearError(guests);
+        }
+      }
+
+      if (!isValid) return;
 
       const btn = form.querySelector('button[type="submit"]');
       const orig = btn.innerHTML;
@@ -348,6 +452,8 @@
         if (window.showToast) {
           window.showToast('☕ Catering inquiry sent! Our team will contact you within 24 hours.', 'success', 5000);
         }
+        const successBox = form.querySelector('.form-success-alert');
+        if (successBox) successBox.style.display = 'block';
       }, 1000);
     });
   }

@@ -65,13 +65,22 @@
     syncHeaderAuth();
   }
 
-  // Email & Phone regex
+  // Strict RFC-compliant email regex
   function isValidEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if (!email || typeof email !== 'string') return false;
+    const trimmed = email.trim();
+    if (trimmed.length < 6 || trimmed.length > 254 || trimmed.includes('..') || /\s/.test(trimmed)) {
+      return false;
+    }
+    const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z]{2,})+$/;
+    return regex.test(trimmed);
   }
 
   function isValidPhone(phone) {
-    return /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/.test(phone.replace(/\s+/g, ''));
+    if (!phone || typeof phone !== 'string') return false;
+    const cleaned = phone.replace(/[\s\-\(\)\+]/g, '');
+    if (!/^\d+$/.test(cleaned)) return false;
+    return cleaned.length >= 10 && cleaned.length <= 15;
   }
 
   // Form error helpers with shake animation
@@ -698,26 +707,14 @@
         if (!memberPill) {
           memberPill = document.createElement('div');
           memberPill.className = 'header-member-pill';
-          memberPill.style.cssText = `
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--bg-surface-soft);
-            border: 1px solid var(--border);
-            padding: 5px 12px;
-            border-radius: var(--radius-pill);
-            font-size: 0.82rem;
-            font-weight: 700;
-            color: var(--text-main);
-          `;
           container.prepend(memberPill);
         }
 
         memberPill.innerHTML = `
-          <i class="fa-solid fa-crown" style="color:var(--accent);"></i>
-          <span>${user.name.split(' ')[0]}</span>
-          <span style="background:var(--primary);color:#fff;font-size:0.7rem;padding:2px 7px;border-radius:var(--radius-pill);">${user.points} pts</span>
-          <button type="button" id="btn-header-signout" title="Sign Out" style="background:none;border:none;color:var(--text-light);cursor:pointer;padding:2px 4px;">
+          <i class="fa-solid fa-crown member-crown-icon" style="color:var(--accent);"></i>
+          <span class="member-name-text">${user.name.split(' ')[0]}</span>
+          <span class="member-points-badge">${user.points} pts</span>
+          <button type="button" id="btn-header-signout" title="Sign Out" class="member-signout-btn">
             <i class="fa-solid fa-arrow-right-from-bracket"></i>
           </button>
         `;
@@ -754,6 +751,48 @@
         } else if (authLink) {
           authLink.remove();
         }
+      }
+    });
+
+    // Also sync drawer auth state for mobile view
+    const drawerNavLists = document.querySelectorAll('.drawer-nav-list');
+    drawerNavLists.forEach(drawerList => {
+      let drawerUserCard = drawerList.querySelector('.drawer-user-card');
+      let drawerLoginLink = drawerList.querySelector('.drawer-login-link') || drawerList.querySelector('a[href*="login.html"]');
+
+      if (user) {
+        if (drawerLoginLink) {
+          drawerLoginLink.classList.add('drawer-login-link');
+          drawerLoginLink.style.display = 'none';
+        }
+        if (!drawerUserCard) {
+          drawerUserCard = document.createElement('div');
+          drawerUserCard.className = 'drawer-user-card';
+          drawerList.insertBefore(drawerUserCard, drawerList.firstChild);
+        }
+        drawerUserCard.innerHTML = `
+          <div class="drawer-user-card-inner">
+            <div class="drawer-user-badge"><i class="fa-solid fa-crown"></i></div>
+            <div class="drawer-user-details">
+              <strong>${user.name}</strong>
+              <span>${user.tier || 'Gold Reserve'} • <b>${user.points} pts</b></span>
+            </div>
+            <button type="button" class="drawer-signout-btn" title="Sign Out">
+              <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </button>
+          </div>
+        `;
+        const drawerSignout = drawerUserCard.querySelector('.drawer-signout-btn');
+        if (drawerSignout) {
+          drawerSignout.addEventListener('click', () => {
+            setCurrentUser(null);
+            if (window.showToast) window.showToast('You have signed out.', 'info');
+            setTimeout(() => window.location.reload(), 500);
+          });
+        }
+      } else {
+        if (drawerUserCard) drawerUserCard.remove();
+        if (drawerLoginLink) drawerLoginLink.style.display = '';
       }
     });
   }

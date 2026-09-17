@@ -48,7 +48,28 @@
       </a>
 
       <nav class="nav-menu" aria-label="Main Navigation">
-        <a href="index.html" class="nav-link">Home</a>
+        <!-- Home Dropdown -->
+        <div class="nav-item-dropdown">
+          <a href="index.html" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            Home <i class="fa-solid fa-chevron-down nav-dropdown-icon"></i>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="index.html" class="nav-dropdown-item">
+              <i class="fa-solid fa-store"></i>
+              <div>
+                <strong>Homepage 1</strong>
+                <span>Classic Heritage Stall</span>
+              </div>
+            </a>
+            <a href="home-2.html" class="nav-dropdown-item">
+              <i class="fa-solid fa-mug-saucer"></i>
+              <div>
+                <strong>Homepage 2</strong>
+                <span>Modern Tea Lounge</span>
+              </div>
+            </a>
+          </div>
+        </div>
         <a href="about.html" class="nav-link">About</a>
         <a href="menu.html" class="nav-link">Menu</a>
         <a href="sourcing.html" class="nav-link">Our Sourcing</a>
@@ -78,7 +99,16 @@
       <button type="button" class="drawer-close-btn btn-icon"><i class="fa-solid fa-xmark"></i></button>
     </div>
     <div class="drawer-nav-list">
-      <a href="index.html" class="drawer-nav-link">Home <i class="fa-solid fa-chevron-right"></i></a>
+      <div class="drawer-dropdown-group">
+        <div class="drawer-dropdown-header">
+          <span>Home Options</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="drawer-subnav">
+          <a href="index.html" class="drawer-subnav-link"><i class="fa-solid fa-store"></i> Homepage 1: Classic Heritage</a>
+          <a href="home-2.html" class="drawer-subnav-link"><i class="fa-solid fa-mug-saucer"></i> Homepage 2: Modern Lounge</a>
+        </div>
+      </div>
       <a href="about.html" class="drawer-nav-link">About Us <i class="fa-solid fa-chevron-right"></i></a>
       <a href="menu.html" class="drawer-nav-link">Our Menu <i class="fa-solid fa-chevron-right"></i></a>
       <a href="sourcing.html" class="drawer-nav-link">Our Sourcing <i class="fa-solid fa-chevron-right"></i></a>
@@ -153,6 +183,7 @@
               <li><i class="fa-solid fa-check"></i> 2 Hours live brewing service</li>
               <li><i class="fa-solid fa-check"></i> 1 Uniformed Chai Specialist</li>
               <li><i class="fa-solid fa-check"></i> Sugar-free / jaggery options included</li>
+              <li><i class="fa-solid fa-check"></i> Complete stall setup & breakdown included</li>
             </ul>
 
             <a href="#booking-section" class="btn btn-outline" style="width:100%;">Select Package</a>
@@ -302,22 +333,25 @@
           </div>
 
           <div class="reveal">
-            <form id="catering-inquiry-form" class="pricing-form-card" style="padding:32px;margin:0;">
+            <form id="catering-inquiry-form" class="pricing-form-card" style="padding:32px;margin:0;" novalidate>
               <h3 style="font-size:1.35rem;margin-bottom:20px;">Event Inquiry Details</h3>
 
               <div class="form-group">
                 <label class="form-label" for="cater-name">Your Full Name *</label>
                 <input type="text" id="cater-name" class="form-control" placeholder="e.g. Vikram Singhania" required>
+                <div class="form-error-msg"></div>
               </div>
 
               <div class="grid grid-2" style="gap:16px;">
                 <div class="form-group">
                   <label class="form-label" for="cater-email">Email Address *</label>
                   <input type="email" id="cater-email" class="form-control" placeholder="vikram@example.com" required>
+                  <div class="form-error-msg"></div>
                 </div>
                 <div class="form-group">
                   <label class="form-label" for="cater-phone">Phone / WhatsApp</label>
-                  <input type="tel" id="cater-phone" class="form-control" placeholder="+91 98290 00000">
+                  <input type="tel" id="cater-phone" class="form-control" placeholder="+91 98290 00000" inputmode="numeric" maxlength="16">
+                  <div class="form-error-msg"></div>
                 </div>
               </div>
 
@@ -330,16 +364,23 @@
                     <option value="premium">Premium Experience (₹9,999)</option>
                     <option value="custom">Custom Scale Wedding</option>
                   </select>
+                  <div class="form-error-msg"></div>
                 </div>
                 <div class="form-group">
                   <label class="form-label" for="cater-guests">Expected Guests</label>
-                  <input type="number" id="cater-guests" class="form-control" placeholder="e.g. 50" min="10">
+                  <input type="number" id="cater-guests" class="form-control" placeholder="e.g. 50" min="5">
+                  <div class="form-error-msg"></div>
                 </div>
               </div>
 
               <div class="form-group">
                 <label class="form-label" for="cater-notes">Event Location & Notes</label>
                 <textarea id="cater-notes" class="form-control" placeholder="City, venue, timing preferences or dietary requirements..." rows="3"></textarea>
+                <div class="form-error-msg"></div>
+              </div>
+
+              <div class="form-success-alert" style="display:none;background:var(--success-bg);color:var(--success);padding:14px;border-radius:var(--radius-md);margin-bottom:18px;font-size:0.9rem;">
+                <i class="fa-solid fa-circle-check"></i> ☕ Thank you! Your catering inquiry has been submitted. Our event team will contact you within 24 hours.
               </div>
 
               <button type="submit" class="btn btn-primary" style="width:100%;">
@@ -357,10 +398,10 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="brand-logo" style="color:#fff;margin-bottom:14px;">
+          <a href="index.html" class="brand-logo footer-brand-logo" aria-label="Chai & Co. Homepage" style="color:#fff;margin-bottom:14px;text-decoration:none;display:inline-flex;align-items:center;gap:12px;">
             <div class="logo-icon" style="background:rgba(214,168,95,0.2);color:var(--accent);"><i class="fa-solid fa-mug-hot"></i></div>
             <span>CHAI & CO.</span>
-          </div>
+          </a>
           <p>
             Brewed with Tradition. Served with Soul. Bringing authentic Indian chai culture to the modern café aesthetic since 2018.
           </p>

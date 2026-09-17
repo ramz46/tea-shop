@@ -32,18 +32,7 @@
   <link rel="stylesheet" href="assets/css/dark-mode.css?v=2.7">
   <link rel="stylesheet" href="assets/css/rtl.css">
 
-  <!-- Auth Gate: Keep index.html as homepage and redirect unauthenticated visitors to login.html -->
-  <script>
-    (function () {
-      try {
-        var user = localStorage.getItem('chai_current_user');
-        if (!user) {
-          var target = window.location.pathname + window.location.search;
-          window.location.replace('login.html?redirect=' + encodeURIComponent(target || 'index.html'));
-        }
-      } catch (e) {}
-    })();
-  </script>
+
 </head>
 <body>
   <!-- Accessibility Skip to Main Content -->
@@ -67,7 +56,28 @@
       </a>
 
       <nav class="nav-menu" aria-label="Main Navigation">
-        <a href="index.html" class="nav-link active">Home</a>
+        <!-- Home Dropdown -->
+        <div class="nav-item-dropdown">
+          <a href="index.html" class="nav-link active dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            Home <i class="fa-solid fa-chevron-down nav-dropdown-icon"></i>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="index.html" class="nav-dropdown-item active">
+              <i class="fa-solid fa-store"></i>
+              <div>
+                <strong>Homepage 1</strong>
+                <span>Classic Heritage Stall</span>
+              </div>
+            </a>
+            <a href="home-2.html" class="nav-dropdown-item">
+              <i class="fa-solid fa-mug-saucer"></i>
+              <div>
+                <strong>Homepage 2</strong>
+                <span>Modern Tea Lounge</span>
+              </div>
+            </a>
+          </div>
+        </div>
         <a href="about.html" class="nav-link">About</a>
         <a href="menu.html" class="nav-link">Menu</a>
         <a href="sourcing.html" class="nav-link">Our Sourcing</a>
@@ -127,7 +137,16 @@
     </div>
 
     <div class="drawer-nav-list">
-      <a href="index.html" class="drawer-nav-link active">Home <i class="fa-solid fa-chevron-right"></i></a>
+      <div class="drawer-dropdown-group">
+        <div class="drawer-dropdown-header">
+          <span>Home Options</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="drawer-subnav">
+          <a href="index.html" class="drawer-subnav-link active"><i class="fa-solid fa-store"></i> Homepage 1: Classic Heritage</a>
+          <a href="home-2.html" class="drawer-subnav-link"><i class="fa-solid fa-mug-saucer"></i> Homepage 2: Modern Lounge</a>
+        </div>
+      </div>
       <a href="about.html" class="drawer-nav-link">About Us <i class="fa-solid fa-chevron-right"></i></a>
       <a href="menu.html" class="drawer-nav-link">Our Menu <i class="fa-solid fa-chevron-right"></i></a>
       <a href="order.html" class="drawer-nav-link" style="color:var(--terracotta);font-weight:700;">Order Online <i class="fa-solid fa-chevron-right"></i></a>
@@ -833,10 +852,10 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="brand-logo" style="color:#fff;margin-bottom:14px;">
+          <a href="index.html" class="brand-logo footer-brand-logo" aria-label="Chai & Co. Homepage" style="color:#fff;margin-bottom:14px;text-decoration:none;display:inline-flex;align-items:center;gap:12px;">
             <div class="logo-icon" style="background:rgba(214,168,95,0.2);color:var(--accent);"><i class="fa-solid fa-mug-hot"></i></div>
             <span>CHAI & CO.</span>
-          </div>
+          </a>
           <p>
             Brewed with Tradition. Served with Soul. Bringing authentic Indian chai culture to the modern café aesthetic since 2018.
           </p>

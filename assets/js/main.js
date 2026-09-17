@@ -104,9 +104,50 @@
       closeDrawer();
     });
 
-    // Close on navigation link click
-    drawer.querySelectorAll('.drawer-nav-link').forEach(link => {
+    // Close on navigation link click (including subnav links)
+    drawer.querySelectorAll('.drawer-nav-link, .drawer-subnav-link').forEach(link => {
       link.addEventListener('click', closeDrawer);
+    });
+
+    // Toggle subnav dropdown inside drawer
+    drawer.querySelectorAll('.drawer-dropdown-header').forEach(hdr => {
+      hdr.addEventListener('click', () => {
+        const subnav = hdr.nextElementSibling;
+        const arrow = hdr.querySelector('.drawer-dropdown-arrow');
+        if (subnav) {
+          const isHidden = subnav.style.display === 'none';
+          subnav.style.display = isHidden ? 'flex' : 'none';
+          if (arrow) arrow.classList.toggle('open', isHidden);
+        }
+      });
+    });
+
+    // Mobile/Touch Dropdown Menu toggle for header nav-menu
+    document.querySelectorAll('.nav-item-dropdown').forEach(dropdown => {
+      const toggleBtn = dropdown.querySelector('.dropdown-toggle');
+      const menu = dropdown.querySelector('.nav-dropdown-menu');
+      if (toggleBtn && menu) {
+        toggleBtn.addEventListener('click', (e) => {
+          if (window.innerWidth < 1200) {
+            // If the dropdown isn't open yet, open it
+            if (!dropdown.classList.contains('open') && !menu.classList.contains('show')) {
+              e.preventDefault();
+              e.stopPropagation();
+              dropdown.classList.add('open');
+              menu.classList.add('show');
+
+              const closeMenuHandler = (evt) => {
+                if (!dropdown.contains(evt.target)) {
+                  dropdown.classList.remove('open');
+                  menu.classList.remove('show');
+                  document.removeEventListener('click', closeMenuHandler);
+                }
+              };
+              setTimeout(() => document.addEventListener('click', closeMenuHandler), 10);
+            }
+          }
+        });
+      }
     });
 
     // ESC key support
@@ -115,6 +156,63 @@
         closeDrawer();
       }
     });
+  }
+
+  // --------------------------------------------------------------------------
+  // 3B. MOBILE BOTTOM NAVIGATION BAR (Instant 1-Tap Mobile Navigation)
+  // --------------------------------------------------------------------------
+  function initMobileBottomNav() {
+    if (document.querySelector('.mobile-bottom-nav')) return;
+
+    // Detect active page to set active highlight
+    const path = window.location.pathname.toLowerCase();
+    const isMenu = path.includes('menu.html');
+    const isOrder = path.includes('order.html');
+    const isAbout = path.includes('about.html');
+    const isHome = !isMenu && !isOrder && !isAbout && (
+      path.endsWith('index.html') || path.endsWith('home-2.html') || path.endsWith('/') || path === ''
+    );
+
+    const bottomNav = document.createElement('nav');
+    bottomNav.className = 'mobile-bottom-nav';
+    bottomNav.setAttribute('aria-label', 'Mobile Quick Navigation');
+    bottomNav.innerHTML = `
+      <a href="index.html" class="mobile-bottom-nav-item ${isHome ? 'active' : ''}" aria-label="Home">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+      </a>
+      <a href="menu.html" class="mobile-bottom-nav-item ${isMenu ? 'active' : ''}" aria-label="Our Menu">
+        <i class="fa-solid fa-book-open"></i>
+        <span>Menu</span>
+      </a>
+      <a href="order.html" class="mobile-bottom-nav-item order-btn-special ${isOrder ? 'active' : ''}" aria-label="Order Online">
+        <div class="order-icon-badge">
+          <i class="fa-solid fa-fire-burner"></i>
+        </div>
+        <span>Order</span>
+      </a>
+      <a href="about.html" class="mobile-bottom-nav-item ${isAbout ? 'active' : ''}" aria-label="About Us">
+        <i class="fa-solid fa-compass"></i>
+        <span>About</span>
+      </a>
+      <button type="button" class="mobile-bottom-nav-item mobile-drawer-trigger-btn" aria-label="More Menu Options">
+        <i class="fa-solid fa-bars"></i>
+        <span>More</span>
+      </button>
+    `;
+
+    document.body.appendChild(bottomNav);
+
+    const triggerBtn = bottomNav.querySelector('.mobile-drawer-trigger-btn');
+    if (triggerBtn) {
+      triggerBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const hamburger = document.querySelector('.hamburger');
+        if (hamburger) {
+          hamburger.click();
+        }
+      });
+    }
   }
 
   // --------------------------------------------------------------------------
@@ -406,6 +504,7 @@
     initPreloader();
     initStickyHeader();
     initMobileNav();
+    initMobileBottomNav();
     initBackToTop();
     initModals();
     initCookieBanner();

@@ -41,7 +41,28 @@
       </a>
 
       <nav class="nav-menu" aria-label="Main Navigation">
-        <a href="index.html" class="nav-link">Home</a>
+        <!-- Home Dropdown -->
+        <div class="nav-item-dropdown">
+          <a href="index.html" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            Home <i class="fa-solid fa-chevron-down nav-dropdown-icon"></i>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="index.html" class="nav-dropdown-item">
+              <i class="fa-solid fa-store"></i>
+              <div>
+                <strong>Homepage 1</strong>
+                <span>Classic Heritage Stall</span>
+              </div>
+            </a>
+            <a href="home-2.html" class="nav-dropdown-item">
+              <i class="fa-solid fa-mug-saucer"></i>
+              <div>
+                <strong>Homepage 2</strong>
+                <span>Modern Tea Lounge</span>
+              </div>
+            </a>
+          </div>
+        </div>
         <a href="about.html" class="nav-link">About</a>
         <a href="menu.html" class="nav-link">Menu</a>
         <a href="order.html" class="nav-link active" style="color:var(--terracotta);font-weight:700;"><i class="fa-solid fa-bag-shopping"></i> Order Online</a>
@@ -83,7 +104,16 @@
       <button type="button" class="drawer-close-btn btn-icon"><i class="fa-solid fa-xmark"></i></button>
     </div>
     <div class="drawer-nav-list">
-      <a href="index.html" class="drawer-nav-link">Home <i class="fa-solid fa-chevron-right"></i></a>
+      <div class="drawer-dropdown-group">
+        <div class="drawer-dropdown-header">
+          <span>Home Options</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="drawer-subnav">
+          <a href="index.html" class="drawer-subnav-link"><i class="fa-solid fa-store"></i> Homepage 1: Classic Heritage</a>
+          <a href="home-2.html" class="drawer-subnav-link"><i class="fa-solid fa-mug-saucer"></i> Homepage 2: Modern Lounge</a>
+        </div>
+      </div>
       <a href="menu.html" class="drawer-nav-link">Our Menu <i class="fa-solid fa-chevron-right"></i></a>
       <a href="order.html" class="drawer-nav-link active">Order Online <i class="fa-solid fa-chevron-right"></i></a>
       <a href="sourcing.html" class="drawer-nav-link">Our Sourcing <i class="fa-solid fa-chevron-right"></i></a>
@@ -249,16 +279,19 @@
                 <div class="form-group" style="margin-bottom:0;">
                   <label class="form-label" for="cust-name">Full Name *</label>
                   <input type="text" id="cust-name" class="form-control" placeholder="e.g. Aarav Sharma" value="Aarav Sharma" required>
+                  <div class="form-error-msg" id="cust-name-error"></div>
                 </div>
                 <div class="form-group" style="margin-bottom:0;">
                   <label class="form-label" for="cust-phone">WhatsApp / Mobile Number *</label>
-                  <input type="tel" id="cust-phone" class="form-control" placeholder="+91 98290 XXXXX" value="+91 98290 12345" required>
+                  <input type="tel" id="cust-phone" class="form-control" placeholder="+91 98290 12345" value="+91 98290 12345" inputmode="numeric" maxlength="16" required>
+                  <div class="form-error-msg" id="cust-phone-error"></div>
                 </div>
               </div>
 
               <div class="form-group">
-                <label class="form-label" for="cust-email">Email Address (for digital receipt)</label>
-                <input type="email" id="cust-email" class="form-control" placeholder="aarav@example.com" value="aarav@example.com">
+                <label class="form-label" for="cust-email">Email Address * (for digital receipt)</label>
+                <input type="email" id="cust-email" class="form-control" placeholder="aarav@example.com" value="aarav@example.com" required>
+                <div class="form-error-msg" id="cust-email-error"></div>
               </div>
 
               <div class="form-group" style="margin-bottom:0;">
@@ -333,17 +366,20 @@
 
                 <div id="payment-card-box" class="payment-details-box">
                   <div class="form-group">
-                    <label class="form-label">Card Number</label>
-                    <input type="text" class="form-control" placeholder="4111 2222 3333 4444" maxlength="19">
+                    <label class="form-label" for="card-number">Card Number</label>
+                    <input type="text" id="card-number" class="form-control" placeholder="4111 2222 3333 4444" maxlength="19" inputmode="numeric" autocomplete="cc-number">
+                    <div class="form-error-msg" id="card-number-error"></div>
                   </div>
                   <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
                     <div class="form-group" style="margin-bottom:0;">
-                      <label class="form-label">Valid Thru</label>
-                      <input type="text" class="form-control" placeholder="MM/YY" maxlength="5">
+                      <label class="form-label" for="card-expiry">Valid Thru</label>
+                      <input type="text" id="card-expiry" class="form-control" placeholder="MM/YY" maxlength="5" inputmode="numeric" autocomplete="cc-exp">
+                      <div class="form-error-msg" id="card-expiry-error"></div>
                     </div>
                     <div class="form-group" style="margin-bottom:0;">
-                      <label class="form-label">CVV</label>
-                      <input type="password" class="form-control" placeholder="•••" maxlength="4">
+                      <label class="form-label" for="card-cvv">CVV</label>
+                      <input type="password" id="card-cvv" class="form-control" placeholder="•••" maxlength="4" inputmode="numeric" autocomplete="cc-csc">
+                      <div class="form-error-msg" id="card-cvv-error"></div>
                     </div>
                   </div>
                 </div>
@@ -512,10 +548,10 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="brand-logo" style="color:#fff;margin-bottom:14px;">
+          <a href="index.html" class="brand-logo footer-brand-logo" aria-label="Chai & Co. Homepage" style="color:#fff;margin-bottom:14px;text-decoration:none;display:inline-flex;align-items:center;gap:12px;">
             <div class="logo-icon" style="background:rgba(214,168,95,0.2);color:var(--accent);"><i class="fa-solid fa-mug-hot"></i></div>
             <span>CHAI & CO.</span>
-          </div>
+          </a>
           <p>
             Brewed with Tradition. Served with Soul. Bringing authentic Indian chai culture to the modern café aesthetic since 2018.
           </p>
@@ -835,6 +871,79 @@
         });
       }
 
+      // Strict Card & Input Sanitization
+      const cardNumberInput = document.getElementById('card-number');
+      const cardExpiryInput = document.getElementById('card-expiry');
+      const cardCvvInput = document.getElementById('card-cvv');
+      const custPhoneInput = document.getElementById('cust-phone');
+      const custEmailInput = document.getElementById('cust-email');
+
+      // Card number: digits only, auto-format into groups of 4
+      if (cardNumberInput) {
+        cardNumberInput.addEventListener('input', e => {
+          let digits = e.target.value.replace(/\D/g, '').slice(0, 16);
+          let formatted = digits.match(/.{1,4}/g)?.join(' ') || digits;
+          e.target.value = formatted;
+          const errEl = document.getElementById('card-number-error');
+          if (errEl) errEl.textContent = '';
+        });
+      }
+
+      // Card expiry: digits only, auto-format as MM/YY
+      if (cardExpiryInput) {
+        cardExpiryInput.addEventListener('input', e => {
+          let digits = e.target.value.replace(/\D/g, '').slice(0, 4);
+          if (digits.length >= 3) {
+            digits = digits.slice(0, 2) + '/' + digits.slice(2, 4);
+          }
+          e.target.value = digits;
+          const errEl = document.getElementById('card-expiry-error');
+          if (errEl) errEl.textContent = '';
+        });
+      }
+
+      // Card CVV: digits only, max 4 chars
+      if (cardCvvInput) {
+        cardCvvInput.addEventListener('input', e => {
+          e.target.value = e.target.value.replace(/\D/g, '').slice(0, 4);
+          const errEl = document.getElementById('card-cvv-error');
+          if (errEl) errEl.textContent = '';
+        });
+      }
+
+      // Phone input: reject letters/alphabets in real time
+      if (custPhoneInput) {
+        custPhoneInput.addEventListener('input', e => {
+          e.target.value = e.target.value.replace(/[a-zA-Z]/g, '').replace(/[^\d\s\+\-\(\)]/g, '');
+          const errEl = document.getElementById('cust-phone-error');
+          if (errEl) errEl.textContent = '';
+        });
+      }
+
+      // Email input blur feedback
+      function validateEmailFormat(email) {
+        if (!email || typeof email !== 'string') return false;
+        const trimmed = email.trim();
+        if (trimmed.length < 6 || trimmed.length > 254 || trimmed.includes('..') || /\s/.test(trimmed)) return false;
+        return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z]{2,})+$/.test(trimmed);
+      }
+
+      if (custEmailInput) {
+        custEmailInput.addEventListener('input', () => {
+          const errEl = document.getElementById('cust-email-error');
+          if (errEl) errEl.textContent = '';
+        });
+        custEmailInput.addEventListener('blur', () => {
+          const val = custEmailInput.value.trim();
+          const errEl = document.getElementById('cust-email-error');
+          if (val && !validateEmailFormat(val)) {
+            if (errEl) errEl.textContent = 'Please enter a valid email address (e.g. name@example.com).';
+          } else if (errEl) {
+            errEl.textContent = '';
+          }
+        });
+      }
+
       // Order Placement CTA
       const placeOrderBtn = document.getElementById('confirm-order-btn');
       if (placeOrderBtn) {
@@ -845,10 +954,73 @@
             return;
           }
 
-          const custName = document.getElementById('cust-name')?.value.trim() || 'Valued Guest';
-          const custPhone = document.getElementById('cust-phone')?.value.trim() || '+91 98290 12345';
-          const custEmail = document.getElementById('cust-email')?.value.trim() || 'guest@example.com';
+          const custNameInput = document.getElementById('cust-name');
+          const custName = custNameInput?.value.trim() || '';
+          const custPhone = custPhoneInput?.value.trim() || '';
+          const custEmail = custEmailInput?.value.trim() || '';
           const custNotes = document.getElementById('cust-notes')?.value.trim() || '';
+
+          // Validate Customer Name
+          if (custName.length < 2) {
+            const err = document.getElementById('cust-name-error');
+            if (err) err.textContent = 'Please enter your full name.';
+            custNameInput?.focus();
+            if (window.showToast) window.showToast('Please provide your full name.', 'error');
+            return;
+          }
+
+          // Validate Customer Phone
+          const cleanPhone = custPhone.replace(/[\s\-\(\)\+]/g, '');
+          if (!/^\d+$/.test(cleanPhone) || cleanPhone.length < 10 || cleanPhone.length > 15) {
+            const err = document.getElementById('cust-phone-error');
+            if (err) err.textContent = 'Please enter a valid 10-digit mobile number (digits only).';
+            custPhoneInput?.focus();
+            if (window.showToast) window.showToast('Please enter a valid mobile number.', 'error');
+            return;
+          }
+
+          // Validate Customer Email
+          if (!validateEmailFormat(custEmail)) {
+            const err = document.getElementById('cust-email-error');
+            if (err) err.textContent = 'Please enter a valid email address (e.g. name@example.com).';
+            custEmailInput?.focus();
+            if (window.showToast) window.showToast('Please enter a valid email address for your order receipt.', 'error');
+            return;
+          }
+
+          // Validate Payment Method
+          const selectedPaymentRadio = document.querySelector('input[name="payment-method"]:checked');
+          const paymentMethod = selectedPaymentRadio ? selectedPaymentRadio.value.toUpperCase() : 'UPI';
+
+          if (paymentMethod === 'CARD') {
+            const cardNumDigits = (cardNumberInput?.value || '').replace(/\D/g, '');
+            const cardExpVal = (cardExpiryInput?.value || '').trim();
+            const cardCvvVal = (cardCvvInput?.value || '').trim();
+
+            if (cardNumDigits.length !== 16) {
+              const err = document.getElementById('card-number-error');
+              if (err) err.textContent = 'Please enter a valid 16-digit card number.';
+              cardNumberInput?.focus();
+              if (window.showToast) window.showToast('Please enter a valid 16-digit card number.', 'error');
+              return;
+            }
+
+            if (!/^(0[1-9]|1[0-2])\/\d{2}$/.test(cardExpVal)) {
+              const err = document.getElementById('card-expiry-error');
+              if (err) err.textContent = 'Please enter valid MM/YY format (Month: 01-12).';
+              cardExpiryInput?.focus();
+              if (window.showToast) window.showToast('Please enter a valid card expiry date (MM/YY).', 'error');
+              return;
+            }
+
+            if (!/^\d{3,4}$/.test(cardCvvVal)) {
+              const err = document.getElementById('card-cvv-error');
+              if (err) err.textContent = 'Please enter a 3 or 4-digit CVV.';
+              cardCvvInput?.focus();
+              if (window.showToast) window.showToast('Please enter a valid CVV.', 'error');
+              return;
+            }
+          }
 
           let fulfillmentInfo = '';
           if (fulfillmentType === 'delivery') {
@@ -862,9 +1034,6 @@
             const slot = document.getElementById('pickup-time-select')?.value || 'In 15 Mins';
             fulfillmentInfo = `Self Pickup (${slot}) at MI Road Stall`;
           }
-
-          const selectedPaymentRadio = document.querySelector('input[name="payment-method"]:checked');
-          const paymentMethod = selectedPaymentRadio ? selectedPaymentRadio.value.toUpperCase() : 'UPI';
 
           // Calculate final totals
           const subtotal = cart.reduce((t, i) => t + (i.price * i.quantity), 0);

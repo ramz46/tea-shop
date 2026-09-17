@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us — CHAI & CO. | Let's Share a Cup</title>
-  <meta name="description" content="Reach out to CHAI & CO. Visit our flagship heritage tea house in Jaipur, inquire about catering, or share your feedback over a warm cup of chai.">
-  <meta name="keywords" content="contact chai and co, tea stall location, jaipur cafe, chai catering inquiry, customer feedback">
+  <meta name="description"
+    content="Reach out to CHAI & CO. Visit our flagship heritage tea house in Jaipur, inquire about catering, or share your feedback over a warm cup of chai.">
+  <meta name="keywords"
+    content="contact chai and co, tea stall location, jaipur cafe, chai catering inquiry, customer feedback">
   <meta name="robots" content="index, follow">
+
 
   <!-- Favicon matching CHAI & CO. Logo Mark -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=3.0">
@@ -18,7 +22,9 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
   <!-- Font Awesome 6 Icons CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -32,6 +38,7 @@
   <link rel="stylesheet" href="assets/css/dark-mode.css?v=2.6">
   <link rel="stylesheet" href="assets/css/rtl.css">
 </head>
+
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -51,7 +58,27 @@
       </a>
 
       <nav class="nav-menu" aria-label="Main Navigation">
-        <a href="index.html" class="nav-link">Home</a>
+        <div class="nav-item-dropdown">
+          <a href="index.html" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            Home <i class="fa-solid fa-chevron-down nav-dropdown-icon"></i>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="index.html" class="nav-dropdown-item">
+              <i class="fa-solid fa-store"></i>
+              <div>
+                <strong>Homepage 1</strong>
+                <span>Classic Heritage Stall</span>
+              </div>
+            </a>
+            <a href="home-2.html" class="nav-dropdown-item">
+              <i class="fa-solid fa-mug-saucer"></i>
+              <div>
+                <strong>Homepage 2</strong>
+                <span>Modern Tea Lounge</span>
+              </div>
+            </a>
+          </div>
+        </div>
         <a href="about.html" class="nav-link">About</a>
         <a href="menu.html" class="nav-link">Menu</a>
         <a href="sourcing.html" class="nav-link">Our Sourcing</a>
@@ -62,10 +89,16 @@
       </nav>
 
       <div class="header-actions">
-        <button type="button" class="header-tool-btn theme-toggle-btn" aria-label="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
-        <button type="button" class="header-tool-btn rtl-toggle-btn" aria-label="Layout Direction: LTR (Click for RTL)"><span class="btn-label" style="font-size:0.7rem;font-weight:700;">LTR</span></button>
-        <a href="login.html" class="header-tool-btn header-auth-link" aria-label="Member Sign In" title="Member Sign In"><i class="fa-regular fa-user"></i></a>
-        <button type="button" class="header-tool-btn cart-toggle-btn" aria-label="Open Cart"><i class="fa-solid fa-bag-shopping"></i><span class="badge-count cart-count-badge" style="display:none;">0</span></button>
+        <button type="button" class="header-tool-btn theme-toggle-btn" aria-label="Toggle Theme"><i
+            class="fa-solid fa-moon"></i></button>
+        <button type="button" class="header-tool-btn rtl-toggle-btn"
+          aria-label="Layout Direction: LTR (Click for RTL)"><span class="btn-label"
+            style="font-size:0.7rem;font-weight:700;">LTR</span></button>
+        <a href="login.html" class="header-tool-btn header-auth-link" aria-label="Member Sign In"
+          title="Member Sign In"><i class="fa-regular fa-user"></i></a>
+        <button type="button" class="header-tool-btn cart-toggle-btn" aria-label="Open Cart"><i
+            class="fa-solid fa-bag-shopping"></i><span class="badge-count cart-count-badge"
+            style="display:none;">0</span></button>
         <button type="button" class="hamburger" aria-label="Open Menu"><span></span><span></span><span></span></button>
       </div>
     </div>
@@ -75,13 +108,23 @@
   <aside class="mobile-nav-drawer">
     <div class="drawer-header">
       <div class="brand-logo" style="font-size:1.3rem;">
-        <div class="logo-icon" style="width:34px;height:34px;font-size:0.9rem;"><i class="fa-solid fa-mug-hot"></i></div>
+        <div class="logo-icon" style="width:34px;height:34px;font-size:0.9rem;"><i class="fa-solid fa-mug-hot"></i>
+        </div>
         <span>CHAI & CO.</span>
       </div>
       <button type="button" class="drawer-close-btn btn-icon"><i class="fa-solid fa-xmark"></i></button>
     </div>
     <div class="drawer-nav-list">
-      <a href="index.html" class="drawer-nav-link">Home <i class="fa-solid fa-chevron-right"></i></a>
+      <div class="drawer-dropdown-group">
+        <div class="drawer-dropdown-header">
+          <span><i class="fa-solid fa-house" style="margin-right:8px;color:var(--primary);"></i> Homepages</span>
+          <i class="fa-solid fa-chevron-down drawer-dropdown-arrow open"></i>
+        </div>
+        <div class="drawer-subnav">
+          <a href="index.html" class="drawer-subnav-link"><i class="fa-solid fa-store"></i> Homepage 1: Classic Heritage</a>
+          <a href="home-2.html" class="drawer-subnav-link"><i class="fa-solid fa-mug-saucer"></i> Homepage 2: Modern Lounge</a>
+        </div>
+      </div>
       <a href="about.html" class="drawer-nav-link">About Us <i class="fa-solid fa-chevron-right"></i></a>
       <a href="menu.html" class="drawer-nav-link">Our Menu <i class="fa-solid fa-chevron-right"></i></a>
       <a href="sourcing.html" class="drawer-nav-link">Our Sourcing <i class="fa-solid fa-chevron-right"></i></a>
@@ -183,7 +226,8 @@
             <span class="tagline-label"><i class="fa-solid fa-paper-plane"></i> Send a Message</span>
             <h2 class="section-title">Drop Us a Thought</h2>
             <p style="margin-bottom:28px;">
-              Whether you want to compliment our Ginger Chai, suggest an artisan snack, or request a media interview, we read every note with warm appreciation.
+              Whether you want to compliment our Ginger Chai, suggest an artisan snack, or request a media interview, we
+              read every note with warm appreciation.
             </p>
 
             <form id="contact-form" novalidate>
@@ -208,16 +252,19 @@
 
               <div class="form-group">
                 <label class="form-label" for="contact-subject">Subject</label>
-                <input type="text" id="contact-subject" class="form-control" placeholder="Inquiry about seasonal blends">
+                <input type="text" id="contact-subject" class="form-control"
+                  placeholder="Inquiry about seasonal blends">
               </div>
 
               <div class="form-group">
                 <label class="form-label" for="contact-message">Your Message *</label>
-                <textarea id="contact-message" class="form-control" rows="5" placeholder="Share your thoughts or questions..." required></textarea>
+                <textarea id="contact-message" class="form-control" rows="5"
+                  placeholder="Share your thoughts or questions..." required></textarea>
                 <div class="form-error-msg"></div>
               </div>
 
-              <div class="form-success-alert" style="display:none;background:var(--success-bg);color:var(--success);padding:14px;border-radius:var(--radius-md);margin-bottom:18px;font-size:0.9rem;">
+              <div class="form-success-alert"
+                style="display:none;background:var(--success-bg);color:var(--success);padding:14px;border-radius:var(--radius-md);margin-bottom:18px;font-size:0.9rem;">
                 <i class="fa-solid fa-circle-check"></i> Thank you! Your message has been sent successfully.
               </div>
 
@@ -229,7 +276,8 @@
 
           <div class="reveal">
             <!-- Leaflet Interactive Map -->
-            <div style="background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-md);">
+            <div
+              style="background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-md);">
               <div id="contact-leaflet-map" style="width:100%;height:400px;background:#e5e3df;"></div>
               <div style="padding:24px;">
                 <h4 style="margin-bottom:6px;">Chai & Co. Heritage Stall</h4>
@@ -252,18 +300,24 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="brand-logo" style="color:#fff;margin-bottom:14px;">
-            <div class="logo-icon" style="background:rgba(214,168,95,0.2);color:var(--accent);"><i class="fa-solid fa-mug-hot"></i></div>
+          <a href="index.html" class="brand-logo footer-brand-logo" aria-label="Chai & Co. Homepage" style="color:#fff;margin-bottom:14px;text-decoration:none;display:inline-flex;align-items:center;gap:12px;">
+            <div class="logo-icon" style="background:rgba(214,168,95,0.2);color:var(--accent);"><i
+                class="fa-solid fa-mug-hot"></i></div>
             <span>CHAI & CO.</span>
-          </div>
+          </a>
           <p>
-            Brewed with Tradition. Served with Soul. Bringing authentic Indian chai culture to the modern café aesthetic since 2018.
+            Brewed with Tradition. Served with Soul. Bringing authentic Indian chai culture to the modern café aesthetic
+            since 2018.
           </p>
           <div class="footer-social-links">
-            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-            <a href="https://x.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link"
+              aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link"
+              aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-link"
+              aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://x.com" target="_blank" rel="noopener" class="footer-social-link"
+              aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
           </div>
         </div>
 
@@ -352,4 +406,5 @@
   <script src="assets/js/forms.js"></script>
   <script src="assets/js/auth.js"></script>
 </body>
+
 </html>
