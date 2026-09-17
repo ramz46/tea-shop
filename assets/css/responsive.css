@@ -440,6 +440,9 @@ body {
     gap: 7px;
     flex-shrink: 1;
     min-width: 0;
+    max-width: calc(100% - 150px) !important;
+    white-space: nowrap;
+    overflow: hidden;
   }
   .brand-logo .logo-icon {
     width: 30px;
@@ -448,6 +451,9 @@ body {
     flex-shrink: 0;
   }
   .header-actions {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
     gap: 5px;
     flex-shrink: 0;
     margin-left: auto;
@@ -456,26 +462,40 @@ body {
     display: none !important;
   }
 
-  /* Compact member badge on mobile so 3-line hamburger is NEVER pushed off */
+  /* Compact member avatar button on mobile so header actions never wrap or push off */
   .header-member-pill {
+    width: 34px !important;
     height: 34px !important;
-    padding: 0 6px !important;
-    gap: 4px !important;
-    font-size: 0.72rem !important;
-    max-width: 90px !important;
-    flex-shrink: 1 !important;
+    min-width: 34px !important;
+    min-height: 34px !important;
+    max-width: 34px !important;
+    padding: 0 !important;
+    gap: 0 !important;
+    border-radius: 50% !important;
+    flex-shrink: 0 !important;
     display: inline-flex !important;
     align-items: center !important;
+    justify-content: center !important;
+    background: rgba(214, 168, 95, 0.18) !important;
+    border: 1px solid rgba(214, 168, 95, 0.45) !important;
+    color: var(--accent) !important;
+    cursor: pointer !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
   }
-  .header-member-pill .member-name-text {
-    display: none !important;
+  .header-member-pill:hover {
+    background: rgba(214, 168, 95, 0.28) !important;
+    transform: translateY(-1px);
   }
+  .header-member-pill .member-crown-icon {
+    font-size: 0.95rem !important;
+    color: var(--accent) !important;
+    margin: 0 !important;
+  }
+  .header-member-pill .member-name-text,
+  .header-member-pill .member-points-badge,
   .header-member-pill .member-signout-btn {
     display: none !important;
-  }
-  .header-member-pill .member-points-badge {
-    font-size: 0.65rem !important;
-    padding: 1px 5px !important;
   }
 
   .header-tool-btn,
@@ -782,7 +802,8 @@ body {
     white-space: nowrap;
     flex-shrink: 1;
     min-width: 0;
-    max-width: 44vw;
+    max-width: calc(100% - 145px) !important;
+    overflow: hidden;
   }
   .brand-logo .logo-icon {
     width: 28px;
@@ -793,6 +814,9 @@ body {
   }
 
   .header-actions {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
     gap: 4px;
     flex-shrink: 0;
     margin-left: auto;
@@ -802,21 +826,31 @@ body {
     display: none !important;
   }
 
-  /* Ultra-compact Member Badge on small mobile screens */
+  /* Ultra-compact Member Avatar on small mobile screens */
   .header-member-pill {
+    width: 32px !important;
     height: 32px !important;
+    min-width: 32px !important;
     min-height: 32px !important;
-    padding: 0 5px !important;
-    max-width: 68px !important;
-    gap: 3px !important;
-    font-size: 0.68rem !important;
-    border-radius: var(--radius-pill) !important;
+    max-width: 32px !important;
+    padding: 0 !important;
+    gap: 0 !important;
+    border-radius: 50% !important;
     display: inline-flex !important;
     align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
   }
-  .header-member-pill .member-points-badge {
-    padding: 1px 4px !important;
-    font-size: 0.62rem !important;
+  .header-member-pill .member-crown-icon {
+    font-size: 0.9rem !important;
+    margin: 0 !important;
+  }
+  .header-member-pill .member-name-text,
+  .header-member-pill .member-points-badge,
+  .header-member-pill .member-signout-btn {
+    display: none !important;
   }
 
   .header-tool-btn,
@@ -1055,7 +1089,9 @@ body {
   .brand-logo {
     font-size: 0.94rem;
     gap: 5px;
-    max-width: 40vw;
+    max-width: calc(100% - 135px) !important;
+    white-space: nowrap;
+    overflow: hidden;
   }
   .brand-logo span {
     overflow: hidden;
@@ -1070,23 +1106,41 @@ body {
     flex-shrink: 0;
   }
   .header-actions {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
     gap: 3px;
     flex-shrink: 0;
     margin-left: auto;
   }
   .header-member-pill {
+    width: 30px !important;
     height: 30px !important;
+    min-width: 30px !important;
     min-height: 30px !important;
-    max-width: 52px !important;
-    padding: 0 4px !important;
-    font-size: 0.64rem !important;
-    border-radius: var(--radius-pill) !important;
+    max-width: 30px !important;
+    padding: 0 !important;
+    gap: 0 !important;
+    border-radius: 50% !important;
     display: inline-flex !important;
     align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    background: rgba(214, 168, 95, 0.18) !important;
+    border: 1px solid rgba(214, 168, 95, 0.45) !important;
+    color: var(--accent) !important;
+    cursor: pointer !important;
   }
-  .header-member-pill .member-points-badge {
-    font-size: 0.6rem !important;
-    padding: 1px 4px !important;
+  .header-member-pill .member-crown-icon {
+    font-size: 0.85rem !important;
+    margin: 0 !important;
+  }
+  .header-member-pill .member-name-text,
+  .header-member-pill .member-points-badge,
+  .header-member-pill .member-signout-btn {
+    display: none !important;
   }
   .header-tool-btn,
   .header-auth-link {
@@ -1223,8 +1277,13 @@ body {
     padding: 0 6px;
   }
   .brand-logo {
-    font-size: 0.9rem;
-    gap: 5px;
+    font-size: 0.88rem;
+    gap: 4px;
+    white-space: nowrap;
+    flex-shrink: 1;
+    min-width: 0;
+    max-width: calc(100% - 130px) !important;
+    overflow: hidden;
   }
   .brand-logo .logo-icon {
     width: 26px;
@@ -1232,15 +1291,37 @@ body {
     font-size: 0.72rem;
   }
   .header-actions {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
     gap: 3px;
+    flex-shrink: 0;
+    margin-left: auto;
   }
   .header-tool-btn,
-  .header-auth-link {
+  .header-auth-link,
+  .header-member-pill {
     width: 30px !important;
     height: 30px !important;
     min-width: 30px !important;
     min-height: 30px !important;
     font-size: 0.7rem !important;
+    border-radius: 50% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+  .header-member-pill .member-crown-icon {
+    font-size: 0.82rem !important;
+    margin: 0 !important;
+  }
+  .header-member-pill .member-name-text,
+  .header-member-pill .member-points-badge,
+  .header-member-pill .member-signout-btn {
+    display: none !important;
   }
   .hamburger {
     width: 30px;

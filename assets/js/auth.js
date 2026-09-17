@@ -707,7 +707,27 @@
         if (!memberPill) {
           memberPill = document.createElement('div');
           memberPill.className = 'header-member-pill';
-          container.prepend(memberPill);
+          memberPill.setAttribute('role', 'button');
+          memberPill.setAttribute('tabindex', '0');
+          memberPill.setAttribute('aria-label', 'Member Account Profile');
+          memberPill.setAttribute('title', `Logged in as ${user.name} (${user.points} pts)`);
+          const cartBtn = container.querySelector('.cart-toggle-btn');
+          if (cartBtn) {
+            container.insertBefore(memberPill, cartBtn);
+          } else {
+            container.appendChild(memberPill);
+          }
+
+          // On mobile view, tapping the member avatar opens the drawer to view full member profile
+          memberPill.addEventListener('click', (e) => {
+            if (window.innerWidth < 768) {
+              if (!e.target.closest('#btn-header-signout')) {
+                e.preventDefault();
+                const hamburger = document.querySelector('.hamburger');
+                if (hamburger) hamburger.click();
+              }
+            }
+          });
         }
 
         memberPill.innerHTML = `
@@ -721,13 +741,14 @@
 
         const signoutBtn = memberPill.querySelector('#btn-header-signout');
         if (signoutBtn) {
-          signoutBtn.addEventListener('click', () => {
+          signoutBtn.onclick = (e) => {
+            e.stopPropagation();
             setCurrentUser(null);
             if (window.showToast) {
               window.showToast('You have signed out.', 'info');
             }
             setTimeout(() => window.location.reload(), 500);
-          });
+          };
         }
       } else {
         if (memberPill) memberPill.remove();
