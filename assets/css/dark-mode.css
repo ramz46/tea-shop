@@ -131,16 +131,28 @@
 }
 
 [data-theme="dark"] .header-tool-btn,
-[data-theme="dark"] .header-icon-btn {
+[data-theme="dark"] .header-icon-btn,
+[data-theme="dark"] .hamburger {
   background: rgba(255, 255, 255, 0.05);
   border-color: rgba(212, 163, 89, 0.16);
   color: #ded1c4;
 }
 [data-theme="dark"] .header-tool-btn:hover,
-[data-theme="dark"] .header-icon-btn:hover {
+[data-theme="dark"] .header-icon-btn:hover,
+[data-theme="dark"] .hamburger:hover {
   background: rgba(212, 163, 89, 0.14);
   color: #ffffff;
   border-color: rgba(212, 163, 89, 0.35);
+}
+[data-theme="dark"] .hamburger span {
+  background: #ded1c4;
+}
+[data-theme="dark"] .hamburger.active {
+  background: rgba(212, 163, 89, 0.2);
+  border-color: var(--primary);
+}
+[data-theme="dark"] .hamburger.active span {
+  background: var(--primary);
 }
 
 [data-theme="dark"] .header-member-pill {

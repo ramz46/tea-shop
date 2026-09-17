@@ -109,15 +109,18 @@
       link.addEventListener('click', closeDrawer);
     });
 
-    // Toggle subnav dropdown inside drawer
+    // Toggle subnav dropdown inside drawer with smooth CSS accordion transition
     drawer.querySelectorAll('.drawer-dropdown-header').forEach(hdr => {
-      hdr.addEventListener('click', () => {
+      hdr.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
         const subnav = hdr.nextElementSibling;
-        const arrow = hdr.querySelector('.drawer-dropdown-arrow');
+        const arrow = hdr.querySelector('.drawer-dropdown-arrow, .fa-chevron-down');
         if (subnav) {
-          const isHidden = subnav.style.display === 'none';
-          subnav.style.display = isHidden ? 'flex' : 'none';
-          if (arrow) arrow.classList.toggle('open', isHidden);
+          const isCollapsed = subnav.classList.toggle('collapsed');
+          if (arrow) {
+            arrow.classList.toggle('open', !isCollapsed);
+          }
         }
       });
     });
