@@ -698,123 +698,19 @@
                        currentPath.endsWith('register.html') || currentPath.endsWith('register');
 
     actionsContainers.forEach(container => {
-      let memberPill = container.querySelector('.header-member-pill');
-      let authLink = container.querySelector('.header-auth-link');
-
-      if (user) {
-        if (authLink) authLink.remove();
-
-        if (!memberPill) {
-          memberPill = document.createElement('div');
-          memberPill.className = 'header-member-pill';
-          memberPill.setAttribute('role', 'button');
-          memberPill.setAttribute('tabindex', '0');
-          memberPill.setAttribute('aria-label', 'Member Account Profile');
-          memberPill.setAttribute('title', `Logged in as ${user.name} (${user.points} pts)`);
-          const cartBtn = container.querySelector('.cart-toggle-btn');
-          if (cartBtn) {
-            container.insertBefore(memberPill, cartBtn);
-          } else {
-            container.appendChild(memberPill);
-          }
-
-          // On mobile view, tapping the member avatar opens the drawer to view full member profile
-          memberPill.addEventListener('click', (e) => {
-            if (window.innerWidth < 768) {
-              if (!e.target.closest('#btn-header-signout')) {
-                e.preventDefault();
-                const hamburger = document.querySelector('.hamburger');
-                if (hamburger) hamburger.click();
-              }
-            }
-          });
-        }
-
-        memberPill.innerHTML = `
-          <i class="fa-solid fa-crown member-crown-icon" style="color:var(--accent);"></i>
-          <span class="member-name-text">${user.name.split(' ')[0]}</span>
-          <span class="member-points-badge">${user.points} pts</span>
-          <button type="button" id="btn-header-signout" title="Sign Out" class="member-signout-btn">
-            <i class="fa-solid fa-arrow-right-from-bracket"></i>
-          </button>
-        `;
-
-        const signoutBtn = memberPill.querySelector('#btn-header-signout');
-        if (signoutBtn) {
-          signoutBtn.onclick = (e) => {
-            e.stopPropagation();
-            setCurrentUser(null);
-            if (window.showToast) {
-              window.showToast('You have signed out.', 'info');
-            }
-            setTimeout(() => window.location.reload(), 500);
-          };
-        }
-      } else {
-        if (memberPill) memberPill.remove();
-
-        if (!isAuthPage) {
-          if (!authLink) {
-            authLink = document.createElement('a');
-            authLink.href = 'login.html';
-            authLink.className = 'header-tool-btn header-auth-link';
-            authLink.setAttribute('aria-label', 'Member Sign In');
-            authLink.setAttribute('title', 'Sign In to Chai Rewards');
-            authLink.innerHTML = '<i class="fa-regular fa-user"></i>';
-
-            const cartBtn = container.querySelector('.cart-toggle-btn');
-            if (cartBtn) {
-              container.insertBefore(authLink, cartBtn);
-            } else {
-              container.prepend(authLink);
-            }
-          }
-        } else if (authLink) {
-          authLink.remove();
-        }
-      }
+      const memberPill = container.querySelector('.header-member-pill');
+      const authLink = container.querySelector('.header-auth-link');
+      if (memberPill) memberPill.remove();
+      if (authLink) authLink.remove();
     });
 
-    // Also sync drawer auth state for mobile view
+    // Also remove login link from drawer
     const drawerNavLists = document.querySelectorAll('.drawer-nav-list');
     drawerNavLists.forEach(drawerList => {
-      let drawerUserCard = drawerList.querySelector('.drawer-user-card');
-      let drawerLoginLink = drawerList.querySelector('.drawer-login-link') || drawerList.querySelector('a[href*="login.html"]');
-
-      if (user) {
-        if (drawerLoginLink) {
-          drawerLoginLink.classList.add('drawer-login-link');
-          drawerLoginLink.style.display = 'none';
-        }
-        if (!drawerUserCard) {
-          drawerUserCard = document.createElement('div');
-          drawerUserCard.className = 'drawer-user-card';
-          drawerList.insertBefore(drawerUserCard, drawerList.firstChild);
-        }
-        drawerUserCard.innerHTML = `
-          <div class="drawer-user-card-inner">
-            <div class="drawer-user-badge"><i class="fa-solid fa-crown"></i></div>
-            <div class="drawer-user-details">
-              <strong>${user.name}</strong>
-              <span>${user.tier || 'Gold Reserve'} • <b>${user.points} pts</b></span>
-            </div>
-            <button type="button" class="drawer-signout-btn" title="Sign Out">
-              <i class="fa-solid fa-arrow-right-from-bracket"></i>
-            </button>
-          </div>
-        `;
-        const drawerSignout = drawerUserCard.querySelector('.drawer-signout-btn');
-        if (drawerSignout) {
-          drawerSignout.addEventListener('click', () => {
-            setCurrentUser(null);
-            if (window.showToast) window.showToast('You have signed out.', 'info');
-            setTimeout(() => window.location.reload(), 500);
-          });
-        }
-      } else {
-        if (drawerUserCard) drawerUserCard.remove();
-        if (drawerLoginLink) drawerLoginLink.style.display = '';
-      }
+      const drawerUserCard = drawerList.querySelector('.drawer-user-card');
+      const drawerLoginLink = drawerList.querySelector('.drawer-login-link') || drawerList.querySelector('a[href*="login.html"]');
+      if (drawerUserCard) drawerUserCard.remove();
+      if (drawerLoginLink) drawerLoginLink.remove();
     });
   }
 

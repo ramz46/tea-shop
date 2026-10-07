@@ -885,32 +885,34 @@ p {
 }
 
 .header-order-btn {
-  height: 34px;
-  padding: 0 16px;
-  font-size: 0.8125rem;
+  height: 36px;
+  padding: 0 18px;
+  font-size: 0.84rem;
   font-weight: 700;
   border-radius: var(--radius-pill);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 7px;
+  gap: 8px;
   flex-shrink: 0;
   text-decoration: none;
   line-height: 1;
   white-space: nowrap;
-  background: linear-gradient(135deg, #cf7d29 0%, #9e4716 100%);
+  background: linear-gradient(135deg, var(--terracotta, #c85a32) 0%, var(--primary, #7a4b2a) 100%);
   color: #ffffff !important;
-  box-shadow: 0 2px 10px rgba(158, 71, 22, 0.22);
+  box-shadow: 0 3px 12px rgba(200, 90, 50, 0.28);
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
               box-shadow 0.25s ease,
-              background 0.2s ease;
+              background 0.25s ease;
+  letter-spacing: 0.015em;
 }
 .header-order-btn i {
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   line-height: 1;
+  transition: transform 0.25s ease;
 }
 .header-order-btn span {
   line-height: 1;
@@ -922,7 +924,7 @@ p {
   left: -130%;
   width: 60%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.32), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
   transform: skewX(-25deg);
   pointer-events: none;
 }
@@ -931,10 +933,16 @@ p {
   transition: left 0.75s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 .header-order-btn:hover {
-  background: linear-gradient(135deg, #dc8b34 0%, #b0531c 100%);
-  transform: translateY(-1px) scale(1.02);
-  box-shadow: 0 4px 14px rgba(158, 71, 22, 0.32);
+  background: linear-gradient(135deg, #d46338 0%, #8c5530 100%);
+  transform: translateY(-1px) scale(1.025);
+  box-shadow: 0 5px 16px rgba(200, 90, 50, 0.38);
   color: #ffffff !important;
+}
+.header-order-btn:hover i {
+  transform: scale(1.15) rotate(-6deg);
+}
+.header-order-btn:active {
+  transform: scale(0.97);
 }
 /* Member Authentication Pill in Header */
 .header-member-pill {

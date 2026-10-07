@@ -43,7 +43,10 @@
       <div class="header-actions">
         <button type="button" class="header-tool-btn theme-toggle-btn" aria-label="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
         <button type="button" class="header-tool-btn rtl-toggle-btn" aria-label="Layout Direction: LTR (Click for RTL)"><span class="btn-label" style="font-size:0.7rem;font-weight:700;">LTR</span></button>
-        <a href="index.html" class="btn btn-outline btn-sm"><i class="fa-solid fa-arrow-left"></i> Return Home</a>
+        <!-- Primary CTA Button -->
+        <a href="order.html" class="header-order-btn" aria-label="Order Online">
+          <i class="fa-solid fa-mug-hot"></i> <span>Order Online</span>
+        </a>
       </div>
     </div>
   </header>
@@ -113,13 +116,24 @@
 
       <!-- Right Form Pane -->
       <div class="auth-form-pane">
+        <!-- Guest Ordering Notice -->
+        <div style="background:rgba(200,90,50,0.1);border:1px solid rgba(200,90,50,0.25);border-radius:var(--radius-md);padding:14px 18px;margin-bottom:20px;display:flex;align-items:center;gap:12px;">
+          <i class="fa-solid fa-circle-info" style="color:var(--terracotta);font-size:1.2rem;flex-shrink:0;"></i>
+          <div style="font-size:0.875rem;line-height:1.45;">
+            <strong>No Registration Required:</strong> Enjoy seamless direct ordering and guest checkout. Points are calculated and redeemed seamlessly on every order!
+            <div style="margin-top:8px;">
+              <a href="order.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-fire-burner"></i> Proceed to Order Online</a>
+            </div>
+          </div>
+        </div>
+
         <!-- Interactive Mode Switch Tabs -->
         <div class="auth-nav-tabs">
           <a href="login.html" class="auth-nav-tab">
-            <i class="fa-solid fa-lock"></i> Sign In
+            <i class="fa-solid fa-lock"></i> Sign In (Demo)
           </a>
           <button type="button" class="auth-nav-tab active" aria-selected="true">
-            <i class="fa-solid fa-user-plus"></i> Join Rewards
+            <i class="fa-solid fa-user-plus"></i> Join Rewards (Demo)
           </button>
         </div>
 
@@ -275,8 +289,8 @@
           <ul class="footer-links">
             <li><a href="blog.html">Chai Chronicles</a></li>
             <li><a href="contact.html">Find a Stall</a></li>
-            <li><a href="login.html">Member Sign In</a></li>
-            <li><a href="register.html">Join Rewards</a></li>
+            <li><a href="order.html">Order Online</a></li>
+            <li><a href="loyalty.html">Chai Rewards</a></li>
             <li><a href="coming-soon.html">New Locations</a></li>
             <li><a href="maintenance.html">System Status</a></li>
           </ul>

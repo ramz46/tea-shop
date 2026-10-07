@@ -521,7 +521,11 @@ body {
     margin-left: auto;
   }
   .header-actions .header-order-btn {
-    display: none !important;
+    display: inline-flex !important;
+    height: 32px;
+    padding: 0 12px;
+    font-size: 0.78rem;
+    gap: 5px;
   }
 
   /* Compact member avatar button on mobile so header actions never wrap or push off */
@@ -886,6 +890,12 @@ body {
   /* On small mobile screens, RTL button is accessible via the mobile drawer to keep header clean */
   .header-actions .rtl-toggle-btn {
     display: none !important;
+  }
+  .header-actions .header-order-btn {
+    height: 30px;
+    padding: 0 10px;
+    font-size: 0.74rem;
+    gap: 4px;
   }
 
   /* Ultra-compact Member Avatar on small mobile screens */
