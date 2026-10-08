@@ -49,16 +49,16 @@
         progressBar.style.width = `${progressPercent}%`;
       }
 
-      // Highlight active tier card
+      // Highlight active tier card without displacing card baselines or buttons
       document.querySelectorAll('.tier-card').forEach(card => {
         const tier = card.dataset.tier;
         if (tier === tierName.toLowerCase().replace(/\s+/g, '-')) {
-          card.style.borderColor = 'var(--primary)';
-          card.style.transform = 'translateY(-6px)';
+          card.classList.add('active-calc-tier');
         } else {
-          card.style.borderColor = '';
-          card.style.transform = '';
+          card.classList.remove('active-calc-tier');
         }
+        card.style.transform = '';
+        card.style.borderColor = '';
       });
     }
 

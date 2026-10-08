@@ -862,6 +862,20 @@
   background: linear-gradient(to bottom, rgba(251, 191, 36, 0.12) 0%, var(--bg-surface) 40%);
   border-color: var(--primary);
 }
+[data-theme="dark"] .tier-card.active-calc-tier {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 3px rgba(212, 155, 75, 0.28), var(--shadow-md) !important;
+}
+[data-theme="dark"] .tier-card .btn-outline {
+  background-color: transparent;
+  color: #f7efe6;
+  border-color: var(--primary);
+}
+[data-theme="dark"] .tier-card .btn-outline:hover {
+  background: linear-gradient(135deg, var(--primary) 0%, #c9822d 100%);
+  color: #100c08;
+  border-color: transparent;
+}
 
 [data-theme="dark"] .loyalty-calc-box {
   background: var(--bg-surface);
