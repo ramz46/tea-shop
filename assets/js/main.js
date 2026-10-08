@@ -152,6 +152,13 @@
       }
     });
 
+    // Auto-mark header CTA button as active if on order.html
+    const isOrderPage = window.location.pathname.toLowerCase().includes('order.html');
+    if (isOrderPage) {
+      const headerOrderBtn = document.querySelector('.header-order-btn');
+      if (headerOrderBtn) headerOrderBtn.classList.add('active');
+    }
+
     // Smoothly auto-center active nav-link in mobile horizontal capsule nav-menu
     const navMenu = document.querySelector('.nav-menu');
     if (navMenu) {
