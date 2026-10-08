@@ -365,6 +365,11 @@ body {
     padding: 22px 20px;
   }
 
+  /* Loyalty Tablet Scaling */
+  .loyalty-calc-box {
+    padding: 36px 28px;
+  }
+
   /* Footer Layout */
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -770,6 +775,19 @@ body {
     transform: translateY(-6px);
   }
 
+  /* Loyalty Tablet Layout (< 768px) */
+  .loyalty-calc-box {
+    padding: 30px 22px;
+  }
+  .tier-grid {
+    gap: 22px;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+  .tier-card {
+    padding: 26px 20px;
+  }
+
   .timeline-process {
     grid-template-columns: 1fr;
     text-align: start;
@@ -1009,15 +1027,49 @@ body {
     font-size: 1.15rem;
   }
 
+  /* Loyalty Calculator Polish (< 576px) */
+  .loyalty-calc-box {
+    padding: 26px 18px;
+    border-radius: var(--radius-lg);
+  }
+  .loyalty-calc-box .form-label {
+    text-align: center;
+    display: block;
+    font-size: 0.98rem;
+    margin-bottom: 8px;
+  }
   .calc-input-group {
-    flex-direction: column;
-    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 18px 0 22px;
+    width: 100%;
   }
   .calc-currency-symbol {
-    display: none;
+    display: inline-block;
+    font-size: 1.8rem;
+    color: var(--primary);
+  }
+  .calc-input {
+    font-size: 1.7rem;
+    padding: 8px 16px;
+    max-width: 200px;
+    text-align: center;
+  }
+  .calc-result-box {
+    padding: 20px 16px;
   }
   .calc-points-display {
-    font-size: 2rem;
+    font-size: 2.3rem;
+  }
+  .loyalty-order-cta-btn {
+    width: 100% !important;
+    padding: 14px 18px !important;
+    font-size: 0.95rem !important;
+    white-space: normal !important;
+    box-sizing: border-box !important;
   }
 
   /* Order Page Fulfillment Switcher */
@@ -1397,7 +1449,75 @@ body {
   }
 
   .tier-card {
-    padding: 24px 18px;
+    padding: 22px 16px !important;
+  }
+
+  /* Loyalty Program Mobile Refinement (< 480px) */
+  .loyalty-calc-box {
+    padding: 22px 14px !important;
+  }
+  .loyalty-calc-box .form-label {
+    font-size: 0.92rem !important;
+    text-align: center !important;
+    margin-bottom: 6px !important;
+  }
+  .calc-input-group {
+    margin: 16px 0 !important;
+    gap: 8px !important;
+  }
+  .calc-currency-symbol {
+    font-size: 1.5rem !important;
+  }
+  .calc-input {
+    font-size: 1.45rem !important;
+    padding: 8px 12px !important;
+    max-width: 160px !important;
+  }
+  .calc-result-box {
+    padding: 16px 12px !important;
+  }
+  .calc-points-display {
+    font-size: 2.1rem !important;
+  }
+  .calc-tier-badge-pill {
+    padding: 8px 14px !important;
+    gap: 8px !important;
+  }
+  .loyalty-order-cta-btn {
+    width: 100% !important;
+    padding: 13px 14px !important;
+    font-size: 0.9rem !important;
+    white-space: normal !important;
+  }
+  .tier-grid {
+    gap: 20px !important;
+    width: 100% !important;
+  }
+  .tier-points {
+    font-size: 1.65rem !important;
+    margin-bottom: 14px !important;
+  }
+  .tier-perks {
+    margin: 18px 0 22px !important;
+    gap: 10px !important;
+  }
+  .tier-perks li {
+    font-size: 0.82rem !important;
+    line-height: 1.45 !important;
+  }
+  .tier-card .btn {
+    min-height: 46px !important;
+    padding: 10px 14px !important;
+    font-size: 0.84rem !important;
+  }
+  .accordion-header {
+    padding: 14px 16px !important;
+    font-size: 0.96rem !important;
+    gap: 10px !important;
+  }
+  .accordion-body {
+    padding: 0 16px 16px !important;
+    font-size: 0.84rem !important;
   }
 
   /* Chai Card Small Mobile Optimization */
@@ -1605,6 +1725,69 @@ body {
   }
   .timeline-step-desc {
     font-size: 0.75rem !important;
+  }
+
+  /* Loyalty Program Ultra-compact Mobile (< 360px) */
+  .loyalty-calc-box {
+    padding: 16px 10px !important;
+  }
+  .loyalty-calc-box .form-label {
+    font-size: 0.86rem !important;
+  }
+  .calc-input-group {
+    margin: 12px 0 !important;
+    gap: 6px !important;
+  }
+  .calc-currency-symbol {
+    font-size: 1.35rem !important;
+  }
+  .calc-input {
+    font-size: 1.3rem !important;
+    padding: 6px 10px !important;
+    max-width: 135px !important;
+  }
+  .calc-result-box {
+    padding: 14px 10px !important;
+  }
+  .calc-points-display {
+    font-size: 1.85rem !important;
+  }
+  .calc-tier-badge-pill {
+    padding: 6px 10px !important;
+    gap: 6px !important;
+    font-size: 0.78rem !important;
+  }
+  .loyalty-order-cta-btn {
+    padding: 12px 10px !important;
+    font-size: 0.84rem !important;
+  }
+  .tier-card {
+    padding: 18px 12px !important;
+  }
+  .tier-points {
+    font-size: 1.5rem !important;
+  }
+  .tier-perks {
+    margin: 14px 0 18px !important;
+    gap: 8px !important;
+  }
+  .tier-perks li {
+    font-size: 0.78rem !important;
+    gap: 8px !important;
+  }
+  .tier-card .btn {
+    min-height: 44px !important;
+    padding: 8px 10px !important;
+    font-size: 0.8rem !important;
+  }
+  .accordion-header {
+    padding: 12px 12px !important;
+    font-size: 0.88rem !important;
+    gap: 8px !important;
+  }
+  .accordion-body {
+    padding: 0 12px 14px !important;
+    font-size: 0.78rem !important;
   }
 }
 

@@ -3318,14 +3318,17 @@ p {
 }
 .tier-perks li {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
   font-size: var(--font-size-sm);
   color: var(--text-muted);
+  text-align: left;
+  line-height: 1.45;
 }
 .tier-perks li i {
   color: var(--secondary);
   font-size: 0.9rem;
+  margin-top: 3px;
   flex-shrink: 0;
 }
 
@@ -3423,6 +3426,24 @@ p {
   font-size: var(--font-size-sm);
   font-weight: 700;
   color: var(--secondary);
+}
+.calc-tier-badge-pill {
+  background: var(--bg-surface);
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  max-width: 100%;
+}
+.loyalty-order-cta-btn {
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.35;
 }
 
 /* --------------------------------------------------------------------------
