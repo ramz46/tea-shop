@@ -701,6 +701,23 @@ body {
     max-width: 90%;
   }
 
+  .page-hero-home2 {
+    min-height: auto !important;
+    padding: calc(var(--header-height) + 36px) 0 60px !important;
+  }
+  .page-hero-home2 .home2-hero-title {
+    font-size: clamp(2rem, 7vw, 2.75rem) !important;
+  }
+  .page-hero-home2 .home2-hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  .page-hero-home2 .home2-hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
   .menu-controls {
     flex-direction: column;
     align-items: stretch;
