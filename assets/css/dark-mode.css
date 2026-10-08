@@ -1074,3 +1074,29 @@
 [data-theme="dark"] .pairing-pill-item:hover {
   border-color: var(--primary);
 }
+
+/* Footer Social Icons & Branding in Dark Mode */
+[data-theme="dark"] .site-footer .footer-social-link,
+[data-theme="dark"] .footer-social-link {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.16);
+  color: #ffffff !important;
+}
+[data-theme="dark"] .site-footer .footer-social-link i,
+[data-theme="dark"] .footer-social-link i {
+  color: #ffffff !important;
+}
+[data-theme="dark"] .site-footer .footer-social-link:hover,
+[data-theme="dark"] .site-footer .footer-social-link:focus-visible,
+[data-theme="dark"] .footer-social-link:hover,
+[data-theme="dark"] .footer-social-link:focus-visible {
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 0 16px rgba(207, 125, 41, 0.35) !important;
+}
+[data-theme="dark"] .site-footer .footer-social-link:hover i,
+[data-theme="dark"] .site-footer .footer-social-link:focus-visible i,
+[data-theme="dark"] .footer-social-link:hover i,
+[data-theme="dark"] .footer-social-link:focus-visible i {
+  color: #ffffff !important;
+}
