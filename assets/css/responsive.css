@@ -319,11 +319,19 @@ body {
 
   .about-preview-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
   }
 
-  .about-img-stack,
   .about-single-media {
+    max-width: 480px;
+    height: 380px !important;
+    max-height: 400px !important;
+    aspect-ratio: 4 / 3 !important;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .about-img-stack {
     max-width: 520px;
     width: 100%;
     margin: 0 auto;
@@ -610,6 +618,41 @@ body {
     border: 4px solid var(--bg-surface) !important;
     display: block !important;
     box-shadow: 0 12px 28px rgba(35, 22, 14, 0.2) !important;
+  }
+
+  .about-single-media {
+    max-width: 480px;
+    height: 330px !important;
+    max-height: 350px !important;
+    aspect-ratio: 4 / 3 !important;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: var(--radius-lg);
+  }
+  .about-badge-established {
+    top: 14px !important;
+    inset-inline-start: 14px !important;
+    padding: 8px 14px !important;
+  }
+  .about-badge-established strong {
+    font-size: 1.25rem !important;
+  }
+  .about-badge-established span {
+    font-size: 0.62rem !important;
+  }
+  .about-floating-ingredient-tag {
+    bottom: 14px !important;
+    inset-inline-start: 14px !important;
+    padding: 8px 12px !important;
+    max-width: 155px !important;
+    border-radius: 12px !important;
+  }
+  .about-floating-rating-tag {
+    bottom: 14px !important;
+    inset-inline-end: 14px !important;
+    padding: 8px 12px !important;
+    min-width: 85px !important;
+    border-radius: 12px !important;
   }
 
   /* Page Hero Tablet & Mobile Scaling */
@@ -1433,6 +1476,46 @@ body {
     font-size: 0.85rem !important;
     line-height: 1.55 !important;
     margin-bottom: 12px !important;
+  }
+
+  /* About Section Single Media (< 480px) */
+  .about-single-media {
+    max-width: 100% !important;
+    height: 260px !important;
+    max-height: 270px !important;
+    aspect-ratio: 16 / 10 !important;
+    border-radius: var(--radius-md) !important;
+  }
+  .about-badge-established {
+    top: 10px !important;
+    inset-inline-start: 10px !important;
+    padding: 6px 10px !important;
+  }
+  .about-badge-established strong {
+    font-size: 1.1rem !important;
+  }
+  .about-badge-established span {
+    font-size: 0.58rem !important;
+  }
+  .about-floating-ingredient-tag {
+    bottom: 10px !important;
+    inset-inline-start: 10px !important;
+    padding: 6px 10px !important;
+    max-width: 125px !important;
+    border-radius: 10px !important;
+  }
+  .about-floating-ingredient-tag .ingredient-pills {
+    display: none !important;
+  }
+  .about-floating-rating-tag {
+    bottom: 10px !important;
+    inset-inline-end: 10px !important;
+    padding: 6px 10px !important;
+    min-width: 70px !important;
+    border-radius: 10px !important;
+  }
+  .about-floating-rating-tag .rating-num {
+    font-size: 1.15rem !important;
   }
 
   /* Spices Grid (< 480px) */

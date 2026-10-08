@@ -2494,27 +2494,29 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 60px;
+  gap: 56px;
 }
 
 .about-single-media {
   position: relative;
   width: 100%;
-  height: 100%;
-  min-height: 420px;
+  max-width: 520px;
+  height: 480px;
+  max-height: 500px;
+  aspect-ratio: 1 / 1;
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: 0 20px 48px rgba(35, 22, 14, 0.12);
   border: 1px solid var(--border);
   background: var(--bg-surface-soft);
-  display: flex;
+  margin: 0 auto;
 }
 
 .about-single-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center 30%;
   display: block;
   border-radius: var(--radius-xl);
   transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -2530,7 +2532,7 @@ p {
   inset-inline-start: 20px;
   background: linear-gradient(135deg, rgba(163, 78, 28, 0.94) 0%, rgba(201, 130, 45, 0.94) 100%);
   color: #fff;
-  padding: 12px 18px;
+  padding: 10px 16px;
   border-radius: var(--radius-md);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -2546,16 +2548,107 @@ p {
 .about-badge-established strong {
   display: block;
   font-family: var(--font-heading);
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   line-height: 1;
   color: #fff;
 }
 .about-badge-established span {
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.9);
+}
+
+/* Floating Badges on About Media */
+.about-floating-ingredient-tag,
+.about-floating-rating-tag {
+  position: absolute;
+  bottom: 20px;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 14px;
+  box-shadow: 0 8px 28px rgba(35, 22, 14, 0.14);
+  border: 1px solid rgba(163, 78, 28, 0.12);
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+.about-floating-ingredient-tag:hover,
+.about-floating-rating-tag:hover {
+  transform: translateY(-2px);
+}
+
+.about-floating-ingredient-tag {
+  inset-inline-start: 20px;
+  padding: 10px 14px;
+  max-width: 175px;
+}
+.about-floating-ingredient-tag .ingredient-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.about-floating-ingredient-tag .ingredient-icon {
+  width: 26px;
+  height: 26px;
+  background: linear-gradient(135deg, #a34e1c, #c9822d);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #fff;
+  font-size: 0.72rem;
+}
+.about-floating-ingredient-tag .ingredient-title {
+  font-size: 0.74rem;
+  color: var(--text-main);
+  font-family: var(--font-heading);
+  letter-spacing: 0.02em;
+}
+.about-floating-ingredient-tag .ingredient-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+.about-floating-ingredient-tag .ingredient-pills span {
+  font-size: 0.62rem;
+  background: rgba(163, 78, 28, 0.08);
+  color: var(--primary);
+  padding: 2px 6px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.about-floating-rating-tag {
+  inset-inline-end: 20px;
+  padding: 10px 14px;
+  text-align: center;
+  min-width: 90px;
+}
+.about-floating-rating-tag .rating-num {
+  font-size: 1.35rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  color: var(--primary);
+  line-height: 1;
+}
+.about-floating-rating-tag .rating-stars {
+  display: flex;
+  gap: 2px;
+  justify-content: center;
+  margin: 3px 0 2px;
+  color: #f59e0b;
+  font-size: 0.58rem;
+}
+.about-floating-rating-tag .rating-count {
+  font-size: 0.58rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .about-img-stack {

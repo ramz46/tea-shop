@@ -750,6 +750,20 @@
   border-color: var(--bg-surface);
 }
 
+[data-theme="dark"] .about-floating-ingredient-tag,
+[data-theme="dark"] .about-floating-rating-tag {
+  background: rgba(22, 17, 11, 0.94);
+  border-color: rgba(251, 191, 36, 0.22);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.5);
+}
+[data-theme="dark"] .about-floating-ingredient-tag .ingredient-title {
+  color: #fff;
+}
+[data-theme="dark"] .about-floating-ingredient-tag .ingredient-pills span {
+  background: rgba(251, 191, 36, 0.12);
+  color: #fbbf24;
+}
+
 /* Drawers, Modals & Toast */
 [data-theme="dark"] .cart-drawer,
 [data-theme="dark"] .mobile-nav-drawer,
