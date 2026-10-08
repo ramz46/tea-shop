@@ -180,60 +180,11 @@
   }
 
   // --------------------------------------------------------------------------
-  // 3B. MOBILE BOTTOM NAVIGATION BAR (Instant 1-Tap Mobile Navigation)
+  // 3B. REMOVE MOBILE BOTTOM NAVIGATION BAR
   // --------------------------------------------------------------------------
-  function initMobileBottomNav() {
-    if (document.querySelector('.mobile-bottom-nav')) return;
-
-    // Detect active page to set active highlight
-    const path = window.location.pathname.toLowerCase();
-    const isMenu = path.includes('menu.html');
-    const isOrder = path.includes('order.html');
-    const isAbout = path.includes('about.html');
-    const isHome = !isMenu && !isOrder && !isAbout && (
-      path.endsWith('index.html') || path.endsWith('home-2.html') || path.endsWith('/') || path === ''
-    );
-
-    const bottomNav = document.createElement('nav');
-    bottomNav.className = 'mobile-bottom-nav';
-    bottomNav.setAttribute('aria-label', 'Mobile Quick Navigation');
-    bottomNav.innerHTML = `
-      <a href="index.html" class="mobile-bottom-nav-item ${isHome ? 'active' : ''}" aria-label="Home">
-        <i class="fa-solid fa-house"></i>
-        <span>Home</span>
-      </a>
-      <a href="menu.html" class="mobile-bottom-nav-item ${isMenu ? 'active' : ''}" aria-label="Our Menu">
-        <i class="fa-solid fa-book-open"></i>
-        <span>Menu</span>
-      </a>
-      <a href="order.html" class="mobile-bottom-nav-item order-btn-special ${isOrder ? 'active' : ''}" aria-label="Order Online">
-        <div class="order-icon-badge">
-          <i class="fa-solid fa-fire-burner"></i>
-        </div>
-        <span>Order</span>
-      </a>
-      <a href="about.html" class="mobile-bottom-nav-item ${isAbout ? 'active' : ''}" aria-label="About Us">
-        <i class="fa-solid fa-compass"></i>
-        <span>About</span>
-      </a>
-      <button type="button" class="mobile-bottom-nav-item mobile-drawer-trigger-btn" aria-label="More Menu Options">
-        <i class="fa-solid fa-bars"></i>
-        <span>More</span>
-      </button>
-    `;
-
-    document.body.appendChild(bottomNav);
-
-    const triggerBtn = bottomNav.querySelector('.mobile-drawer-trigger-btn');
-    if (triggerBtn) {
-      triggerBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const hamburger = document.querySelector('.hamburger');
-        if (hamburger) {
-          hamburger.click();
-        }
-      });
-    }
+  function removeMobileBottomNav() {
+    const existing = document.querySelectorAll('.mobile-bottom-nav');
+    existing.forEach(nav => nav.remove());
   }
 
   // --------------------------------------------------------------------------
@@ -525,7 +476,7 @@
     initPreloader();
     initStickyHeader();
     initMobileNav();
-    initMobileBottomNav();
+    removeMobileBottomNav();
     initBackToTop();
     initModals();
     initCookieBanner();
