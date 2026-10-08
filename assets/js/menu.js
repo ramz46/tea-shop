@@ -1299,9 +1299,28 @@
     // Bind Category Filter Buttons
     document.querySelectorAll('.menu-filter-tabs .filter-btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        document.querySelectorAll('.menu-filter-tabs .filter-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.menu-filter-tabs .filter-btn').forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
         btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
         activeCategory = btn.dataset.category || 'All';
+
+        // Auto-center the active category pill within the horizontal scrollable tabs
+        if (typeof btn.scrollIntoView === 'function') {
+          btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+
+        // If user is scrolled down past the menu controls, smoothly stabilize position at top of grid
+        const menuControls = document.querySelector('.menu-controls');
+        if (menuControls) {
+          const controlsRect = menuControls.getBoundingClientRect();
+          if (controlsRect.top < 70) {
+            menuControls.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+
         filterAndRender();
       });
     });

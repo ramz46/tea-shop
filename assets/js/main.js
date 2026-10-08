@@ -159,14 +159,16 @@
       if (headerOrderBtn) headerOrderBtn.classList.add('active');
     }
 
-    // Smoothly auto-center active nav-link in mobile horizontal capsule nav-menu
+    // Smoothly auto-center active nav-link if nav-menu is scrollable
     const navMenu = document.querySelector('.nav-menu');
     if (navMenu) {
       const activeLink = navMenu.querySelector('.nav-link.active');
       if (activeLink) {
         setTimeout(() => {
-          const scrollTarget = activeLink.offsetLeft - (navMenu.clientWidth / 2) + (activeLink.clientWidth / 2);
-          navMenu.scrollTo({ left: Math.max(0, scrollTarget), behavior: 'smooth' });
+          if (navMenu.clientWidth > 0 && navMenu.scrollWidth > navMenu.clientWidth) {
+            const scrollTarget = activeLink.offsetLeft - (navMenu.clientWidth / 2) + (activeLink.clientWidth / 2);
+            navMenu.scrollTo({ left: Math.max(0, scrollTarget), behavior: 'smooth' });
+          }
         }, 120);
       }
     }

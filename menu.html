@@ -190,19 +190,19 @@
     <section class="section">
       <div class="container">
         <!-- Controls: Category tabs, Search input, Sorting -->
-        <div class="menu-controls">
-          <div class="menu-filter-tabs">
-            <button type="button" class="filter-btn active" data-category="All">All Creations <span class="tab-count">30</span></button>
-            <button type="button" class="filter-btn" data-category="Masala Chai">Masala Chai <span class="tab-count">6</span></button>
-            <button type="button" class="filter-btn" data-category="Specialty Tea">Specialty Tea <span class="tab-count">6</span></button>
-            <button type="button" class="filter-btn" data-category="Herbal Tea">Herbal Tisanes <span class="tab-count">3</span></button>
-            <button type="button" class="filter-btn" data-category="Iced Tea">Cold Brews <span class="tab-count">3</span></button>
-            <button type="button" class="filter-btn" data-category="Coffee">Filter Kaapi <span class="tab-count">3</span></button>
-            <button type="button" class="filter-btn" data-category="Snacks">Savories & Bakes <span class="tab-count">6</span></button>
-            <button type="button" class="filter-btn" data-category="Desserts">Heritage Sweets <span class="tab-count">3</span></button>
+        <div class="menu-controls menu-page-controls">
+          <div class="menu-filter-tabs" role="tablist" aria-label="Menu categories">
+            <button type="button" class="filter-btn active" data-category="All" role="tab" aria-selected="true">All Creations <span class="tab-count">30</span></button>
+            <button type="button" class="filter-btn" data-category="Masala Chai" role="tab" aria-selected="false">Masala Chai <span class="tab-count">6</span></button>
+            <button type="button" class="filter-btn" data-category="Specialty Tea" role="tab" aria-selected="false">Specialty Tea <span class="tab-count">6</span></button>
+            <button type="button" class="filter-btn" data-category="Herbal Tea" role="tab" aria-selected="false">Herbal Tisanes <span class="tab-count">3</span></button>
+            <button type="button" class="filter-btn" data-category="Iced Tea" role="tab" aria-selected="false">Cold Brews <span class="tab-count">3</span></button>
+            <button type="button" class="filter-btn" data-category="Coffee" role="tab" aria-selected="false">Filter Kaapi <span class="tab-count">3</span></button>
+            <button type="button" class="filter-btn" data-category="Snacks" role="tab" aria-selected="false">Savories & Bakes <span class="tab-count">6</span></button>
+            <button type="button" class="filter-btn" data-category="Desserts" role="tab" aria-selected="false">Heritage Sweets <span class="tab-count">3</span></button>
           </div>
 
-          <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+          <div class="menu-search-sort-group">
             <div class="menu-search-box">
               <input type="text" class="menu-search-input" placeholder="Search by botanical, spice, garden estate, or pairing..." aria-label="Search artisan menu items">
               <i class="fa-solid fa-magnifying-glass menu-search-icon"></i>
