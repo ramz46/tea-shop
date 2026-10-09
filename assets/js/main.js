@@ -131,7 +131,7 @@
       const menu = dropdown.querySelector('.nav-dropdown-menu');
       if (toggleBtn && menu) {
         toggleBtn.addEventListener('click', (e) => {
-          if (window.innerWidth < 1200) {
+          if (window.innerWidth < 1280 || window.matchMedia('(pointer: coarse)').matches) {
             e.preventDefault();
             e.stopPropagation();
             const isOpen = dropdown.classList.toggle('open');

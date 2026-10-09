@@ -27,10 +27,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Core Theme Styles -->
-  <link rel="stylesheet" href="assets/css/style.css?v=4.1">
-  <link rel="stylesheet" href="assets/css/responsive.css?v=4.1">
-  <link rel="stylesheet" href="assets/css/dark-mode.css?v=4.1">
-  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=4.4">
+  <link rel="stylesheet" href="assets/css/responsive.css?v=4.4">
+  <link rel="stylesheet" href="assets/css/dark-mode.css?v=4.4">
+  <link rel="stylesheet" href="assets/css/rtl.css?v=4.4">
 
 
 </head>
@@ -48,6 +48,7 @@
   </div>
 
   <!-- Global Sticky Header -->
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-container">
       <a href="index.html" class="brand-logo" aria-label="Chai & Co. Homepage">
@@ -58,7 +59,7 @@
       <nav class="nav-menu" aria-label="Main Navigation">
         <!-- Home Dropdown -->
         <div class="nav-item-dropdown">
-          <a href="index.html" class="nav-link active dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+          <a href="index.html" class="nav-link dropdown-toggle active" aria-haspopup="true" aria-expanded="false">
             Home <i class="fa-solid fa-chevron-down nav-dropdown-icon"></i>
           </a>
           <div class="nav-dropdown-menu">
@@ -80,7 +81,6 @@
         </div>
         <a href="about.html" class="nav-link">About</a>
         <a href="menu.html" class="nav-link">Menu</a>
-        <a href="order.html" class="nav-link"><i class="fa-solid fa-bag-shopping"></i> Order Online</a>
         <a href="sourcing.html" class="nav-link">Our Sourcing</a>
         <a href="loyalty.html" class="nav-link">Loyalty</a>
         <a href="pricing.html" class="nav-link">Catering</a>
@@ -99,7 +99,7 @@
           <span class="btn-label" style="font-size:0.7rem;font-weight:700;">LTR</span>
         </button>
 
-        <!-- Order Now CTA Button -->
+        <!-- Primary CTA Button -->
         <a href="order.html" class="header-order-btn" aria-label="Order Online">
           <i class="fa-solid fa-mug-hot"></i> <span>Order Online</span>
         </a>
@@ -120,7 +120,7 @@
     </div>
   </header>
 
-  <!-- Mobile Offcanvas Drawer -->
+  <!-- Mobile Drawer -->
   <aside class="mobile-nav-drawer" aria-label="Mobile Navigation">
     <div class="drawer-header">
       <div class="brand-logo" style="font-size:1.3rem;">
@@ -136,21 +136,20 @@
       <div class="drawer-dropdown-group">
         <div class="drawer-dropdown-header">
           <span>Home Options</span>
-          <i class="fa-solid fa-chevron-down"></i>
+          <i class="fa-solid fa-chevron-down drawer-dropdown-arrow"></i>
         </div>
         <div class="drawer-subnav">
           <a href="index.html" class="drawer-subnav-link active"><i class="fa-solid fa-store"></i> Homepage 1: Classic Heritage</a>
           <a href="home-2.html" class="drawer-subnav-link"><i class="fa-solid fa-mug-saucer"></i> Homepage 2: Modern Lounge</a>
         </div>
       </div>
-      <a href="about.html" class="drawer-nav-link">About Us <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="menu.html" class="drawer-nav-link">Our Menu <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="order.html" class="drawer-nav-link">Order Online <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="sourcing.html" class="drawer-nav-link">Our Sourcing <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="loyalty.html" class="drawer-nav-link">Chai Rewards <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="pricing.html" class="drawer-nav-link">Catering & Events <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="blog.html" class="drawer-nav-link">Stories & Blog <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="contact.html" class="drawer-nav-link">Contact Us <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="about.html" class="drawer-nav-link"><span>About Us</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="menu.html" class="drawer-nav-link"><span>Our Menu</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="sourcing.html" class="drawer-nav-link"><span>Our Sourcing</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="loyalty.html" class="drawer-nav-link"><span>Loyalty</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="pricing.html" class="drawer-nav-link"><span>Catering &amp; Events</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="blog.html" class="drawer-nav-link"><span>Stories &amp; Blog</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="contact.html" class="drawer-nav-link"><span>Contact Us</span> <i class="fa-solid fa-chevron-right"></i></a>
     </div>
 
     <div class="drawer-footer">
@@ -166,7 +165,7 @@
     </div>
   </aside>
 
-  <!-- Global Slide-out Shopping Cart Drawer -->
+  <!-- Cart Drawer -->
   <aside class="cart-drawer" aria-label="Shopping Cart">
     <div class="cart-header">
       <div style="display:flex;align-items:center;gap:10px;">
@@ -177,37 +176,18 @@
         <i class="fa-solid fa-xmark"></i>
       </button>
     </div>
-
-    <div class="cart-body">
-      <!-- Cart items injected dynamically by components.js -->
-    </div>
-
+    <div class="cart-body"></div>
     <div class="cart-footer">
-      <div class="cart-summary-row">
-        <span>Item Subtotal</span>
-        <span class="cart-subtotal-val">₹0</span>
-      </div>
-      <div class="cart-summary-row">
-        <span>GST & Restaurant Taxes (5%)</span>
-        <span class="cart-tax-val">₹0</span>
-      </div>
-      <div class="cart-summary-row total">
-        <span>Estimated Total</span>
-        <span class="cart-total-val">₹0</span>
-      </div>
-      <button type="button" class="btn btn-primary cart-checkout-btn" style="width:100%;margin-top:16px;">
+      <div class="cart-summary-row"><span>Subtotal</span><span class="cart-subtotal-val">₹0</span></div>
+      <div class="cart-summary-row"><span>GST (5%)</span><span class="cart-tax-val">₹0</span></div>
+      <div class="cart-summary-row total"><span>Total</span><span class="cart-total-val">₹0</span></div>
+      <a href="order.html" class="btn btn-primary cart-checkout-btn" style="width:100%;margin-top:16px;">
         Proceed to Order <i class="fa-solid fa-arrow-right"></i>
-      </button>
-      <p style="text-align:center;font-size:0.75rem;color:var(--text-light);margin-top:10px;">
-        Handcrafted with soul • 100% Satisfaction Guarantee
-      </p>
+      </a>
     </div>
   </aside>
-
-  <!-- Backdrop for drawers and modals -->
   <div class="drawer-backdrop"></div>
 
-  <!-- MAIN CONTENT -->
   <main id="main-content">
     <!-- 1. HERO SECTION -->
     <section class="hero">
@@ -227,7 +207,7 @@
               <a href="menu.html" class="btn btn-primary btn-lg">
                 <i class="fa-solid fa-mug-hot"></i> Explore Our Menu
               </a>
-              <a href="about.html" class="btn btn-primary btn-lg">
+              <a href="about.html" class="btn btn-outline btn-lg">
                 <i class="fa-solid fa-compass"></i> Visit Our Chai House
               </a>
             </div>
@@ -979,7 +959,7 @@
 
   <!-- Vanilla JavaScript Modules -->
   <script src="assets/js/theme.js"></script>
-  <script src="assets/js/main.js?v=3.6"></script>
+  <script src="assets/js/main.js?v=4.3"></script>
   <script src="assets/js/components.js"></script>
   <script src="assets/js/menu.js?v=2.2"></script>
   <script src="assets/js/forms.js"></script>

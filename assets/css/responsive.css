@@ -47,7 +47,7 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   2. DESKTOPS & LAPTOPS (< 1280px)
+   2. DESKTOPS & LAPTOPS (< 1280px) — Universal Spacing & Clearances
    -------------------------------------------------------------------------- */
 @media (max-width: 1279.98px) {
   :root {
@@ -69,116 +69,7 @@ body {
     overflow: visible !important;
   }
 
-  .header-container {
-    display: flex;
-    flex-wrap: nowrap !important;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 16px;
-    height: 100% !important;
-    box-sizing: border-box;
-  }
-
-  .brand-logo {
-    order: 1;
-    flex: 0 1 auto;
-    min-width: 0;
-    max-width: 50%;
-  }
-  .brand-logo span {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  .header-actions {
-    order: 2;
-    flex: 0 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: nowrap !important;
-    margin-left: auto;
-  }
-
-  .header-tool-btn,
-  .header-auth-link {
-    width: 36px !important;
-    height: 36px !important;
-    min-width: 36px !important;
-    min-height: 36px !important;
-    border-radius: 50% !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    flex-shrink: 0 !important;
-    font-size: 0.85rem !important;
-  }
-
-  .header-member-pill {
-    height: 36px !important;
-    min-height: 36px !important;
-    border-radius: var(--radius-pill) !important;
-    padding: 0 10px !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    box-sizing: border-box !important;
-    flex-shrink: 1 !important;
-    max-width: 140px !important;
-  }
-
-  .hamburger {
-    display: flex !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    width: 36px !important;
-    height: 36px !important;
-    min-width: 36px !important;
-    min-height: 36px !important;
-    border-radius: 50% !important;
-    padding: 0 !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 4px !important;
-    flex-shrink: 0 !important;
-    order: 99 !important;
-  }
-  .hamburger span {
-    width: 16px !important;
-    height: 2px !important;
-  }
-  .hamburger.active span:nth-child(1) {
-    transform: translateY(6px) rotate(45deg) !important;
-  }
-  .hamburger.active span:nth-child(2) {
-    opacity: 0 !important;
-    transform: scaleX(0) !important;
-  }
-  .hamburger.active span:nth-child(3) {
-    transform: translateY(-6px) rotate(-45deg) !important;
-  }
-
-  /* Collapse horizontal header navigation: All navigation items are accessed via the sleek hamburger drawer */
-  .nav-menu {
-    display: none !important;
-  }
-
-  .nav-item-dropdown.open .nav-dropdown-menu,
-  .nav-dropdown-menu.show {
-    position: fixed !important;
-    display: block !important;
-    top: calc(var(--header-height, 68px) + 2px) !important;
-    left: 16px !important;
-    width: min(280px, calc(100vw - 32px)) !important;
-    z-index: 1050 !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    pointer-events: auto !important;
-    transform: translateY(0) !important;
-  }
-
-  /* Universal Mobile Content Top Clearance - Zero overlap with fixed header */
+  /* Universal Mobile & Tablet Content Top Clearance - Zero overlap with fixed header */
   .hero {
     min-height: auto !important;
     display: block !important;
@@ -222,7 +113,136 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   2B. MEDIUM LAPTOPS / NARROW DESKTOPS (< 1080px)
+   2A. DESKTOPS & LAPTOPS (1025px - 1279.98px)
+       Prominent horizontal navbar for desktop/laptop screens in Edge & all browsers
+   -------------------------------------------------------------------------- */
+@media (min-width: 1025px) and (max-width: 1279.98px) {
+  .header-container {
+    display: flex;
+    flex-wrap: nowrap !important;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    height: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .brand-logo {
+    order: 1 !important;
+    flex: 0 0 auto !important;
+    min-width: 0;
+    max-width: none !important;
+    font-size: 1.15rem !important;
+    gap: 8px !important;
+  }
+  .brand-logo .logo-icon {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 0.88rem !important;
+  }
+  .brand-logo span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .header-actions {
+    order: 3 !important;
+    flex: 0 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    flex-wrap: nowrap !important;
+    margin-left: 0 !important;
+  }
+
+  .header-tool-btn,
+  .header-auth-link {
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+    min-height: 34px !important;
+    border-radius: 50% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    font-size: 0.82rem !important;
+  }
+
+  .header-order-btn {
+    height: 32px !important;
+    padding: 0 11px !important;
+    font-size: 0.78rem !important;
+    gap: 5px !important;
+  }
+
+  .header-member-pill {
+    height: 34px !important;
+    min-height: 34px !important;
+    border-radius: var(--radius-pill) !important;
+    padding: 0 8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    flex-shrink: 1 !important;
+    max-width: 130px !important;
+  }
+
+  /* Hamburger hidden on desktop & laptop screens (1025px - 1280px) */
+  .hamburger {
+    display: none !important;
+  }
+
+  /* Desktops & Laptops (1025px - 1279.98px): Horizontal navbar is prominently displayed */
+  .nav-menu {
+    order: 2 !important;
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    align-items: center !important;
+    gap: 2px !important;
+    background: rgba(180, 83, 9, 0.05);
+    border: 1px solid rgba(180, 83, 9, 0.14);
+    padding: 3px 5px !important;
+    border-radius: var(--radius-pill);
+    box-shadow: inset 0 1px 2px rgba(31, 22, 14, 0.03);
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+    margin: 0 auto !important;
+  }
+
+  .nav-link {
+    font-size: 0.77rem !important;
+    padding: 4px 7px !important;
+    letter-spacing: 0.01em !important;
+    white-space: nowrap !important;
+  }
+  .nav-link[href*="loyalty.html"] {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    flex-shrink: 0 !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2B. FULL DESKTOPS (>= 1280px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1280px) {
+  .hamburger {
+    display: none !important;
+  }
+  .nav-menu {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2C. MEDIUM LAPTOPS / NARROW DESKTOPS (< 1080px)
    -------------------------------------------------------------------------- */
 @media (max-width: 1080px) {
   .grid-4 {
@@ -232,9 +252,87 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   3. LAPTOPS & TABLETS LANDSCAPE (< 992px)
+   3. TABLETS LANDSCAPE, TABLETS PORTRAIT & MOBILE (<= 1024px)
+      Targeting 360px, 768px, and 1024px viewports:
+      Remove the extra header/menu as the hamburger menu is already available.
    -------------------------------------------------------------------------- */
-@media (max-width: 991.98px) {
+@media (max-width: 1024px) {
+  .header-container {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0 16px !important;
+    height: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .brand-logo {
+    order: 1 !important;
+    flex: 0 1 auto !important;
+    min-width: 0 !important;
+    max-width: calc(100% - 150px) !important;
+  }
+
+  .header-actions {
+    order: 2 !important;
+    margin-left: auto !important;
+    gap: 8px !important;
+    flex: 0 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* 360px, 768px, and 1024px: Remove the extra header/menu, as the hamburger menu is already available */
+  .nav-menu {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  /* Mobile Drawer Loyalty link resilience */
+  .mobile-nav-drawer .drawer-nav-link[href*="loyalty.html"] {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* Hamburger menu button is available and accessible on <= 1024px (1024px, 768px, 360px) */
+  .hamburger {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    min-height: 36px !important;
+    border-radius: 50% !important;
+    padding: 0 !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 4px !important;
+    flex-shrink: 0 !important;
+    order: 99 !important;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+  }
+  .hamburger span {
+    width: 16px !important;
+    height: 2px !important;
+  }
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg) !important;
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0 !important;
+    transform: scaleX(0) !important;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg) !important;
+  }
+
   .menu-filter-tabs {
     display: flex;
     overflow-x: auto;
@@ -386,9 +484,9 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   4. TABLETS PORTRAIT (< 768px)
+   4. TABLETS PORTRAIT (<= 768px)
    -------------------------------------------------------------------------- */
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   :root {
     --header-height: 66px;
     --header-height-sticky: 66px;
@@ -416,8 +514,18 @@ body {
     align-items: center;
     justify-content: space-between;
   }
+  /* Remove extra header/menu on 768px: hamburger menu drawer is active */
   .nav-menu {
     display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+  .hamburger {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    order: 99 !important;
   }
   .brand-logo {
     font-size: 1.12rem;
@@ -715,7 +823,10 @@ body {
     font-size: 1.45rem !important;
   }
   .about-hero-overlay {
-    padding: 24px 20px !important;
+    padding: 20px 16px !important;
+  }
+  .about-banner-caption {
+    padding: 18px 18px !important;
   }
 
   .menu-controls {
@@ -1694,11 +1805,18 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   6B. ULTRA-COMPACT MOBILE (< 360px)
+   6B. ULTRA-COMPACT MOBILE (<= 360px)
    -------------------------------------------------------------------------- */
-@media (max-width: 359.98px) {
+@media (max-width: 360px) {
   .header-container {
     padding: 0 6px;
+  }
+  /* Remove extra header/menu on 360px: hamburger menu drawer is active */
+  .nav-menu {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
   }
   .brand-logo {
     font-size: 0.88rem;
@@ -1748,11 +1866,15 @@ body {
     display: none !important;
   }
   .hamburger {
-    width: 30px;
-    height: 30px;
-    min-width: 30px;
-    min-height: 30px;
-    padding: 4px;
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px !important;
+    min-height: 30px !important;
+    padding: 4px !important;
+    order: 99 !important;
   }
 
   .brew-gallery-grid {

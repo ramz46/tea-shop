@@ -1,11 +1,11 @@
 /* ==========================================================================
    CHAI & CO. — Tea House & Specialty Chai Stall
-   RTL & LTR Direction Engine (rtl.css)
-   Activated via: <html dir="rtl"> or <html dir="ltr">
+   RTL Direction & Layout Engine (rtl.css)
+   Activated via: <html dir="rtl">
    ========================================================================== */
 
 /* ==========================================================================
-   1. Base Direction Rules
+   1. Base Direction & Root Layout
    ========================================================================== */
 [dir="ltr"] {
   direction: ltr;
@@ -14,110 +14,353 @@
 
 [dir="rtl"] {
   direction: rtl;
+  text-align: right;
 }
 
-/* ==========================================================================
-   2. Sentence Flow & Full Stop (.) Preservation in RTL
-   English text in RTL containers must preserve correct left-to-right sentence flow
-   and ensure full stops (.), colons (:), and quotation marks stay at the end.
-   ========================================================================== */
-[dir="rtl"] p,
+[dir="rtl"] body {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Base text flow for RTL mode */
 [dir="rtl"] h1,
 [dir="rtl"] h2,
 [dir="rtl"] h3,
 [dir="rtl"] h4,
 [dir="rtl"] h5,
 [dir="rtl"] h6,
+[dir="rtl"] p,
+[dir="rtl"] ul,
+[dir="rtl"] ol,
 [dir="rtl"] li,
-[dir="rtl"] blockquote,
-[dir="rtl"] .hero-subtitle,
-[dir="rtl"] .hero-title,
-[dir="rtl"] .page-header p,
-[dir="rtl"] .page-header h1,
-[dir="rtl"] .section-header p,
-[dir="rtl"] .section-title,
-[dir="rtl"] .chai-description,
-[dir="rtl"] .recipe-summary,
-[dir="rtl"] .recipe-step-highlight,
-[dir="rtl"] .pairing-strip-desc,
-[dir="rtl"] .brand-tagline,
-[dir="rtl"] .footer-col p,
-[dir="rtl"] .footer-desc,
-[dir="rtl"] .footer-copyright,
-[dir="rtl"] .dietary-note,
-[dir="rtl"] .card-desc,
-[dir="rtl"] .review-text,
-[dir="rtl"] .blog-excerpt,
-[dir="rtl"] .about-lead,
-[dir="rtl"] .faq-answer,
-[dir="rtl"] .recipe-ingredients-list li {
-  unicode-bidi: plaintext;
-}
-
-/* ==========================================================================
-   3. Alignment Rules (Center stays Center, Start aligns to Start)
-   ========================================================================== */
-[dir="rtl"] .text-center,
-[dir="rtl"] .section-header.text-center,
-[dir="rtl"] .page-header.text-center,
-[dir="rtl"] .hero-content.text-center,
-[dir="rtl"] .footer-bottom,
-[dir="rtl"] .footer-copyright,
-[dir="rtl"] .brand-eyebrow,
-[dir="rtl"] .menu-category-banner.text-center {
-  text-align: center !important;
-}
-
-[dir="rtl"] .section-header.text-start {
+[dir="rtl"] blockquote {
   text-align: right;
 }
 
 /* ==========================================================================
-   4. Brand Logo & Breadcrumb Navigation
+   2. Centered Sections & Hero Headers (Enforce Center in RTL)
    ========================================================================== */
-/* Brand logo CHAI & CO. should stay LTR so the dot is at the end */
+[dir="rtl"] .text-center,
+[dir="rtl"] .text-center *,
+[dir="rtl"] .section-header:not(.text-start),
+[dir="rtl"] .section-header:not(.text-start) *,
+[dir="rtl"] .page-hero,
+[dir="rtl"] .page-hero *,
+[dir="rtl"] .page-hero-about,
+[dir="rtl"] .page-hero-about *,
+[dir="rtl"] .page-hero-home2,
+[dir="rtl"] .page-hero-home2 *,
+[dir="rtl"] .home2-hero-content,
+[dir="rtl"] .home2-hero-content *,
+[dir="rtl"] .hero-content.text-center,
+[dir="rtl"] .hero-content.text-center *,
+[dir="rtl"] .pricing-header,
+[dir="rtl"] .pricing-header *,
+[dir="rtl"] .feature-card:not([style*="text-align:start"]):not(.text-start),
+[dir="rtl"] .feature-card:not([style*="text-align:start"]):not(.text-start) h3,
+[dir="rtl"] .feature-card:not([style*="text-align:start"]):not(.text-start) h4,
+[dir="rtl"] .feature-card:not([style*="text-align:start"]):not(.text-start) p,
+[dir="rtl"] .timeline-step,
+[dir="rtl"] .timeline-step *,
+[dir="rtl"] .footer-bottom,
+[dir="rtl"] .footer-bottom *,
+[dir="rtl"] .footer-copyright,
+[dir="rtl"] .brand-eyebrow,
+[dir="rtl"] .menu-category-banner.text-center,
+[dir="rtl"] .empty-state,
+[dir="rtl"] .empty-state * {
+  text-align: center !important;
+}
+
+/* Explicit text-start (left in LTR, right in RTL) */
+[dir="rtl"] .text-start,
+[dir="rtl"] .section-header.text-start,
+[dir="rtl"] .section-header.text-start * {
+  text-align: right !important;
+  margin-inline-start: 0;
+}
+
+/* ==========================================================================
+   3. Header, Navigation & Dropdowns
+   ========================================================================== */
+/* Brand Logo Isolations */
 [dir="rtl"] .brand-logo-text,
-[dir="rtl"] .logo,
 [dir="rtl"] .brand-logo,
 [dir="rtl"] .header-brand,
-[dir="rtl"] .footer-brand {
+[dir="rtl"] .footer-brand-logo,
+[dir="rtl"] .footer-brand .brand-logo {
   direction: ltr;
   unicode-bidi: isolate;
   display: inline-flex;
   align-items: center;
 }
 
-/* Breadcrumb navigation sequence (Home > Menu) */
-[dir="rtl"] .breadcrumb,
-[dir="rtl"] .page-header-nav,
+/* Navigation Dropdown Placement */
+[dir="rtl"] .nav-dropdown-menu {
+  left: auto !important;
+  right: 0 !important;
+  text-align: right !important;
+}
+
+[dir="rtl"] .nav-dropdown-item {
+  text-align: right !important;
+}
+
+[dir="rtl"] .nav-dropdown-item:hover {
+  transform: translateX(-3px) !important;
+}
+
+/* Mobile Nav Drawer in RTL */
+[dir="rtl"] .mobile-nav-drawer {
+  right: auto !important;
+  left: 0 !important;
+  transform: translateX(-100%);
+  text-align: right !important;
+  box-shadow: 8px 0 32px rgba(43, 33, 24, 0.18) !important;
+}
+
+[dir="rtl"] .mobile-nav-drawer.open {
+  transform: translateX(0);
+}
+
+[dir="rtl"] .drawer-subnav {
+  padding-left: 0 !important;
+  padding-right: 12px !important;
+  text-align: right !important;
+}
+
+[dir="rtl"] .drawer-nav-link:hover,
+[dir="rtl"] .drawer-nav-link.active {
+  transform: translateX(-4px) !important;
+}
+
+[dir="rtl"] .drawer-nav-link:hover i,
+[dir="rtl"] .drawer-nav-link.active i {
+  transform: translateX(-3px) !important;
+}
+
+/* Cart Drawer in RTL */
+[dir="rtl"] .cart-drawer {
+  right: auto !important;
+  left: 0 !important;
+  transform: translateX(-100%);
+  text-align: right !important;
+  box-shadow: 8px 0 32px rgba(43, 33, 24, 0.2) !important;
+}
+
+[dir="rtl"] .cart-drawer.open {
+  transform: translateX(0);
+}
+
+/* Breadcrumbs in RTL */
+[dir="rtl"] .breadcrumbs,
 [dir="rtl"] .page-breadcrumbs,
 [dir="rtl"] nav[aria-label="breadcrumb"] {
-  direction: ltr;
+  direction: rtl;
   display: inline-flex;
-  unicode-bidi: isolate;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ==========================================================================
-   5. Search Box & Inputs in RTL
+   4. Hero Sections & Grid Columns
+   ========================================================================== */
+[dir="rtl"] .hero-content:not(.text-center) {
+  text-align: right !important;
+}
+
+[dir="rtl"] .hero-headline,
+[dir="rtl"] .hero-desc {
+  text-align: right !important;
+}
+
+[dir="rtl"] .hero-buttons {
+  justify-content: flex-start;
+}
+
+[dir="rtl"] .hero-social-proof {
+  justify-content: flex-start;
+}
+
+[dir="rtl"] .hero-proof-text {
+  text-align: right;
+}
+
+[dir="rtl"] .hero-features {
+  justify-content: flex-start;
+}
+
+[dir="rtl"] .hero-feature-item {
+  text-align: right;
+}
+
+[dir="rtl"] .hero-feature-text h5,
+[dir="rtl"] .hero-feature-text p {
+  text-align: right !important;
+}
+
+/* ==========================================================================
+   5. Search Box & Inputs
    ========================================================================== */
 [dir="rtl"] .menu-search-box {
   position: relative;
 }
 
 [dir="rtl"] .menu-search-input {
-  padding-left: 20px !important;
+  padding-left: 18px !important;
   padding-right: 44px !important;
-  text-align: right;
-  unicode-bidi: plaintext;
+  text-align: right !important;
 }
 
 [dir="rtl"] .menu-search-icon {
   left: auto !important;
-  right: 18px !important;
+  right: 16px !important;
+}
+
+[dir="rtl"] .menu-sort-select {
+  text-align: right !important;
 }
 
 /* ==========================================================================
-   6. Numeric, Rating, Spec & Stepper Isolations
+   6. Forms, Controls & Modals
+   ========================================================================== */
+[dir="rtl"] .form-label {
+  text-align: right !important;
+  display: block;
+}
+
+[dir="rtl"] .form-control,
+[dir="rtl"] input:not([type="checkbox"]):not([type="radio"]),
+[dir="rtl"] select,
+[dir="rtl"] textarea {
+  text-align: right;
+}
+
+[dir="rtl"] input[type="tel"],
+[dir="rtl"] input[type="email"],
+[dir="rtl"] input[type="url"] {
+  text-align: right;
+  direction: ltr;
+}
+
+[dir="rtl"] .form-error-msg {
+  text-align: right !important;
+}
+
+[dir="rtl"] .password-toggle-wrapper input {
+  padding-left: 46px !important;
+  padding-right: 18px !important;
+}
+
+[dir="rtl"] .pricing-form-card {
+  text-align: right;
+}
+
+/* ==========================================================================
+   7. Cards, Teas, Recipes & Testimonials
+   ========================================================================== */
+[dir="rtl"] .chai-card-body,
+[dir="rtl"] .chai-title,
+[dir="rtl"] .chai-description,
+[dir="rtl"] .chai-meta,
+[dir="rtl"] .recipe-guide-card,
+[dir="rtl"] .recipe-title,
+[dir="rtl"] .recipe-summary,
+[dir="rtl"] .recipe-ingredients-list,
+[dir="rtl"] .recipe-ingredients-list li,
+[dir="rtl"] .pairing-strip-header,
+[dir="rtl"] .pairing-pill-item,
+[dir="rtl"] .sourcing-card-body,
+[dir="rtl"] .blog-card-body,
+[dir="rtl"] .blog-article-content,
+[dir="rtl"] .sidebar-widget,
+[dir="rtl"] .testimonial-card,
+[dir="rtl"] .testimonial-quote,
+[dir="rtl"] .author-info,
+[dir="rtl"] .order-card,
+[dir="rtl"] .order-card-title,
+[dir="rtl"] .about-preview-grid .reveal:not(.text-center),
+[dir="rtl"] .lead-editorial,
+[dir="rtl"] .about-quote-card,
+[dir="rtl"] .quote-text,
+[dir="rtl"] .quote-author {
+  text-align: right !important;
+}
+
+/* Recipe Highlight Bar Flip */
+[dir="rtl"] .recipe-step-highlight {
+  border-left: none !important;
+  border-right: 3px solid var(--primary) !important;
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm) !important;
+  text-align: right !important;
+}
+
+[dir="rtl"] .recipe-ingredients-list li strong {
+  margin-right: 0 !important;
+  margin-left: 4px !important;
+}
+
+/* About Badge Offset */
+[dir="rtl"] .about-badge-established {
+  left: auto !important;
+  right: 20px !important;
+}
+
+/* ==========================================================================
+   8. Pricing Tables
+   ========================================================================== */
+[dir="rtl"] .pricing-table {
+  text-align: right;
+}
+
+[dir="rtl"] .pricing-table th:first-child,
+[dir="rtl"] .pricing-table td:first-child {
+  text-align: right !important;
+}
+
+[dir="rtl"] .pricing-table th:not(:first-child),
+[dir="rtl"] .pricing-table td:not(:first-child) {
+  text-align: center !important;
+}
+
+[dir="rtl"] .pricing-features li {
+  text-align: right;
+}
+
+/* ==========================================================================
+   9. Footer Columns & Content
+   ========================================================================== */
+[dir="rtl"] .footer-brand {
+  display: block !important;
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+[dir="rtl"] .footer-brand p {
+  text-align: right !important;
+  margin-inline-start: 0;
+}
+
+[dir="rtl"] .footer-col,
+[dir="rtl"] .footer-title,
+[dir="rtl"] .footer-links,
+[dir="rtl"] .footer-links li,
+[dir="rtl"] .footer-links a,
+[dir="rtl"] .footer-newsletter-box {
+  text-align: right !important;
+}
+
+[dir="rtl"] .footer-title::after {
+  left: auto !important;
+  right: 0 !important;
+}
+
+[dir="rtl"] .footer-social-links {
+  justify-content: flex-start;
+}
+
+/* ==========================================================================
+   10. Numeric, Price, Badge & Stepper Isolations
    ========================================================================== */
 [dir="rtl"] .chai-price,
 [dir="rtl"] .chai-rating,
@@ -128,7 +371,8 @@
 [dir="rtl"] .recipe-time,
 [dir="rtl"] .brew-metrics,
 [dir="rtl"] .header-cart-count,
-[dir="rtl"] .chai-cart-stepper {
+[dir="rtl"] .chai-cart-stepper,
+[dir="rtl"] .pricing-amount {
   direction: ltr;
   display: inline-flex;
   align-items: center;
@@ -136,9 +380,8 @@
 }
 
 /* ==========================================================================
-   7. Navigation & Drawers
+   11. Icons & Spacing Flips
    ========================================================================== */
-/* Icon Flips */
 [dir="rtl"] .fa-arrow-right,
 [dir="rtl"] .fa-chevron-right,
 [dir="rtl"] .fa-arrow-left,
@@ -146,72 +389,51 @@
   transform: scaleX(-1);
 }
 
-[dir="rtl"] .btn .fa-arrow-right {
+[dir="rtl"] .btn .fa-arrow-right,
+[dir="rtl"] .btn .fa-chevron-right {
   transform: scaleX(-1);
 }
 
-[dir="rtl"] .blog-read-more:hover {
-  gap: 12px;
+/* Icon margin flips */
+[dir="rtl"] .btn i:first-child:not(:last-child),
+[dir="rtl"] .tagline-label i,
+[dir="rtl"] .form-label i,
+[dir="rtl"] .feature-list li i,
+[dir="rtl"] .pricing-features li i,
+[dir="rtl"] .hero-feature-icon {
+  margin-right: 0;
+  margin-left: 8px;
 }
 
-/* Mobile Nav Drawer in RTL */
-[dir="rtl"] .mobile-nav-drawer {
-  right: auto;
-  left: 0;
-  transform: translateX(-100%);
-}
-[dir="rtl"] .mobile-nav-drawer.open {
-  transform: translateX(0);
+[dir="rtl"] i[style*="margin-right"] {
+  margin-right: 0 !important;
+  margin-left: 8px !important;
 }
 
-/* Cart Drawer in RTL */
-[dir="rtl"] .cart-drawer {
-  right: auto;
-  left: 0;
-  transform: translateX(-100%);
-}
-[dir="rtl"] .cart-drawer.open {
-  transform: translateX(0);
-}
-
-/* Toast Notifications in RTL */
+/* ==========================================================================
+   12. Overlays, Toasts & Back-to-Top
+   ========================================================================== */
 [dir="rtl"] .toast-container {
-  right: auto;
-  left: 30px;
+  right: auto !important;
+  left: 30px !important;
 }
 
-/* Back-to-Top Button in RTL */
+[dir="rtl"] .toast-content,
+[dir="rtl"] .toast-title,
+[dir="rtl"] .toast-message {
+  text-align: right !important;
+}
+
 [dir="rtl"] .back-to-top {
-  left: auto;
-  right: 30px;
+  left: auto !important;
+  right: 30px !important;
 }
 
-/* Hero Floating Card Alignment */
-[dir="rtl"] .hero-floating-card {
-  left: auto;
-  right: -24px;
-}
-
-/* Established Badge on About */
-[dir="rtl"] .about-badge-established {
-  left: auto;
-  right: -20px;
-}
-
-/* Sub image on About */
-[dir="rtl"] .about-sub-img {
-  right: auto;
-  left: 0;
-}
-
-/* Timeline direction */
 [dir="rtl"] .timeline-process::before {
   background: repeating-linear-gradient(to left, var(--primary) 0, var(--primary) 10px, transparent 10px, transparent 20px);
 }
 
-/* ==========================================================================
-   8. Header RTL Toggle Button Active State
-   ========================================================================== */
+/* Active Toggle button */
 .rtl-toggle-btn.active {
   background: var(--primary) !important;
   color: #ffffff !important;

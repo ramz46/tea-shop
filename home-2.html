@@ -24,10 +24,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/css/style.css?v=3.9">
-  <link rel="stylesheet" href="assets/css/responsive.css?v=3.9">
-  <link rel="stylesheet" href="assets/css/dark-mode.css?v=3.9">
-  <link rel="stylesheet" href="assets/css/rtl.css?v=3.9">
+  <link rel="stylesheet" href="assets/css/style.css?v=4.4">
+  <link rel="stylesheet" href="assets/css/responsive.css?v=4.4">
+  <link rel="stylesheet" href="assets/css/dark-mode.css?v=4.4">
+  <link rel="stylesheet" href="assets/css/rtl.css?v=4.4">
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -40,6 +40,7 @@
   </div>
 
   <!-- Global Sticky Header -->
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-container">
       <a href="index.html" class="brand-logo" aria-label="Chai & Co. Homepage">
@@ -50,7 +51,7 @@
       <nav class="nav-menu" aria-label="Main Navigation">
         <!-- Home Dropdown -->
         <div class="nav-item-dropdown">
-          <a href="home-2.html" class="nav-link active dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+          <a href="home-2.html" class="nav-link dropdown-toggle active" aria-haspopup="true" aria-expanded="false">
             Home <i class="fa-solid fa-chevron-down nav-dropdown-icon"></i>
           </a>
           <div class="nav-dropdown-menu">
@@ -70,10 +71,8 @@
             </a>
           </div>
         </div>
-
         <a href="about.html" class="nav-link">About</a>
         <a href="menu.html" class="nav-link">Menu</a>
-        <a href="order.html" class="nav-link"><i class="fa-solid fa-bag-shopping"></i> Order Online</a>
         <a href="sourcing.html" class="nav-link">Our Sourcing</a>
         <a href="loyalty.html" class="nav-link">Loyalty</a>
         <a href="pricing.html" class="nav-link">Catering</a>
@@ -92,7 +91,7 @@
           <span class="btn-label" style="font-size:0.7rem;font-weight:700;">LTR</span>
         </button>
 
-        <!-- Order Online CTA Button -->
+        <!-- Primary CTA Button -->
         <a href="order.html" class="header-order-btn" aria-label="Order Online">
           <i class="fa-solid fa-mug-hot"></i> <span>Order Online</span>
         </a>
@@ -113,7 +112,7 @@
     </div>
   </header>
 
-  <!-- Mobile Offcanvas Drawer -->
+  <!-- Mobile Drawer -->
   <aside class="mobile-nav-drawer" aria-label="Mobile Navigation">
     <div class="drawer-header">
       <div class="brand-logo" style="font-size:1.3rem;">
@@ -129,21 +128,20 @@
       <div class="drawer-dropdown-group">
         <div class="drawer-dropdown-header">
           <span>Home Options</span>
-          <i class="fa-solid fa-chevron-down"></i>
+          <i class="fa-solid fa-chevron-down drawer-dropdown-arrow"></i>
         </div>
         <div class="drawer-subnav">
           <a href="index.html" class="drawer-subnav-link"><i class="fa-solid fa-store"></i> Homepage 1: Classic Heritage</a>
           <a href="home-2.html" class="drawer-subnav-link active"><i class="fa-solid fa-mug-saucer"></i> Homepage 2: Modern Lounge</a>
         </div>
       </div>
-      <a href="about.html" class="drawer-nav-link">About Us <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="menu.html" class="drawer-nav-link">Our Menu <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="order.html" class="drawer-nav-link">Order Online <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="sourcing.html" class="drawer-nav-link">Our Sourcing <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="loyalty.html" class="drawer-nav-link">Chai Rewards <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="pricing.html" class="drawer-nav-link">Catering & Events <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="blog.html" class="drawer-nav-link">Stories & Blog <i class="fa-solid fa-chevron-right"></i></a>
-      <a href="contact.html" class="drawer-nav-link">Contact Us <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="about.html" class="drawer-nav-link"><span>About Us</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="menu.html" class="drawer-nav-link"><span>Our Menu</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="sourcing.html" class="drawer-nav-link"><span>Our Sourcing</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="loyalty.html" class="drawer-nav-link"><span>Loyalty</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="pricing.html" class="drawer-nav-link"><span>Catering &amp; Events</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="blog.html" class="drawer-nav-link"><span>Stories &amp; Blog</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="contact.html" class="drawer-nav-link"><span>Contact Us</span> <i class="fa-solid fa-chevron-right"></i></a>
     </div>
 
     <div class="drawer-footer">
@@ -159,12 +157,12 @@
     </div>
   </aside>
 
-  <!-- Shopping Cart Drawer -->
+  <!-- Cart Drawer -->
   <aside class="cart-drawer" aria-label="Shopping Cart">
     <div class="cart-header">
       <div style="display:flex;align-items:center;gap:10px;">
         <i class="fa-solid fa-bag-shopping" style="color:var(--primary);font-size:1.2rem;"></i>
-        <h3>Your Chai Tray (<span class="cart-count-badge">0</span>)</h3>
+        <h3>Your Order (<span class="cart-count-badge">0</span>)</h3>
       </div>
       <button type="button" class="cart-close-btn btn-icon" aria-label="Close cart">
         <i class="fa-solid fa-xmark"></i>
@@ -175,14 +173,13 @@
       <div class="cart-summary-row"><span>Subtotal</span><span class="cart-subtotal-val">₹0</span></div>
       <div class="cart-summary-row"><span>GST (5%)</span><span class="cart-tax-val">₹0</span></div>
       <div class="cart-summary-row total"><span>Total</span><span class="cart-total-val">₹0</span></div>
-      <a href="order.html" class="btn btn-primary" style="width:100%;margin-top:16px;text-align:center;display:block;">
-        Checkout Now <i class="fa-solid fa-arrow-right"></i>
+      <a href="order.html" class="btn btn-primary cart-checkout-btn" style="width:100%;margin-top:16px;">
+        Proceed to Order <i class="fa-solid fa-arrow-right"></i>
       </a>
     </div>
   </aside>
   <div class="drawer-backdrop"></div>
 
-  <!-- MAIN CONTENT -->
   <main id="main-content">
     <!-- Hero: Modern Tea Lounge & Tasting Room -->
     <section class="page-hero page-hero-home2" style="--hero-bg: url('/assets/images/about-haveli-heritage.jpg');">
@@ -434,7 +431,9 @@
 
               <div class="grid grid-2" style="gap:16px;">
                 <div class="form-group">
-                  <label class="form-label" for="res-date">Preferred Date</label>
+                  <label class="form-label" for="res-date">
+                    <i class="fa-solid fa-calendar-days preferred-date-icon" style="margin-right:6px;"></i> Preferred Date
+                  </label>
                   <input type="date" id="res-date" class="form-control" required>
                   <div class="form-error-msg"></div>
                 </div>
@@ -540,7 +539,7 @@
   <script src="assets/js/forms.js"></script>
   <script src="assets/js/menu.js"></script>
   <script src="assets/js/auth.js?v=3.6"></script>
-  <script src="assets/js/main.js?v=3.6"></script>
+  <script src="assets/js/main.js?v=4.3"></script>
   <script>
     // Lounge table booking form validation
     document.addEventListener('DOMContentLoaded', () => {

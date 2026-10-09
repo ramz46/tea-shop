@@ -23,35 +23,156 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/css/style.css?v=3.6">
-  <link rel="stylesheet" href="assets/css/responsive.css?v=3.6">
-  <link rel="stylesheet" href="assets/css/dark-mode.css?v=3.6">
-  <link rel="stylesheet" href="assets/css/rtl.css">
-  <link rel="stylesheet" href="assets/css/auth.css?v=3.5">
+  <link rel="stylesheet" href="assets/css/style.css?v=4.4">
+  <link rel="stylesheet" href="assets/css/responsive.css?v=4.4">
+  <link rel="stylesheet" href="assets/css/dark-mode.css?v=4.4">
+  <link rel="stylesheet" href="assets/css/rtl.css?v=4.4">
+  <link rel="stylesheet" href="assets/css/auth.css?v=4.4">
 </head>
 <body class="auth-page-body">
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- Global Scrolled Header -->
-  <header class="site-header scrolled">
+  <!-- Header -->
+  <header class="site-header">
     <div class="container header-container">
       <a href="index.html" class="brand-logo" aria-label="Chai & Co. Homepage">
         <div class="logo-icon"><i class="fa-solid fa-mug-hot"></i></div>
         <span>CHAI & CO.</span>
       </a>
 
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <!-- Home Dropdown -->
+        <div class="nav-item-dropdown">
+          <a href="index.html" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            Home <i class="fa-solid fa-chevron-down nav-dropdown-icon"></i>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="index.html" class="nav-dropdown-item">
+              <i class="fa-solid fa-store"></i>
+              <div>
+                <strong>Homepage 1</strong>
+                <span>Classic Heritage Stall</span>
+              </div>
+            </a>
+            <a href="home-2.html" class="nav-dropdown-item">
+              <i class="fa-solid fa-mug-saucer"></i>
+              <div>
+                <strong>Homepage 2</strong>
+                <span>Modern Tea Lounge</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="sourcing.html" class="nav-link">Our Sourcing</a>
+        <a href="loyalty.html" class="nav-link">Loyalty</a>
+        <a href="pricing.html" class="nav-link">Catering</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
       <div class="header-actions">
-        <button type="button" class="header-tool-btn theme-toggle-btn" aria-label="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
-        <button type="button" class="header-tool-btn rtl-toggle-btn" aria-label="Layout Direction: LTR (Click for RTL)"><span class="btn-label" style="font-size:0.7rem;font-weight:700;">LTR</span></button>
+        <!-- Theme Toggle -->
+        <button type="button" class="header-tool-btn theme-toggle-btn" aria-label="Toggle Dark/Light Mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <!-- RTL Toggle -->
+        <button type="button" class="header-tool-btn rtl-toggle-btn" aria-label="Layout Direction: LTR (Click for RTL)">
+          <span class="btn-label" style="font-size:0.7rem;font-weight:700;">LTR</span>
+        </button>
+
         <!-- Primary CTA Button -->
         <a href="order.html" class="header-order-btn" aria-label="Order Online">
           <i class="fa-solid fa-mug-hot"></i> <span>Order Online</span>
         </a>
+
+        <!-- Shopping Cart Trigger -->
+        <button type="button" class="header-tool-btn cart-toggle-btn" aria-label="Open Shopping Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="badge-count cart-count-badge" style="display:none;">0</span>
+        </button>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button type="button" class="hamburger" aria-label="Open Mobile Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
   </header>
 
-  <!-- Main Auth Split Section -->
+  <!-- Mobile Drawer -->
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <div class="brand-logo" style="font-size:1.3rem;">
+        <div class="logo-icon" style="width:34px;height:34px;font-size:0.9rem;"><i class="fa-solid fa-mug-hot"></i></div>
+        <span>CHAI & CO.</span>
+      </div>
+      <button type="button" class="drawer-close-btn btn-icon" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="drawer-nav-list">
+      <div class="drawer-dropdown-group">
+        <div class="drawer-dropdown-header">
+          <span>Home Options</span>
+          <i class="fa-solid fa-chevron-down drawer-dropdown-arrow"></i>
+        </div>
+        <div class="drawer-subnav">
+          <a href="index.html" class="drawer-subnav-link"><i class="fa-solid fa-store"></i> Homepage 1: Classic Heritage</a>
+          <a href="home-2.html" class="drawer-subnav-link"><i class="fa-solid fa-mug-saucer"></i> Homepage 2: Modern Lounge</a>
+        </div>
+      </div>
+      <a href="about.html" class="drawer-nav-link"><span>About Us</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="menu.html" class="drawer-nav-link"><span>Our Menu</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="sourcing.html" class="drawer-nav-link"><span>Our Sourcing</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="loyalty.html" class="drawer-nav-link"><span>Loyalty</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="pricing.html" class="drawer-nav-link"><span>Catering &amp; Events</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="blog.html" class="drawer-nav-link"><span>Stories &amp; Blog</span> <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="contact.html" class="drawer-nav-link"><span>Contact Us</span> <i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+
+    <div class="drawer-footer">
+      <div style="display:flex;gap:10px;">
+        <button type="button" class="btn btn-outline btn-sm theme-toggle-btn" style="flex:1;">
+          <i class="fa-solid fa-moon"></i> Theme
+        </button>
+        <button type="button" class="btn btn-outline btn-sm rtl-toggle-btn" style="flex:1;">
+          <i class="fa-solid fa-right-left"></i> RTL
+        </button>
+      </div>
+      <a href="order.html" class="btn btn-primary" style="width:100%;">Proceed to Order</a>
+    </div>
+  </aside>
+
+  <!-- Cart Drawer -->
+  <aside class="cart-drawer" aria-label="Shopping Cart">
+    <div class="cart-header">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <i class="fa-solid fa-bag-shopping" style="color:var(--primary);font-size:1.2rem;"></i>
+        <h3>Your Order (<span class="cart-count-badge">0</span>)</h3>
+      </div>
+      <button type="button" class="cart-close-btn btn-icon" aria-label="Close cart">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="cart-body"></div>
+    <div class="cart-footer">
+      <div class="cart-summary-row"><span>Subtotal</span><span class="cart-subtotal-val">₹0</span></div>
+      <div class="cart-summary-row"><span>GST (5%)</span><span class="cart-tax-val">₹0</span></div>
+      <div class="cart-summary-row total"><span>Total</span><span class="cart-total-val">₹0</span></div>
+      <a href="order.html" class="btn btn-primary cart-checkout-btn" style="width:100%;margin-top:16px;">
+        Proceed to Order <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </aside>
+  <div class="drawer-backdrop"></div>
+
   <main id="main-content" class="auth-main-section">
     <div class="auth-ambient-glow"></div>
 
@@ -391,7 +512,7 @@
 
   <!-- Scripts -->
   <script src="assets/js/theme.js"></script>
-  <script src="assets/js/main.js?v=3.6"></script>
+  <script src="assets/js/main.js?v=4.3"></script>
   <script src="assets/js/auth.js?v=3.6"></script>
 </body>
 </html>
