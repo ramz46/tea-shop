@@ -305,33 +305,147 @@
   color: #f0e6dc !important;
 }
 
-/* About Page Hero Alignment & Typography (Dark Mode) */
-[data-theme="dark"] .about-hero-title-top {
-  color: #d6c6b8 !important;
-  background: none !important;
-  -webkit-text-fill-color: #d6c6b8 !important;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6) !important;
+/* --------------------------------------------------------------------------
+   About Page Hero & Typography (Dark Mode - Midnight Roasted Haveli Obsidian)
+   -------------------------------------------------------------------------- */
+[data-theme="dark"] .page-hero-about {
+  background-color: #0b0704 !important;
+  border-bottom: 1px solid rgba(245, 158, 11, 0.22) !important;
 }
 
-[data-theme="dark"] .about-hero-title-main {
+[data-theme="dark"] .page-hero-about::before {
+  background-image: url('/assets/images/about-haveli-heritage.jpg') !important;
+  opacity: 0.38 !important;
+  filter: brightness(0.72) contrast(1.18) saturate(1.1) !important;
+}
+
+[data-theme="dark"] .page-hero-about::after {
+  background: 
+    radial-gradient(
+      ellipse 90% 70% at 50% 45%,
+      rgba(15, 10, 6, 0.88) 0%,
+      rgba(11, 7, 4, 0.94) 55%,
+      rgba(7, 5, 3, 0.98) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(11, 7, 4, 0.85) 0%,
+      rgba(16, 10, 6, 0.68) 45%,
+      rgba(7, 5, 3, 0.98) 100%
+    ) !important;
+}
+
+[data-theme="dark"] .page-hero-about .tagline-label {
+  background: rgba(245, 158, 11, 0.16) !important;
+  color: #fbbf24 !important;
+  font-weight: 700 !important;
+  border: 1px solid rgba(245, 158, 11, 0.42) !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7) !important;
+}
+
+[data-theme="dark"] .page-hero-about .tagline-label i {
+  color: #f59e0b !important;
+}
+
+[data-theme="dark"] .about-hero-title {
   color: #ffffff !important;
-  background: none !important;
-  -webkit-text-fill-color: #ffffff !important;
-  filter: none !important;
-  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.8), 0 0 35px rgba(245, 158, 11, 0.2) !important;
 }
 
-[data-theme="dark"] .about-hero-title .text-gradient {
-  background: linear-gradient(135deg, #fcd34d 0%, #f59e0b 50%, #d97706 100%) !important;
+[data-theme="dark"] .about-hero-title-top {
+  display: block !important;
+  font-family: var(--font-heading) !important;
+  font-size: clamp(1.65rem, 3.4vw, 2.35rem) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.01em !important;
+  color: #f5ede4 !important;
+  background: linear-gradient(135deg, #ffffff 0%, #fae8d2 60%, #e2be9b 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
-  filter: drop-shadow(0 2px 12px rgba(245, 158, 11, 0.4)) !important;
+  text-shadow: none !important;
+  filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.85)) !important;
+}
+
+[data-theme="dark"] .about-hero-title-main {
+  display: block !important;
+  font-family: var(--font-heading) !important;
+  font-size: clamp(2.35rem, 5.2vw, 3.65rem) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.025em !important;
+  line-height: 1.15 !important;
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #ffffff 0%, #fef3c7 45%, #fde68a 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-shadow: none !important;
+  filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 25px rgba(245, 158, 11, 0.25)) !important;
+}
+
+[data-theme="dark"] .about-hero-title .text-gradient {
+  background: linear-gradient(135deg, #fef08a 0%, #f59e0b 50%, #ea580c 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  display: inline !important;
+  font-style: italic !important;
+  filter: drop-shadow(0 2px 14px rgba(245, 158, 11, 0.55)) !important;
 }
 
 [data-theme="dark"] .about-hero-subtitle {
-  color: #d5c7b8 !important;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7) !important;
+  color: #e5d8cc !important;
+  font-weight: 500 !important;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.9) !important;
+}
+
+[data-theme="dark"] .about-hero-breadcrumbs {
+  background: rgba(22, 17, 12, 0.85) !important;
+  border-color: rgba(251, 191, 36, 0.28) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.55) !important;
+}
+
+[data-theme="dark"] .about-hero-breadcrumbs a {
+  color: #f3eae1 !important;
+}
+
+[data-theme="dark"] .about-hero-breadcrumbs a:hover {
+  color: #fbbf24 !important;
+}
+
+[data-theme="dark"] .about-hero-breadcrumbs .breadcrumb-separator {
+  color: #a88a6d !important;
+}
+
+[data-theme="dark"] .about-hero-breadcrumbs span {
+  color: #ffffff !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7) !important;
+}
+
+[data-theme="dark"] .about-quote-card {
+  background: linear-gradient(135deg, rgba(25, 20, 16, 0.95) 0%, rgba(35, 27, 20, 0.85) 100%) !important;
+  border-inline-start: 4px solid var(--primary) !important;
+  border-top: 1px solid rgba(251, 191, 36, 0.15) !important;
+  border-right: 1px solid rgba(251, 191, 36, 0.15) !important;
+  border-bottom: 1px solid rgba(251, 191, 36, 0.15) !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45) !important;
+}
+
+[data-theme="dark"] .about-quote-card .quote-text {
+  color: #fae8d2 !important;
+}
+
+[data-theme="dark"] .about-quote-card .quote-author {
+  color: var(--text-muted) !important;
+}
+
+[data-theme="dark"] .about-quote-card .quote-author strong {
+  color: var(--accent) !important;
+}
+
+[data-theme="dark"] .about-hero-banner {
+  border-color: rgba(251, 191, 36, 0.24) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(245, 158, 11, 0.1) !important;
 }
 
 [data-theme="dark"] .breadcrumbs {

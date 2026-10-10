@@ -5708,12 +5708,12 @@ textarea.form-control {
   --hero-bg: url('/assets/images/banner-blog.jpg');
 }
 
-.page-hero-about::before {
-  background-image: url('/assets/images/about-haveli-heritage.jpg') !important;
-  opacity: 0.18 !important;
-  filter: brightness(0.98) contrast(1.06) saturate(1.1) !important;
+html:not([data-theme="dark"]) .page-hero-about::before {
+  background-image: url('/assets/images/about-haveli-heritage.jpg');
+  opacity: 0.18;
+  filter: brightness(0.98) contrast(1.06) saturate(1.1);
 }
-.page-hero-about::after {
+html:not([data-theme="dark"]) .page-hero-about::after {
   background: 
     radial-gradient(
       ellipse 90% 70% at 50% 45%,
@@ -5726,7 +5726,7 @@ textarea.form-control {
       rgba(253, 251, 247, 0.82) 0%,
       rgba(253, 248, 237, 0.72) 45%,
       rgba(251, 244, 232, 0.98) 100%
-    ) !important;
+    );
 }
 .page-hero-about {
   --hero-bg: url('/assets/images/about-haveli-heritage.jpg');
@@ -5737,12 +5737,12 @@ textarea.form-control {
   max-width: 1040px;
 }
 
-.page-hero-about .tagline-label {
-  background: rgba(255, 248, 238, 0.96) !important;
-  color: #7c2d12 !important;
-  font-weight: 700 !important;
-  border: 1px solid rgba(194, 65, 12, 0.38) !important;
-  box-shadow: 0 4px 18px rgba(78, 42, 16, 0.12), inset 0 1px 0 #ffffff !important;
+html:not([data-theme="dark"]) .page-hero-about .tagline-label {
+  background: rgba(255, 248, 238, 0.96);
+  color: #7c2d12;
+  font-weight: 700;
+  border: 1px solid rgba(194, 65, 12, 0.38);
+  box-shadow: 0 4px 18px rgba(78, 42, 16, 0.12), inset 0 1px 0 #ffffff;
 }
 
 .about-hero-title {
@@ -5757,62 +5757,62 @@ textarea.form-control {
   line-height: 1.18 !important;
 }
 
-.about-hero-title-top {
+html:not([data-theme="dark"]) .about-hero-title-top {
   display: block;
   font-family: var(--font-heading);
   font-size: clamp(1.65rem, 3.4vw, 2.35rem);
   font-weight: 700;
   letter-spacing: -0.01em;
-  color: #3b1e0d !important;
-  background: linear-gradient(135deg, #2a1306 0%, #4d230d 100%) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  background-clip: text !important;
+  color: #3b1e0d;
+  background: linear-gradient(135deg, #2a1306 0%, #4d230d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   text-shadow: none;
   filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.9));
 }
 
-.about-hero-title-main {
+html:not([data-theme="dark"]) .about-hero-title-main {
   display: block;
   font-family: var(--font-heading);
   font-size: clamp(2.35rem, 5.2vw, 3.65rem);
   font-weight: 800;
   letter-spacing: -0.025em;
   line-height: 1.15;
-  color: #1a0b04 !important;
-  background: linear-gradient(135deg, #180903 0%, #351608 45%, #59240a 100%) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  background-clip: text !important;
+  color: #1a0b04;
+  background: linear-gradient(135deg, #180903 0%, #351608 45%, #59240a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   filter: drop-shadow(0 1px 2px rgba(255, 255, 255, 0.95));
 }
 
-.about-hero-title .text-gradient {
-  background: linear-gradient(135deg, #9a3412 0%, #b45309 45%, #c2410c 100%) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  background-clip: text !important;
-  display: inline !important;
-  font-style: italic !important;
+html:not([data-theme="dark"]) .about-hero-title .text-gradient {
+  background: linear-gradient(135deg, #9a3412 0%, #b45309 45%, #c2410c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline;
+  font-style: italic;
   filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.9));
 }
 
-.about-hero-subtitle {
-  max-width: 700px !important;
-  margin: 14px auto 0 !important;
-  line-height: 1.75 !important;
-  font-size: clamp(1.05rem, 1.8vw, 1.22rem) !important;
-  color: #2b1b11 !important;
-  font-weight: 500 !important;
-  text-align: center !important;
+html:not([data-theme="dark"]) .about-hero-subtitle {
+  max-width: 700px;
+  margin: 14px auto 0;
+  line-height: 1.75;
+  font-size: clamp(1.05rem, 1.8vw, 1.22rem);
+  color: #2b1b11;
+  font-weight: 500;
+  text-align: center;
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
 }
 
 .about-hero-breadcrumbs {
   margin: 22px auto 38px !important;
 }
-.about-hero-breadcrumbs span {
-  color: #1f1208 !important;
+html:not([data-theme="dark"]) .about-hero-breadcrumbs span {
+  color: #1f1208;
 }
 
 .page-hero-sourcing::before {
