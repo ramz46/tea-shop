@@ -78,8 +78,9 @@ body {
   }
 
   .page-hero {
-    padding-top: calc(var(--header-height) + 28px) !important;
-    padding-bottom: 44px !important;
+    min-height: 380px !important;
+    padding-top: calc(var(--header-height) + 16px) !important;
+    padding-bottom: 28px !important;
   }
 
   .auth-main-section {
@@ -771,7 +772,8 @@ body {
     padding-bottom: 50px !important;
   }
   .page-hero {
-    padding: calc(var(--header-height) + 28px) 0 44px !important;
+    min-height: 340px !important;
+    padding: calc(var(--header-height) + 18px) 0 28px !important;
   }
   .page-hero-title {
     font-size: clamp(1.85rem, 6vw, 2.6rem) !important;
@@ -1528,6 +1530,7 @@ body {
     padding-bottom: 40px !important;
   }
   .page-hero {
+    min-height: 340px !important;
     padding-top: calc(var(--header-height) + 18px) !important;
     padding-bottom: 26px !important;
   }

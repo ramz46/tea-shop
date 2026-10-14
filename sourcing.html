@@ -24,10 +24,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/css/style.css?v=4.5">
-  <link rel="stylesheet" href="assets/css/responsive.css?v=4.5">
-  <link rel="stylesheet" href="assets/css/dark-mode.css?v=4.5">
-  <link rel="stylesheet" href="assets/css/rtl.css?v=4.5">
+  <link rel="stylesheet" href="assets/css/style.css?v=4.6">
+  <link rel="stylesheet" href="assets/css/responsive.css?v=4.6">
+  <link rel="stylesheet" href="assets/css/dark-mode.css?v=4.6">
+  <link rel="stylesheet" href="assets/css/rtl.css?v=4.6">
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -185,6 +185,9 @@
       <div class="container">
         <span class="tagline-label"><i class="fa-solid fa-mountain"></i> Direct from the Origin</span>
         <h1 class="page-hero-title">From the Tea Garden to Your Cup</h1>
+        <p class="page-hero-subtitle">
+          Single-estate orthodox leaves from misty Himalayan slopes and whole spices sourced direct from generational farmers.
+        </p>
         <div class="breadcrumbs">
           <a href="index.html">Home</a>
           <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></span>
@@ -290,7 +293,7 @@
 
           <!-- Cloves -->
           <div class="spice-card reveal">
-            <div class="spice-icon-box"><i class="fa-solid fa-sparkles"></i></div>
+            <div class="spice-icon-box"><i class="fa-solid fa-sun" aria-label="Sun-Dried Cloves"></i></div>
             <span class="spice-origin">Kanyakumari Coast</span>
             <h4 class="spice-title">Sun-Dried Cloves</h4>
             <p class="text-muted" style="font-size:0.875rem;line-height:1.6;">
@@ -333,19 +336,19 @@
             </p>
             <ul class="sourcing-pillars-list">
               <li class="sourcing-pillar-item">
-                <i class="fa-solid fa-check-circle sourcing-pillar-icon"></i>
+                <i class="fa-solid fa-hand-holding-heart sourcing-pillar-icon" aria-hidden="true"></i>
                 <div class="sourcing-pillar-text">
                   <strong>Guaranteed 25% Wage Premium:</strong> We pay above market standard directly to picker associations to support local healthcare and education.
                 </div>
               </li>
               <li class="sourcing-pillar-item">
-                <i class="fa-solid fa-check-circle sourcing-pillar-icon"></i>
+                <i class="fa-solid fa-recycle sourcing-pillar-icon" aria-hidden="true"></i>
                 <div class="sourcing-pillar-text">
                   <strong>Clay Kulhad Vessels:</strong> Our traditional unglazed earthenware cups are hand-thrown by local potters and naturally biodegrade into soil.
                 </div>
               </li>
               <li class="sourcing-pillar-item">
-                <i class="fa-solid fa-check-circle sourcing-pillar-icon"></i>
+                <i class="fa-solid fa-shield-halved sourcing-pillar-icon" aria-hidden="true"></i>
                 <div class="sourcing-pillar-text">
                   <strong>Pesticide-Free Testing:</strong> Every estate shipment is independently tested for zero chemical residue before entering our blend kitchen.
                 </div>
@@ -355,8 +358,21 @@
           </div>
 
           <div class="reveal">
-            <div class="about-img-stack" style="position:relative;">
-              <img src="assets/images/tea-sourcing-ethics.jpg" alt="Authentic Chai in Clay Kulhads with Tea Leaves and Spices overlooking Tea Plantation" style="border-radius:var(--radius-xl);box-shadow:var(--shadow-xl);width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--border);">
+            <div class="about-img-stack">
+              <img src="assets/images/tea-sourcing-ethics.jpg" alt="Authentic Chai in Clay Kulhads with Tea Leaves and Spices overlooking Tea Plantation" class="about-main-img" loading="lazy">
+              <img src="assets/images/about-chai-craft.jpg" alt="Traditional Chai Brewing and Pouring into Terracotta Kulhad" class="about-sub-img" loading="lazy">
+              <!-- Floating Direct Trade Tag -->
+              <div class="about-floating-ingredient-tag" style="bottom: 16px; inset-inline-start: 16px;">
+                <div class="ingredient-header">
+                  <span class="ingredient-icon"><i class="fa-solid fa-leaf"></i></span>
+                  <strong class="ingredient-title">100% Direct Trade</strong>
+                </div>
+                <div class="ingredient-pills">
+                  <span>Single-Estate</span>
+                  <span>Pure Clay</span>
+                  <span>Zero Toxins</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
