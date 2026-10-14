@@ -235,43 +235,105 @@
 
 /* Page Hero - Dual-Mode Atmospheric Banner Layer */
 [data-theme="dark"] .page-hero {
-  background-color: #0b0907;
-  border-bottom-color: rgba(251, 191, 36, 0.16);
+  background-color: #0b0806 !important;
+  border-bottom: 1px solid rgba(251, 191, 36, 0.18) !important;
 }
 
 [data-theme="dark"] .page-hero::before {
-  opacity: 0.50;
-  filter: brightness(0.85) contrast(1.1) saturate(1.15);
+  opacity: 0.36 !important;
+  filter: brightness(0.80) contrast(1.15) saturate(1.1) !important;
 }
 
 [data-theme="dark"] .page-hero::after {
-  background: linear-gradient(
-    180deg,
-    rgba(12, 9, 6, 0.74) 0%,
-    rgba(18, 14, 10, 0.58) 45%,
-    rgba(10, 8, 6, 0.86) 100%
-  );
+  background: 
+    radial-gradient(
+      ellipse 85% 70% at 50% 48%,
+      rgba(22, 16, 11, 0.80) 0%,
+      rgba(15, 11, 7, 0.90) 55%,
+      rgba(11, 8, 5, 0.98) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(15, 11, 8, 0.82) 0%,
+      rgba(18, 13, 9, 0.68) 45%,
+      rgba(11, 8, 5, 0.98) 100%
+    ) !important;
 }
 
 [data-theme="dark"] .page-hero .tagline-label {
-  background: rgba(245, 158, 11, 0.18);
-  color: #fbbf24;
-  border-color: rgba(245, 158, 11, 0.35);
-  box-shadow: 0 0 20px rgba(245, 158, 11, 0.15);
+  background: rgba(245, 158, 11, 0.16) !important;
+  color: #fbbf24 !important;
+  border: 1px solid rgba(245, 158, 11, 0.40) !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8) !important;
+}
+
+[data-theme="dark"] .page-hero .tagline-label i {
+  color: #f59e0b !important;
 }
 
 [data-theme="dark"] .page-hero-title {
-  background: none !important;
   color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important;
-  filter: none !important;
-  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.8), 0 0 35px rgba(245, 158, 11, 0.2) !important;
+  background: linear-gradient(135deg, #ffffff 0%, #fef3c7 45%, #fde68a 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  filter: drop-shadow(0 2px 14px rgba(0, 0, 0, 0.95)) !important;
+}
+
+[data-theme="dark"] .page-hero-title .text-gradient,
+[data-theme="dark"] .page-hero .text-gradient,
+[data-theme="dark"] .about-hero-title .text-gradient {
+  background: linear-gradient(135deg, #fef08a 0%, #fbbf24 50%, #f59e0b 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  display: inline !important;
+  font-style: italic !important;
+  filter: drop-shadow(0 2px 10px rgba(245, 158, 11, 0.35)) !important;
 }
 
 [data-theme="dark"] .page-hero-subtitle,
 [data-theme="dark"] .page-hero p {
-  color: #d1c5b8 !important;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.75) !important;
+  color: #ede2d7 !important;
+  font-weight: 500 !important;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Page Hero CTA Buttons in Dark Mode */
+[data-theme="dark"] .page-hero-actions .btn-primary,
+[data-theme="dark"] .page-hero .btn-primary {
+  background: linear-gradient(135deg, #e59b3c 0%, #b86e24 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(251, 191, 36, 0.5) !important;
+  box-shadow: 0 6px 24px rgba(229, 155, 60, 0.35) !important;
+}
+[data-theme="dark"] .page-hero-actions .btn-primary:hover,
+[data-theme="dark"] .page-hero-actions .btn-primary:focus-visible,
+[data-theme="dark"] .page-hero .btn-primary:hover,
+[data-theme="dark"] .page-hero .btn-primary:focus-visible {
+  background: linear-gradient(135deg, #f5af52 0%, #c97f30 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 30px rgba(229, 155, 60, 0.5) !important;
+  outline: 2px solid #fbbf24 !important;
+  outline-offset: 2px !important;
+}
+[data-theme="dark"] .page-hero-actions .btn-outline,
+[data-theme="dark"] .page-hero .btn-outline {
+  background: rgba(255, 255, 255, 0.10) !important;
+  color: #ffffff !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.75) !important;
+}
+[data-theme="dark"] .page-hero-actions .btn-outline:hover,
+[data-theme="dark"] .page-hero-actions .btn-outline:focus-visible,
+[data-theme="dark"] .page-hero .btn-outline:hover,
+[data-theme="dark"] .page-hero .btn-outline:focus-visible {
+  background: #ffffff !important;
+  color: #120c08 !important;
+  border-color: #ffffff !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.65) !important;
+  outline: 2px solid #ffffff !important;
+  outline-offset: 2px !important;
 }
 
 /* Homepage 2 Hero - Dark Mode */
@@ -428,20 +490,30 @@
 }
 
 [data-theme="dark"] .breadcrumbs {
-  background: rgba(22, 17, 12, 0.76) !important;
-  border-color: rgba(251, 191, 36, 0.24) !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45) !important;
-  color: #d5c8bb !important;
+  background: rgba(22, 16, 11, 0.88) !important;
+  border: 1px solid rgba(251, 191, 36, 0.28) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.55) !important;
+  color: #e5d8cc !important;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6) !important;
 }
 [data-theme="dark"] .breadcrumbs a {
   color: #f3eae1 !important;
 }
-[data-theme="dark"] .breadcrumbs a:hover {
+[data-theme="dark"] .breadcrumbs a:hover,
+[data-theme="dark"] .breadcrumbs a:focus-visible {
   color: #fbbf24 !important;
+  outline: 2px solid #fbbf24 !important;
+  outline-offset: 3px !important;
+  border-radius: 4px !important;
 }
 [data-theme="dark"] .breadcrumb-separator {
-  color: #92755f !important;
+  color: #a88a6d !important;
+}
+[data-theme="dark"] .breadcrumb-current,
+[data-theme="dark"] .breadcrumbs span:last-child {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7) !important;
 }
 
 /* Hero Section */

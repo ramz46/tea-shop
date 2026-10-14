@@ -5555,15 +5555,15 @@ textarea.form-control {
   align-items: center;
   justify-content: center;
   padding: calc(var(--header-height) + 16px) 0 28px;
-  background-color: #fdfbf7;
+  background-color: #faf6f0;
   text-align: center;
-  border-bottom: 1px solid rgba(194, 120, 48, 0.16);
+  border-bottom: 1px solid rgba(194, 120, 48, 0.18);
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
 }
 
-/* Atmospheric Background Photographic Layer - Sunlit Radiance */
+/* Atmospheric Background Photographic Layer - Warm Haveli Heritage */
 .page-hero::before {
   content: '';
   position: absolute;
@@ -5572,8 +5572,8 @@ textarea.form-control {
   background-size: cover;
   background-position: center 35%;
   background-repeat: no-repeat;
-  opacity: 0.92;
-  filter: brightness(1.22) contrast(1.02) saturate(1.22);
+  opacity: 0.28;
+  filter: brightness(1.02) contrast(1.06) saturate(1.15);
   transform: scale(1.02);
   transition: opacity 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
   z-index: 0;
@@ -5587,16 +5587,16 @@ textarea.form-control {
   inset: 0;
   background: 
     radial-gradient(
-      ellipse 85% 65% at 50% 48%,
-      rgba(255, 255, 255, 0.50) 0%,
-      rgba(255, 253, 248, 0.64) 55%,
-      rgba(255, 249, 238, 0.78) 100%
+      ellipse 85% 70% at 50% 48%,
+      rgba(255, 253, 248, 0.85) 0%,
+      rgba(254, 250, 242, 0.90) 55%,
+      rgba(250, 243, 232, 0.96) 100%
     ),
     linear-gradient(
       180deg,
-      rgba(255, 255, 255, 0.45) 0%,
-      rgba(255, 255, 255, 0.18) 45%,
-      rgba(255, 250, 242, 0.80) 100%
+      rgba(255, 255, 255, 0.72) 0%,
+      rgba(255, 252, 246, 0.62) 45%,
+      rgba(248, 240, 228, 0.95) 100%
     );
   z-index: 1;
   pointer-events: none;
@@ -5621,51 +5621,71 @@ textarea.form-control {
   font-weight: 700;
   letter-spacing: -0.025em;
   line-height: 1.18;
-  color: #2b170c;
-  background: linear-gradient(135deg, #26140a 0%, #45210e 45%, #7a3a14 100%);
+  color: #221006;
+  background: linear-gradient(135deg, #1f0d05 0%, #3e1b09 45%, #6b2d0d 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   text-align: center;
   position: relative;
-  filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.7));
+  filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.9));
+}
+
+/* High-Contrast Spiced Terracotta Title Highlight in Light Mode */
+html:not([data-theme="dark"]) .page-hero-title .text-gradient,
+html:not([data-theme="dark"]) .page-hero .text-gradient,
+html:not([data-theme="dark"]) .about-hero-title .text-gradient {
+  background: linear-gradient(135deg, #9a3412 0%, #b45309 45%, #7c2d12 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: #9a3412 !important;
+  display: inline !important;
+  font-style: italic !important;
+  filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.95)) !important;
 }
 
 /* Warm Champagne Frosted Glass Tagline Pill */
 .page-hero .tagline-label {
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  background: rgba(255, 249, 240, 0.88);
-  color: #964719;
-  border: 1px solid rgba(194, 120, 48, 0.32);
-  box-shadow: 0 4px 18px rgba(78, 42, 16, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  background: rgba(255, 248, 238, 0.95);
+  color: #7c2d12;
+  border: 1px solid rgba(194, 65, 12, 0.35);
+  box-shadow: 0 3px 14px rgba(78, 42, 16, 0.08), inset 0 1px 0 #ffffff;
   padding: 5px 16px;
   border-radius: 999px;
   font-size: 0.78rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.page-hero .tagline-label i {
+  color: #c2410c;
 }
 
 /* Velvety Spiced Mocha Subtitle */
 .page-hero-subtitle,
 .page-hero p {
   font-family: var(--font-serif-accent, var(--font-heading));
-  font-size: 1.1rem;
+  font-size: 1.12rem;
   font-style: italic;
   font-weight: 500;
-  line-height: 1.55;
+  line-height: 1.6;
   letter-spacing: 0.01em;
-  color: #423023;
-  max-width: 780px;
+  color: #2b1a10;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0;
   text-align: center;
   position: relative;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.55);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.95);
 }
 
 /* Editorial Floating Breadcrumb Capsule */
@@ -5677,27 +5697,95 @@ textarea.form-control {
   gap: 10px;
   font-size: var(--font-size-sm);
   font-weight: 600;
-  color: #554133;
+  color: #3b1e0d;
   position: relative;
-  margin-top: 14px;
-  background: rgba(255, 250, 242, 0.78);
+  margin-top: 16px;
+  background: rgba(255, 252, 246, 0.94);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(210, 180, 150, 0.40);
+  border: 1px solid rgba(194, 120, 48, 0.28);
   padding: 6px 20px;
   border-radius: 999px;
-  box-shadow: 0 2px 12px rgba(45, 25, 12, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 10px rgba(45, 25, 12, 0.06), inset 0 1px 0 #ffffff;
 }
 .breadcrumbs a {
-  color: #3b2819;
+  color: #452410;
+  text-decoration: none;
   transition: color 0.2s ease;
 }
-.breadcrumbs a:hover {
-  color: var(--primary);
+.breadcrumbs a:hover,
+.breadcrumbs a:focus-visible {
+  color: #b45309;
+  text-decoration: underline;
+  outline: 2px solid #b45309;
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 .breadcrumb-separator {
   font-size: 0.7rem;
-  color: #a88d77;
+  color: #8c6a4e;
+}
+.breadcrumb-current,
+.breadcrumbs span:last-child {
+  color: #1a0b04 !important;
+  font-weight: 700;
+}
+
+/* Hero Actions / Call to Action Buttons (Support for Any Inner Hero) */
+.page-hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 3;
+}
+.page-hero-actions .btn-primary,
+.page-hero .btn-primary {
+  background: linear-gradient(135deg, #b45309 0%, #8a3f14 100%);
+  color: #ffffff !important;
+  border: 1px solid #7c2d12;
+  box-shadow: 0 4px 16px rgba(180, 83, 9, 0.28);
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 999px;
+  transition: all 0.25s ease;
+}
+.page-hero-actions .btn-primary:hover,
+.page-hero-actions .btn-primary:focus-visible,
+.page-hero .btn-primary:hover,
+.page-hero .btn-primary:focus-visible {
+  background: linear-gradient(135deg, #c2410c 0%, #9a3412 100%);
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(180, 83, 9, 0.42);
+  outline: 2px solid #b45309;
+  outline-offset: 2px;
+}
+.page-hero-actions .btn-outline,
+.page-hero .btn-outline {
+  background: rgba(255, 252, 246, 0.90);
+  color: #2b170c !important;
+  border: 1.5px solid rgba(194, 120, 48, 0.45);
+  box-shadow: 0 2px 10px rgba(45, 25, 12, 0.06);
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 999px;
+  transition: all 0.25s ease;
+}
+.page-hero-actions .btn-outline:hover,
+.page-hero-actions .btn-outline:focus-visible,
+.page-hero .btn-outline:hover,
+.page-hero .btn-outline:focus-visible {
+  background: #ffffff;
+  color: #8a3f14 !important;
+  border-color: #8a3f14;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(78, 42, 16, 0.15);
+  outline: 2px solid #8a3f14;
+  outline-offset: 2px;
 }
 
 /* Specific Page Hero Banner Image Mappings */
